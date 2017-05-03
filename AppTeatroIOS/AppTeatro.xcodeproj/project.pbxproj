@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6264CB1EB93CB400AB8DED /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */; };
+		1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */; };
 		1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C31EA3E3A300150964 /* AppDelegate.swift */; };
 		1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C51EA3E3A300150964 /* ViewController.swift */; };
 		1FA676C91EA3E3A300150964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA676C71EA3E3A300150964 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
+		1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoTableViewCell.swift; sourceTree = "<group>"; };
 		1FA676C01EA3E3A100150964 /* AppTeatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTeatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA676C31EA3E3A300150964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA676C51EA3E3A300150964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6264C91EB93B5A00AB8DED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */,
+				1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1FA676B71EA3E3A100150964 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
+				1F6264C91EB93B5A00AB8DED /* Controllers */,
 				1FA676C31EA3E3A300150964 /* AppDelegate.swift */,
 				1FA676C51EA3E3A300150964 /* ViewController.swift */,
 				1FA676C71EA3E3A300150964 /* Main.storyboard */,
@@ -279,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6264CB1EB93CB400AB8DED /* EventosTableViewController.swift in Sources */,
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
+				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 			);
