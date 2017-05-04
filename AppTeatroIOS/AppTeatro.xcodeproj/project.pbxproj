@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F6264CB1EB93CB400AB8DED /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */; };
 		1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */; };
 		1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C31EA3E3A300150964 /* AppDelegate.swift */; };
 		1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C51EA3E3A300150964 /* ViewController.swift */; };
@@ -18,6 +17,8 @@
 		1FA676DC1EA3E3AA00150964 /* AppTeatroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676DB1EA3E3AA00150964 /* AppTeatroTests.swift */; };
 		1FA676E71EA3E3AB00150964 /* AppTeatroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676E61EA3E3AB00150964 /* AppTeatroUITests.swift */; };
 		1FA676F61EA3E41C00150964 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA676F51EA3E41C00150964 /* MapKit.framework */; };
+		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
+		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoTableViewCell.swift; sourceTree = "<group>"; };
 		1FA676C01EA3E3A100150964 /* AppTeatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTeatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA676C31EA3E3A300150964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		1FA676E61EA3E3AB00150964 /* AppTeatroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTeatroUITests.swift; sourceTree = "<group>"; };
 		1FA676E81EA3E3AC00150964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA676F51EA3E41C00150964 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
+		3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PesquisaViewController.swift; path = Controllers/PesquisaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,9 @@
 		1F6264C91EB93B5A00AB8DED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F6264CA1EB93CB400AB8DED /* EventosTableViewController.swift */,
 				1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */,
+				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
+				3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -293,11 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F6264CB1EB93CB400AB8DED /* EventosTableViewController.swift in Sources */,
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
+				3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
+				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

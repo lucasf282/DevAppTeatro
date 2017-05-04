@@ -2,7 +2,7 @@
 //  EventosTableViewController.swift
 //  AppTeatro
 //
-//  Created by MyMac on 5/2/17.
+//  Created by HC5MAC10 on 03/05/17.
 //  Copyright © 2017 MyMac. All rights reserved.
 //
 
@@ -34,15 +34,23 @@ class EventosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 1
     }
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventoCell", for: indexPath) as! EventoTableViewCell
 
         // Configure the cell...
+        //cell.heightAnchor.constraint(equalTo: <#T##NSLayoutDimension#>, multiplier: <#T##CGFloat#>)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let largura = tableView.frame.size.width
+        return largura/16*9
+        
     }
     
 
