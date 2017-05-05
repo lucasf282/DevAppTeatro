@@ -1,0 +1,162 @@
+
+/* Class = "UISegmentedControl"; 01l-1T-Zn0.segmentTitles[0] = "Todos"; ObjectID = "01l-1T-Zn0"; */
+"01l-1T-Zn0.segmentTitles[0]" = "Todos";
+
+/* Class = "UISegmentedControl"; 01l-1T-Zn0.segmentTitles[1] = "Perto de mim"; ObjectID = "01l-1T-Zn0"; */
+"01l-1T-Zn0.segmentTitles[1]" = "Perto de mim";
+
+/* Class = "UIViewController"; title = "Detalhes"; ObjectID = "0qx-TR-TpS"; */
+"0qx-TR-TpS.title" = "Detalhes";
+
+/* Class = "UILabel"; text = "28/12 - 26h"; ObjectID = "2YR-SP-PUD"; */
+"2YR-SP-PUD.text" = "28/12 - 26h";
+
+/* Class = "UILabel"; text = "grátis"; ObjectID = "3E5-P4-o7A"; */
+"3E5-P4-o7A.text" = "grátis";
+
+/* Class = "UILabel"; text = "Opção do menu"; ObjectID = "3Yf-rS-ifz"; */
+"3Yf-rS-ifz.text" = "Opção do menu";
+
+/* Class = "UILabel"; text = "Local"; ObjectID = "5xM-4v-nGf"; */
+"5xM-4v-nGf.text" = "Local";
+
+/* Class = "UINavigationItem"; title = "Descricão"; ObjectID = "6Ch-Yi-NWF"; */
+"6Ch-Yi-NWF.title" = "Descricão";
+
+/* Class = "UILabel"; text = "Gênero"; ObjectID = "7xX-Bg-Qnl"; */
+"7xX-Bg-Qnl.text" = "Gênero";
+
+/* Class = "UILabel"; text = "Local"; ObjectID = "8a7-dh-bVL"; */
+"8a7-dh-bVL.text" = "Local";
+
+/* Class = "UIButton"; normalTitle = "Criar uma conta"; ObjectID = "9Aa-rP-xrg"; */
+"9Aa-rP-xrg.normalTitle" = "Criar uma conta";
+
+/* Class = "UIBarButtonItem"; title = "Compartilhar"; ObjectID = "DLG-lu-geX"; */
+"DLG-lu-geX.title" = "Compartilhar";
+
+/* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "Ei9-Su-aWL"; */
+"Ei9-Su-aWL.normalTitle" = "Facebook";
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "Evx-ha-mfD"; */
+"Evx-ha-mfD.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FE3-B9-C08"; */
+"FE3-B9-C08.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Horário"; ObjectID = "FFL-yw-3SA"; */
+"FFL-yw-3SA.text" = "Horário";
+
+/* Class = "UINavigationItem"; title = "Busca"; ObjectID = "Fh5-OU-I8q"; */
+"Fh5-OU-I8q.title" = "Busca";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HSh-GD-g8n"; */
+"HSh-GD-g8n.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ISR-91-CUh"; */
+"ISR-91-CUh.title" = "Item";
+
+/* Class = "UILabel"; text = "Titulo do evento"; ObjectID = "KwV-Gu-Bax"; */
+"KwV-Gu-Bax.text" = "Titulo do evento";
+
+/* Class = "UILabel"; text = "Nome de usuário"; ObjectID = "MLt-sZ-CTu"; */
+"MLt-sZ-CTu.text" = "Nome de usuário";
+
+/* Class = "UILabel"; text = "Local"; ObjectID = "OlA-KF-rCp"; */
+"OlA-KF-rCp.text" = "Local";
+
+/* Class = "UITableViewController"; title = "Eventos"; ObjectID = "PT0-xe-vM7"; */
+"PT0-xe-vM7.title" = "Eventos";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Pe1-kF-Iyr"; */
+"Pe1-kF-Iyr.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "Sigin"; ObjectID = "RQK-6y-euV"; */
+"RQK-6y-euV.title" = "Sigin";
+
+/* Class = "UIButton"; normalTitle = "Entrar"; ObjectID = "RRo-3c-Svf"; */
+"RRo-3c-Svf.normalTitle" = "Entrar";
+
+/* Class = "UILabel"; text = "Titulo do evento"; ObjectID = "S06-IZ-Dy6"; */
+"S06-IZ-Dy6.text" = "Titulo do evento";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "Saz-Eb-5Ms"; */
+"Saz-Eb-5Ms.placeholder" = "Senha";
+
+/* Class = "UIButton"; normalTitle = "Google +"; ObjectID = "Sdr-Q4-ytq"; */
+"Sdr-Q4-ytq.normalTitle" = "Google +";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TjH-eE-vXx"; */
+"TjH-eE-vXx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "28/dez - 18h"; ObjectID = "UvH-g5-rpb"; */
+"UvH-g5-rpb.text" = "28/dez - 18h";
+
+/* Class = "UINavigationItem"; title = "Filtros"; ObjectID = "Vux-L4-QWa"; */
+"Vux-L4-QWa.title" = "Filtros";
+
+/* Class = "UILabel"; text = "Adicionar ao calendario"; ObjectID = "WzS-na-ure"; */
+"WzS-na-ure.text" = "Adicionar ao calendario";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "XTI-nY-C3l"; */
+"XTI-nY-C3l.placeholder" = "Senha";
+
+/* Class = "UILabel"; text = "Preço"; ObjectID = "Xe1-4g-6iK"; */
+"Xe1-4g-6iK.text" = "Preço";
+
+/* Class = "UISegmentedControl"; bCF-Ei-vfC.segmentTitles[0] = "Eventos"; ObjectID = "bCF-Ei-vfC"; */
+"bCF-Ei-vfC.segmentTitles[0]" = "Eventos";
+
+/* Class = "UISegmentedControl"; bCF-Ei-vfC.segmentTitles[1] = "Destaques"; ObjectID = "bCF-Ei-vfC"; */
+"bCF-Ei-vfC.segmentTitles[1]" = "Destaques";
+
+/* Class = "UISegmentedControl"; bCF-Ei-vfC.segmentTitles[2] = "Favoritos"; ObjectID = "bCF-Ei-vfC"; */
+"bCF-Ei-vfC.segmentTitles[2]" = "Favoritos";
+
+/* Class = "UIViewController"; title = "Filtro"; ObjectID = "egC-UP-mFo"; */
+"egC-UP-mFo.title" = "Filtro";
+
+/* Class = "UITextField"; placeholder = "Confirmar Senha"; ObjectID = "g7F-dY-GHf"; */
+"g7F-dY-GHf.placeholder" = "Confirmar Senha";
+
+/* Class = "UILabel"; text = "28/dez - 18h"; ObjectID = "gEB-ew-Wlc"; */
+"gEB-ew-Wlc.text" = "28/dez - 18h";
+
+/* Class = "UIButton"; normalTitle = "Crie um conta"; ObjectID = "k2t-LX-4tL"; */
+"k2t-LX-4tL.normalTitle" = "Crie um conta";
+
+/* Class = "UIViewController"; title = "Sidebar"; ObjectID = "l5l-rK-hzt"; */
+"l5l-rK-hzt.title" = "Sidebar";
+
+/* Class = "UILabel"; text = "Data"; ObjectID = "lbe-TW-g6W"; */
+"lbe-TW-g6W.text" = "Data";
+
+/* Class = "UIBarButtonItem"; title = "Filtro"; ObjectID = "mZG-zk-mJr"; */
+"mZG-zk-mJr.title" = "Filtro";
+
+/* Class = "UIButton"; normalTitle = "Google +"; ObjectID = "p1B-qt-NvJ"; */
+"p1B-qt-NvJ.normalTitle" = "Google +";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "pqx-3p-MbD"; */
+"pqx-3p-MbD.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "qKO-8g-UHr"; */
+"qKO-8g-UHr.normalTitle" = "Facebook";
+
+/* Class = "UIButton"; normalTitle = "Aplicar Filtro"; ObjectID = "qj2-cC-GTB"; */
+"qj2-cC-GTB.normalTitle" = "Aplicar Filtro";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "rrt-fS-5bM"; */
+"rrt-fS-5bM.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Nome do local"; ObjectID = "tUu-3c-ap0"; */
+"tUu-3c-ap0.placeholder" = "Nome do local";
+
+/* Class = "UIButton"; normalTitle = "Esqueceu sua senha?"; ObjectID = "vDN-be-iLS"; */
+"vDN-be-iLS.normalTitle" = "Esqueceu sua senha?";
+
+/* Class = "UIViewController"; title = "Pesquisa"; ObjectID = "ygX-pX-dLz"; */
+"ygX-pX-dLz.title" = "Pesquisa";
+
+/* Class = "UILabel"; text = "grátis"; ObjectID = "zAB-kp-sQX"; */
+"zAB-kp-sQX.text" = "grátis";
