@@ -21,6 +21,7 @@
 		1FA676F61EA3E41C00150964 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA676F51EA3E41C00150964 /* MapKit.framework */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
+		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,9 @@
 		1FA676F51EA3E41C00150964 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PesquisaViewController.swift; path = Controllers/PesquisaViewController.swift; sourceTree = "<group>"; };
+		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
+		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
+		AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppTeatro-Bridging-Header.h"; path = "Library/AppTeatro-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
+				AF8A4C491EBE259100F67EF7 /* Library */,
 				1F7F580E1EBD1D4500644A1F /* Views */,
 				1F6264C91EB93B5A00AB8DED /* Controllers */,
 				1FA676C31EA3E3A300150964 /* AppDelegate.swift */,
@@ -141,6 +146,7 @@
 				1FA676CF1EA3E3A400150964 /* LaunchScreen.storyboard */,
 				1FA676D21EA3E3A400150964 /* Info.plist */,
 				1FA676CA1EA3E3A400150964 /* AppTeatro.xcdatamodeld */,
+				AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */,
 			);
 			path = AppTeatro;
 			sourceTree = "<group>";
@@ -169,6 +175,15 @@
 				1FA676F51EA3E41C00150964 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF8A4C491EBE259100F67EF7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */,
+				AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +254,7 @@
 				TargetAttributes = {
 					1FA676BF1EA3E3A100150964 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -248,11 +264,13 @@
 					};
 					1FA676D61EA3E3AA00150964 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1FA676BF1EA3E3A100150964;
 					};
 					1FA676E11EA3E3AB00150964 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1FA676BF1EA3E3A100150964;
 					};
@@ -315,6 +333,7 @@
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				1F7F58101EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
+				AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
 				1F7F580D1EBD1A3900644A1F /* SidebarViewController.swift in Sources */,
@@ -471,11 +490,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -484,11 +506,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatro-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -498,11 +522,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatroTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppTeatro.app/AppTeatro";
 			};
@@ -513,11 +540,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatroTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppTeatro.app/AppTeatro";
 			};
@@ -527,11 +556,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatroUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatroUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatroUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AppTeatro;
 			};
@@ -541,11 +573,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppTeatroUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyMac.AppTeatroUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTeatro/AppTeatroUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AppTeatro;
 			};

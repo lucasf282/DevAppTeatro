@@ -10,6 +10,8 @@ import UIKit
 
 class EventosTableViewController: UITableViewController {
 
+    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,9 @@ class EventosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        btnMenuButton.target = revealViewController()
+        btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
     }
 
     override func didReceiveMemoryWarning() {
