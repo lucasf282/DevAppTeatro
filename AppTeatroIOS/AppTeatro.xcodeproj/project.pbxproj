@@ -22,6 +22,8 @@
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
+		AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */; };
+		AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA611EBFA699008F0856 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
 		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
 		AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppTeatro-Bridging-Header.h"; path = "Library/AppTeatro-Bridging-Header.h"; sourceTree = "<group>"; };
+		AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentPageViewController.swift; path = Controllers/ContentPageViewController.swift; sourceTree = "<group>"; };
+		AFC5EA611EBFA699008F0856 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controllers/PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
 				3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */,
 				1F7F580C1EBD1A3900644A1F /* SidebarViewController.swift */,
+				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
+				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -330,9 +336,11 @@
 			files = (
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
 				3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */,
+				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				1F7F58101EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
+				AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */,
 				AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
