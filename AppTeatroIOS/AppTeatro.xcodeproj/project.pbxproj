@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */; };
 		1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */; };
-		1F7F580D1EBD1A3900644A1F /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F580C1EBD1A3900644A1F /* SidebarViewController.swift */; };
-		1F7F58101EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F580F1EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift */; };
+		1F6795981EC26062001FE447 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6795971EC26062001FE447 /* LoginViewController.swift */; };
 		1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C31EA3E3A300150964 /* AppDelegate.swift */; };
 		1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C51EA3E3A300150964 /* ViewController.swift */; };
 		1FA676C91EA3E3A300150964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA676C71EA3E3A300150964 /* Main.storyboard */; };
@@ -47,8 +46,7 @@
 /* Begin PBXFileReference section */
 		1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoTableViewCell.swift; sourceTree = "<group>"; };
 		1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescricaoTableViewController.swift; path = Controllers/DescricaoTableViewController.swift; sourceTree = "<group>"; };
-		1F7F580C1EBD1A3900644A1F /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidebarViewController.swift; path = Controllers/SidebarViewController.swift; sourceTree = "<group>"; };
-		1F7F580F1EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidebarMenuTableViewCell.swift; path = Views/SidebarMenuTableViewCell.swift; sourceTree = "<group>"; };
+		1F6795971EC26062001FE447 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		1FA676C01EA3E3A100150964 /* AppTeatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTeatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA676C31EA3E3A300150964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA676C51EA3E3A300150964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,10 +102,10 @@
 			children = (
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
 				3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */,
-				1F7F580C1EBD1A3900644A1F /* SidebarViewController.swift */,
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 				1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */,
+				1F6795971EC26062001FE447 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */,
-				1F7F580F1EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -337,18 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6795981EC26062001FE447 /* LoginViewController.swift in Sources */,
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
 				3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
-				1F7F58101EBD1EBA00644A1F /* SidebarMenuTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
 				AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */,
 				AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */,
 				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
-				1F7F580D1EBD1A3900644A1F /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

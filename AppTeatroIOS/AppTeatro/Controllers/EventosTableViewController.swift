@@ -20,9 +20,13 @@ class EventosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        if self.revealViewController() != nil {
         btnMenuButton.target = revealViewController()
-        btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
