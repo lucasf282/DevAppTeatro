@@ -9,10 +9,14 @@
 import UIKit
 
 class DescricaoTableViewController: UITableViewController {
+    let textExemplo = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore. f;hfsf fhsghfdiguher ferygfwygerg weqrg wygerq wrgtwyeirugtw. dslfjhasdfuao fsfhbas fgefgyfwgq rg iuqwegy aye fsyfg dsayfg qwfygduitfgare oqiehiyfer fatufiutwe freiqufgyuigf qwet ruqgfyfg utifsf gsyuf guwg qyfg fiuds f qgoeryf gsdfquwvfgyiv ewqf qwiegfu."
+    @IBOutlet weak var textView_desc: UITextView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        textView_desc.text = textExemplo
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,21 +48,27 @@ class DescricaoTableViewController: UITableViewController {
             return largura/16*9
         }
         if indexPath.row == 4 {
-            return 100
+            let largura = tableView.frame.size.width - 145
+            print(" tableview \(largura)")
+            
+            let altura = textExemplo.height(withConstrainedWidth: largura, font: UIFont.systemFont(ofSize: 14))
+            
+            print(" altura \(altura)")
+            return altura
         }
         return 64
     }
-
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        if indexPath.row == 4 {
+        }
         // Configure the cell...
 
         return cell
     }
-    */
-
+*/
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -104,4 +114,13 @@ class DescricaoTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension String {
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+        return boundingBox.height
+    }
 }
