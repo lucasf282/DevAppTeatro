@@ -21,6 +21,8 @@
 		1FA676F61EA3E41C00150964 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA676F51EA3E41C00150964 /* MapKit.framework */; };
 		1FC413E51EC384F200732ECB /* GeneroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */; };
 		1FC413E71EC386F500732ECB /* GenerosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */; };
+		1FC48EA11EC5333F0028291A /* DetalheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */; };
+		1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
@@ -66,6 +68,8 @@
 		1FA676F51EA3E41C00150964 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneroCollectionViewCell.swift; path = Views/GeneroCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerosCollectionViewController.swift; path = Controllers/GenerosCollectionViewController.swift; sourceTree = "<group>"; };
+		1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheTableViewCell.swift; path = Views/DetalheTableViewCell.swift; sourceTree = "<group>"; };
+		1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesTableViewController.swift; path = Controllers/DetalhesTableViewController.swift; sourceTree = "<group>"; };
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PesquisaViewController.swift; path = Controllers/PesquisaViewController.swift; sourceTree = "<group>"; };
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 				1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */,
+				1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */,
 				1F6795971EC26062001FE447 /* LoginViewController.swift */,
 				1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */,
 			);
@@ -120,6 +125,7 @@
 			children = (
 				1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */,
 				1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */,
+				1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -347,12 +353,14 @@
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
+				1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */,
 				AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */,
 				AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */,
 				1FC413E51EC384F200732ECB /* GeneroCollectionViewCell.swift in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */,
 				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
+				1FC48EA11EC5333F0028291A /* DetalheTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
