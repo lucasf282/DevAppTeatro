@@ -19,6 +19,8 @@
 		1FA676DC1EA3E3AA00150964 /* AppTeatroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676DB1EA3E3AA00150964 /* AppTeatroTests.swift */; };
 		1FA676E71EA3E3AB00150964 /* AppTeatroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676E61EA3E3AB00150964 /* AppTeatroUITests.swift */; };
 		1FA676F61EA3E41C00150964 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA676F51EA3E41C00150964 /* MapKit.framework */; };
+		1FBE66011EC6880B00BF87B4 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */; };
+		1FBE66031EC68DAB00BF87B4 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE66021EC68DAB00BF87B4 /* LocalTableViewCell.swift */; };
 		1FC413E51EC384F200732ECB /* GeneroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */; };
 		1FC413E71EC386F500732ECB /* GenerosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */; };
 		1FC48EA11EC5333F0028291A /* DetalheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		1FA676E61EA3E3AB00150964 /* AppTeatroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTeatroUITests.swift; sourceTree = "<group>"; };
 		1FA676E81EA3E3AC00150964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA676F51EA3E41C00150964 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalViewController.swift; path = Controllers/LocalViewController.swift; sourceTree = "<group>"; };
+		1FBE66021EC68DAB00BF87B4 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalTableViewCell.swift; path = Views/LocalTableViewCell.swift; sourceTree = "<group>"; };
 		1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneroCollectionViewCell.swift; path = Views/GeneroCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerosCollectionViewController.swift; path = Controllers/GenerosCollectionViewController.swift; sourceTree = "<group>"; };
 		1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheTableViewCell.swift; path = Views/DetalheTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */,
 				1F6795971EC26062001FE447 /* LoginViewController.swift */,
 				1FC413E61EC386F500732ECB /* GenerosCollectionViewController.swift */,
+				1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				1F6264CC1EB93DC500AB8DED /* EventoTableViewCell.swift */,
 				1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */,
 				1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */,
+				1FBE66021EC68DAB00BF87B4 /* LocalTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -359,7 +365,9 @@
 				1FC413E51EC384F200732ECB /* GeneroCollectionViewCell.swift in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */,
+				1FBE66031EC68DAB00BF87B4 /* LocalTableViewCell.swift in Sources */,
 				3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */,
+				1FBE66011EC6880B00BF87B4 /* LocalViewController.swift in Sources */,
 				1FC48EA11EC5333F0028291A /* DetalheTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
