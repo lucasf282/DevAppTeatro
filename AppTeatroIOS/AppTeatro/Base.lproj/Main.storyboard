@@ -446,6 +446,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-kF-Iyr" userLabel="Genero">
                                                 <rect key="frame" x="76" y="56" width="291" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="RJc-rE-jnD" kind="popoverPresentation" identifier="GeneroPopover" popoverAnchorView="Pe1-kF-Iyr" id="EGa-Dd-7ac">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-4v-nGf">
                                                 <rect key="frame" x="8" y="103" width="41" height="21"/>
@@ -479,6 +484,9 @@
                                                 <rect key="frame" x="225" y="218" width="142" height="30"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="RJc-rE-jnD" kind="presentation" id="sqV-Wq-YLo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-GD-g8n" userLabel="HoraMin">
                                                 <rect key="frame" x="76" y="218" width="142" height="30"/>
@@ -575,63 +583,11 @@
                             <constraint firstAttribute="trailing" secondItem="qj2-cC-GTB" secondAttribute="trailing" id="zw8-YT-6xB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Filtros" id="Vux-L4-QWa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Iew-FK-phq"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Filtros" id="Vux-L4-QWa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaJ-EH-T0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2266" y="-639"/>
-        </scene>
-        <!--generos-->
-        <scene sceneID="ss7-Fa-tTp">
-            <objects>
-                <collectionViewController title="generos" id="pYp-uC-a0j" customClass="GenerosCollectionViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gXw-qq-DyL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w9R-Ps-0bP">
-                            <size key="itemSize" width="118" height="118"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GeneroCell" reuseIdentifier="GeneroCell" id="Zxk-9X-ion" customClass="GeneroCollectionViewCell" customModule="AppTeatro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQt-Kf-SJ1">
-                                            <rect key="frame" x="16" y="16" width="86" height="86"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="0.20392156859999999" green="0.65098039220000004" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="aQt-Kf-SJ1" secondAttribute="trailing" constant="8" id="ONt-Tb-dX7"/>
-                                    <constraint firstItem="aQt-Kf-SJ1" firstAttribute="leading" secondItem="Zxk-9X-ion" secondAttribute="leadingMargin" constant="8" id="QJm-fa-phO"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="aQt-Kf-SJ1" secondAttribute="bottom" constant="8" id="dZc-Z0-UlO"/>
-                                    <constraint firstItem="aQt-Kf-SJ1" firstAttribute="top" secondItem="Zxk-9X-ion" secondAttribute="topMargin" constant="8" id="gdl-uI-PlP"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="imgView_genero" destination="aQt-Kf-SJ1" id="TUm-Ym-KlB"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="pYp-uC-a0j" id="RQd-eY-MBy"/>
-                            <outlet property="delegate" destination="pYp-uC-a0j" id="wec-rf-BrS"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a3C-Jg-6rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3014" y="-639"/>
         </scene>
         <!--Eventos-->
         <scene sceneID="pXz-jO-Xen">
@@ -1075,20 +1031,20 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="hrC-xf-eOM"/>
-                                <exclude reference="uXs-py-2Je"/>
                                 <exclude reference="6ya-3w-zfK"/>
                                 <exclude reference="Gay-QB-Mia"/>
                                 <exclude reference="ngc-R3-DDx"/>
                                 <exclude reference="oWe-Ud-emM"/>
                                 <exclude reference="rmY-Dp-uPC"/>
+                                <exclude reference="uXs-py-2Je"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="uXs-py-2Je"/>
                                 <include reference="6ya-3w-zfK"/>
                                 <include reference="Gay-QB-Mia"/>
                                 <include reference="rmY-Dp-uPC"/>
+                                <include reference="uXs-py-2Je"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1263,7 +1219,7 @@
                     <navigationItem key="navigationItem" title="Busca" id="Fh5-OU-I8q">
                         <barButtonItem key="rightBarButtonItem" title="Filtro" id="mZG-zk-mJr">
                             <connections>
-                                <segue destination="HXr-j3-MlX" kind="show" id="PMa-hk-uuy"/>
+                                <segue destination="egC-UP-mFo" kind="show" id="Pg7-8a-kPV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1453,9 +1409,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-je-IWC" userLabel="Genero">
                                                 <rect key="frame" x="76" y="56" width="291" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <segue destination="pYp-uC-a0j" kind="show" id="Umj-WZ-xrs"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiH-rS-mBy">
                                                 <rect key="frame" x="8" y="103" width="41" height="21"/>
@@ -1590,6 +1543,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7c-YW-4Zu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2266" y="-639"/>
+        </scene>
+        <!--Generos-->
+        <scene sceneID="Upo-PF-a0D">
+            <objects>
+                <viewController title="Generos" id="RJc-rE-jnD" customClass="GenerosViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMi-rC-bsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAu-7A-rVw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQK-vk-VKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-80-dAq">
+                                <rect key="frame" x="8" y="8" width="359" height="613"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdZ-ZJ-9dU">
+                                    <size key="itemSize" width="116" height="113"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="GeneroCell" reuseIdentifier="GeneroCell" id="gBB-fV-Iom" customClass="GeneroCollectionViewCell" customModule="AppTeatro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-bx-0Rr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.76475566630000003" green="0.23561424019999999" blue="0.20908716320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imgView_genero" destination="C7G-bx-0Rr" id="Fog-4p-ndi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RJc-rE-jnD" id="q59-Mg-ld2"/>
+                                    <outlet property="delegate" destination="RJc-rE-jnD" id="2PY-xN-EtF"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-UU-MT9">
+                                <rect key="frame" x="191" y="629" width="176" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="btnCancel:" destination="RJc-rE-jnD" eventType="touchUpInside" id="fn2-ys-YNM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErY-0P-DPP">
+                                <rect key="frame" x="8" y="629" width="176" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="btnOK:" destination="RJc-rE-jnD" eventType="touchUpInside" id="etm-mV-rot"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ErY-0P-DPP" firstAttribute="top" secondItem="qTc-80-dAq" secondAttribute="bottom" constant="8" id="1Ue-bw-88w"/>
+                            <constraint firstAttribute="trailing" secondItem="qTc-80-dAq" secondAttribute="trailing" constant="8" id="6qF-0v-FN0"/>
+                            <constraint firstItem="qTc-80-dAq" firstAttribute="leading" secondItem="yQK-vk-VKQ" secondAttribute="leading" constant="8" id="8y4-PT-yXM"/>
+                            <constraint firstItem="pAu-7A-rVw" firstAttribute="top" secondItem="ErY-0P-DPP" secondAttribute="bottom" constant="8" id="Bl1-8V-1e8"/>
+                            <constraint firstItem="mQu-UU-MT9" firstAttribute="width" secondItem="ErY-0P-DPP" secondAttribute="width" id="IRe-nC-FB5"/>
+                            <constraint firstItem="ErY-0P-DPP" firstAttribute="leading" secondItem="qTc-80-dAq" secondAttribute="leading" id="TiZ-FG-9CG"/>
+                            <constraint firstItem="mQu-UU-MT9" firstAttribute="centerY" secondItem="ErY-0P-DPP" secondAttribute="centerY" id="XvM-1Z-Hy9"/>
+                            <constraint firstItem="mQu-UU-MT9" firstAttribute="trailing" secondItem="qTc-80-dAq" secondAttribute="trailing" id="nVz-kL-UON"/>
+                            <constraint firstItem="ErY-0P-DPP" firstAttribute="width" secondItem="qTc-80-dAq" secondAttribute="width" multiplier="0.5" constant="-4" id="rVM-ZB-vQi"/>
+                            <constraint firstItem="qTc-80-dAq" firstAttribute="top" secondItem="yQK-vk-VKQ" secondAttribute="top" constant="8" id="sq2-CX-Twg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3013.5999999999999" y="-639.13043478260875"/>
         </scene>
         <!--Filtro-->
         <scene sceneID="gEv-WH-pkd">
@@ -1777,5 +1810,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="OSe-N0-LXN"/>
         <segue reference="KAY-26-FEb"/>
+        <segue reference="EGa-Dd-7ac"/>
     </inferredMetricsTieBreakers>
 </document>
