@@ -963,7 +963,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Teatro Nacional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-fu-yc8">
-                                                            <rect key="frame" x="69" y="11" width="249" height="21"/>
+                                                            <rect key="frame" x="69" y="11" width="290" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1135,11 +1135,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapaTeste" translatesAutoresizingMaskIntoConstraints="NO" id="n9B-0A-gnu" userLabel="ImgView_capa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientePreto" translatesAutoresizingMaskIntoConstraints="NO" id="T6U-M2-hVb">
-                                                    <rect key="frame" x="0.0" y="111" width="667" height="100"/>
+                                                    <rect key="frame" x="0.0" y="111" width="375" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="0Ff-La-9uV"/>
                                                     </constraints>
@@ -1151,7 +1151,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-KF-rCp">
-                                                    <rect key="frame" x="317" y="187" width="33" height="16"/>
+                                                    <rect key="frame" x="171" y="187" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1163,11 +1163,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c0-XS-Xcp">
-                                                    <rect key="frame" x="627" y="16" width="24" height="24"/>
+                                                    <rect key="frame" x="335" y="16" width="24" height="24"/>
                                                     <state key="normal" image="ic_favorite"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grátis" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3E5-P4-o7A">
-                                                    <rect key="frame" x="624" y="187" width="35" height="16"/>
+                                                    <rect key="frame" x="332" y="187" width="35" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1560,28 +1560,50 @@
                                 <rect key="frame" x="8" y="8" width="359" height="613"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdZ-ZJ-9dU">
-                                    <size key="itemSize" width="116" height="113"/>
+                                    <size key="itemSize" width="116" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="GeneroCell" reuseIdentifier="GeneroCell" id="gBB-fV-Iom" customClass="GeneroCollectionViewCell" customModule="AppTeatro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-bx-0Rr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="113"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.76475566630000003" green="0.23561424019999999" blue="0.20908716320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-Vx-ijF">
+                                                    <rect key="frame" x="0.0" y="120" width="116" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-Wa-iHa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="vAi-Wa-iHa" secondAttribute="height" multiplier="1:1" id="Okh-7F-nMR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <state key="normal" title="Button" image="generos_comedia"/>
+                                                    <state key="selected" image="generos_suspense"/>
+                                                    <connections>
+                                                        <action selector="setectGenero:" destination="gBB-fV-Iom" eventType="touchUpInside" id="r3K-0I-bSg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="vAi-Wa-iHa" firstAttribute="leading" secondItem="gBB-fV-Iom" secondAttribute="leading" id="07l-7C-NFy"/>
+                                            <constraint firstItem="mCh-Vx-ijF" firstAttribute="top" secondItem="vAi-Wa-iHa" secondAttribute="bottom" constant="4" id="3hC-C7-zPo"/>
+                                            <constraint firstItem="vAi-Wa-iHa" firstAttribute="top" secondItem="gBB-fV-Iom" secondAttribute="top" id="4du-z2-DxK"/>
+                                            <constraint firstAttribute="trailing" secondItem="vAi-Wa-iHa" secondAttribute="trailing" id="FRv-Yo-bLF"/>
+                                            <constraint firstItem="mCh-Vx-ijF" firstAttribute="leading" secondItem="gBB-fV-Iom" secondAttribute="leading" id="h4E-ty-xBV"/>
+                                            <constraint firstAttribute="trailing" secondItem="mCh-Vx-ijF" secondAttribute="trailing" id="txs-3E-Sov"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="imgView_genero" destination="C7G-bx-0Rr" id="Fog-4p-ndi"/>
+                                            <outlet property="btn_genero" destination="vAi-Wa-iHa" id="BEp-tX-xlq"/>
+                                            <outlet property="label_genero" destination="mCh-Vx-ijF" id="Vvv-v0-Mez"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1619,6 +1641,9 @@
                             <constraint firstItem="qTc-80-dAq" firstAttribute="top" secondItem="yQK-vk-VKQ" secondAttribute="top" constant="8" id="sq2-CX-Twg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView_generos" destination="qTc-80-dAq" id="lwW-YE-NM3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1796,6 +1821,8 @@
         <image name="SideMenuIcon" width="25" height="25"/>
         <image name="TeatroNacional" width="912" height="570"/>
         <image name="eventosIcon" width="512" height="512"/>
+        <image name="generos_comedia" width="200" height="200"/>
+        <image name="generos_suspense" width="200" height="200"/>
         <image name="gradientePreto" width="375" height="112"/>
         <image name="ic_attach_money" width="24" height="24"/>
         <image name="ic_description" width="24" height="24"/>

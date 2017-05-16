@@ -9,7 +9,18 @@
 import UIKit
 
 class GeneroCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var label_genero: UILabel!
+    @IBOutlet weak var btn_genero: UIButton!
     
-    @IBOutlet weak var imgView_genero: UIImageView!
+    var btnIsSelected : Bool = false
     
+    @IBAction func setectGenero(_ sender: Any) {
+        if btnIsSelected{
+            btn_genero.isSelected = false
+            btnIsSelected = false
+        }else{
+            btn_genero.isSelected = true
+            btnIsSelected = true
+        }
+    }
 }
