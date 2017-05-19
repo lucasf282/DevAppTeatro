@@ -27,6 +27,7 @@
 		1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
+		AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
 		AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */; };
 		AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA611EBFA699008F0856 /* PageViewController.swift */; };
@@ -76,6 +77,7 @@
 		1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesTableViewController.swift; path = Controllers/DetalhesTableViewController.swift; sourceTree = "<group>"; };
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PesquisaViewController.swift; path = Controllers/PesquisaViewController.swift; sourceTree = "<group>"; };
+		AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Manager/CoreDataManager.swift; sourceTree = "<group>"; };
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
 		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
 		AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppTeatro-Bridging-Header.h"; path = "Library/AppTeatro-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
+				AF3FAA761ECE623F00FD9E2F /* Manager */,
 				AF8A4C491EBE259100F67EF7 /* Library */,
 				1F7F580E1EBD1D4500644A1F /* Views */,
 				1F6264C91EB93B5A00AB8DED /* Controllers */,
@@ -199,6 +202,14 @@
 				1FA676F51EA3E41C00150964 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF3FAA761ECE623F00FD9E2F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		AF8A4C491EBE259100F67EF7 /* Library */ = {
@@ -358,6 +369,7 @@
 				3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
+				AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
 				1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */,
 				AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */,
