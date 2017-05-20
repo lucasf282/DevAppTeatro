@@ -10,18 +10,20 @@ import UIKit
 
 class EventosTableViewController: UITableViewController {
     
-    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
-    
+    var evento : eventoItem?
+    let detalheEventoSegue = "MostrarDetalheEvento"
     fileprivate var eventoItemArray = [eventoItem]()
+    
+    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         if self.revealViewController() != nil {
             btnMenuButton.target = revealViewController()
             btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -29,7 +31,7 @@ class EventosTableViewController: UITableViewController {
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
-        //Core Data
+        //Inicialização do Core Data
         // 1. Deletar todos os objetos da base
         //CoreDataManager.cleanCoreData()
         
@@ -41,22 +43,25 @@ class EventosTableViewController: UITableViewController {
         
     }
     
-    func presetCoreData() {
-        CoreDataManager.storeObj(nome: "Improvaveis", genero: "Teatro UNIP", descricao: "R$ 20,00")
-        CoreDataManager.storeObj(nome: "Melhores do Mundo", genero: "Teatro dos Bancários", descricao: "R$ 30,00")
-        CoreDataManager.storeObj(nome: "G7", genero: "Teatro Marista", descricao: "R$ 35,00")
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Table view data source
+    
+    func presetCoreData() {
+        
+        CoreDataManager.storeObj(nome: "Improvaveis", diaHora: "21/02 - 19h", local: "Teatro UNIP", valor: "R$ 30,00", descricao: "A Cia.Barbixas de Humor é formada por...")
+        
+        CoreDataManager.storeObj(nome: "Melhores do Mundo", diaHora: "10/05 - 20h", local: "Teatro dos Bancários", valor: "R$ 40,00", descricao: "A Cia de comédia Os Melhores do Mundo...")
+        
+        CoreDataManager.storeObj(nome: "G7", diaHora: "06/06 - 18h", local: "Teatro Marista", valor: "R$ 25,00", descricao: "O G7 há 14 anos faz teatro...")
+    }
+    
     func updateData() {
         eventoItemArray = CoreDataManager.fetchObj()
     }
-    
-    // MARK: - Table view data source
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {
     //        // #warning Incomplete implementation, return the number of sections
@@ -68,7 +73,6 @@ class EventosTableViewController: UITableViewController {
         return eventoItemArray.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventoCell", for: indexPath) as! EventoTableViewCell
         
@@ -79,8 +83,9 @@ class EventosTableViewController: UITableViewController {
         
         cell.ImgView_capa.image = UIImage(named: evtItem.eventoNome!)
         cell.labelTitulo.text = evtItem.eventoNome!
-        cell.labelLocal.text = evtItem.eventoGenero!
-        cell.labelPreco.text = evtItem.eventoDescricao!
+        cell.labelDataHora.text = evtItem.eventoDiaeHora!
+        cell.labelLocal.text = evtItem.eventoLocal!
+        cell.labelPreco.text = evtItem.eventoValor!
         
         return cell
     }
@@ -91,6 +96,10 @@ class EventosTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.evento = eventoItemArray[indexPath.row]
+        self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -127,14 +136,38 @@ class EventosTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        switch identifier {
+        case detalheEventoSegue:
+            return self.evento != nil
+        default:
+            return true
+            
+        }
+        
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier{
+            switch identifier {
+            case detalheEventoSegue:
+                (segue.destination as! DescricaoTableViewController).evento = self.evento!
+                self.evento = nil
+                
+            default:
+                break;
+                
+            }
+            
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+        }
+    }
     
 }

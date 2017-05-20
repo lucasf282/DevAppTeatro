@@ -10,21 +10,29 @@ import UIKit
 import CoreData
 
 struct eventoItem {
+    
     var eventoNome:String?
-    var eventoGenero:String?
+    var eventoDiaeHora:String?
+    var eventoLocal:String?
+    var eventoValor:String?
     var eventoDescricao:String?
     
     init() {
         eventoNome = ""
-        eventoGenero = ""
+        eventoDiaeHora = ""
+        eventoLocal = ""
+        eventoValor = ""
         eventoDescricao = ""
     }
     
-    init(nome:String,genero:String,descricao:String) {
+    init(nome:String,diaHora:String,local:String,valor:String,descricao:String) {
         self.eventoNome = nome
-        self.eventoGenero = genero
+        self.eventoDiaeHora = diaHora
+        self.eventoLocal = local
+        self.eventoValor = valor
         self.eventoDescricao = descricao
     }
+    
 }
 
 class CoreDataManager: NSObject {
@@ -35,7 +43,7 @@ class CoreDataManager: NSObject {
     }
     
     ///store obj into core data
-    class func storeObj(nome:String,genero:String,descricao:String) {
+    class func storeObj(nome:String,diaHora:String,local:String,valor:String,descricao:String) {
         
         let context = getContext()
         
@@ -44,7 +52,9 @@ class CoreDataManager: NSObject {
         let managedObj = NSManagedObject(entity: entity!, insertInto: context)
         
         managedObj.setValue(nome, forKey: "nome")
-        managedObj.setValue(genero, forKey: "genero")
+        managedObj.setValue(diaHora, forKey: "diaHora")
+        managedObj.setValue(local, forKey: "lugar")
+        managedObj.setValue(valor, forKey: "valor")
         managedObj.setValue(descricao, forKey: "descricao")
         
         do {
@@ -68,9 +78,9 @@ class CoreDataManager: NSObject {
             case 0:
                 filterKeyword = "nome"
             case 1:
-                filterKeyword = "genero"
+                filterKeyword = "lugar"
             default:
-                filterKeyword = "descricao"
+                filterKeyword = "nome"
             }
             
             let predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
@@ -84,9 +94,9 @@ class CoreDataManager: NSObject {
             let fetchResult = try getContext().fetch(fetchRequest)
             
             for item in fetchResult {
-                let evt = eventoItem(nome: item.nome!, genero: item.genero!, descricao: item.descricao!)
+                let evt = eventoItem(nome: item.nome!, diaHora: item.diaHora!, local: item.lugar!, valor: item.valor!, descricao: item.descricao!)
                 aray.append(evt)
-                print("Titulo:"+evt.eventoNome!+"\nGenero:"+evt.eventoGenero!+"\nDescricao:"+evt.eventoDescricao!+"\n")
+                print("Titulo:"+evt.eventoNome!+"\nDia e Hora:"+evt.eventoDiaeHora!+"\nLocal:"+evt.eventoLocal!+"\nValor:"+evt.eventoValor!+"\nDescrição:"+evt.eventoDescricao!+"\n")
             }
         }catch {
             print(error.localizedDescription)

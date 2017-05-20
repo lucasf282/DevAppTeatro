@@ -8,9 +8,12 @@
     </entity>
     <entity name="Evento" representedClassName="Evento" syncable="YES" codeGenerationType="class">
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaHora" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="genero" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lugar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valor" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="listaAgenda" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Agenda" inverseName="evento" inverseEntity="Agenda" syncable="YES"/>
         <relationship name="local" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Local" inverseName="listaEvento" inverseEntity="Local" syncable="YES"/>
     </entity>
@@ -30,8 +33,8 @@
     </entity>
     <elements>
         <element name="Agenda" positionX="376" positionY="-3249" width="128" height="103"/>
+        <element name="Evento" positionX="547" positionY="-3249" width="128" height="178"/>
         <element name="Ingresso" positionX="378" positionY="-3096" width="128" height="103"/>
-        <element name="Evento" positionX="547" positionY="-3249" width="128" height="133"/>
         <element name="Local" positionX="738" positionY="-3249" width="128" height="133"/>
     </elements>
 </model>
