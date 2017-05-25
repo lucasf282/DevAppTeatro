@@ -8,20 +8,27 @@
 
 import UIKit
 
+@objc protocol GeneroSelectedDelegate{
+    func generoSelectedDelegate(generosSelecionados: [String])
+}
+
 class GenerosViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    var delegate : GeneroSelectedDelegate?
+    var generosSelecionados:[String]?
     
     let generos = [["generos_comedia", "comédia"], ["generos_drama", "drama"], ["generos_suspense", "suspense"], ["generos_outro1", "outro1"], ["generos_outro2", "outro2"], ["generos_outro3", "outro3"], ["generos_outro4", "outro4"]]
     
-    var generosSelecionados:[Array<Any>] = []
     
     @IBOutlet weak var collectionView_generos: UICollectionView!
     
     @IBAction func btnOK(_ sender: Any) {
         generosSelected()
-        dismiss(animated: true, completion: nil)
+        delegate?.generoSelectedDelegate(generosSelecionados: generosSelecionados ?? ["selecionar"])
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnCancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -56,12 +63,18 @@ class GenerosViewController: UIViewController , UICollectionViewDelegate, UIColl
     
     func generosSelected(){
         let cells = collectionView_generos.visibleCells
-        generosSelecionados.removeAll()
+        if generosSelecionados == nil{
+            generosSelecionados = []
+        }else{
+            generosSelecionados?.removeAll()
+        }
         for cell in cells {
             let generoCell = cell as! GeneroCollectionViewCell
-            generosSelecionados.append([generoCell.label_genero.text!, generoCell.btnIsSelected])
+            if generoCell.btnIsSelected {
+                generosSelecionados?.append(generoCell.label_genero.text!) 
+            }
         }
-        print(generosSelecionados)
+        print(generosSelecionados ?? "vazio")
     }
     
     /*

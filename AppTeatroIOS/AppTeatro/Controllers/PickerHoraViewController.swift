@@ -33,7 +33,6 @@ class PickerHoraViewController: UIViewController, UIPickerViewDelegate, UIPicker
         super.viewDidLoad()
         let index = horarios.index(of: horaSelecionada ?? "") ?? 0
         pickerView_hora.selectRow(index, inComponent: 0, animated: true)
-        pickerView(pickerView_hora, didSelectRow: index, inComponent: 1)
     }
     
     override func didReceiveMemoryWarning() {

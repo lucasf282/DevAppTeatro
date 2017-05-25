@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -446,11 +446,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-kF-Iyr" userLabel="Genero">
                                                 <rect key="frame" x="76" y="56" width="291" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <segue destination="RJc-rE-jnD" kind="popoverPresentation" identifier="GeneroPopover" popoverAnchorView="Pe1-kF-Iyr" id="EGa-Dd-7ac">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-4v-nGf">
                                                 <rect key="frame" x="8" y="103" width="41" height="21"/>
@@ -680,7 +675,7 @@
                     <navigationItem key="navigationItem" title="Eventos" id="c8p-5K-Whd">
                         <barButtonItem key="leftBarButtonItem" image="SideMenuIcon" id="kto-IE-0Rw"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="bCF-Ei-vfC">
-                            <rect key="frame" x="68" y="8" width="239" height="29"/>
+                            <rect key="frame" x="68" y="7.5" width="239" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Eventos"/>
@@ -1059,7 +1054,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zho-7k-H4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264.617691154423" y="71.200000000000003"/>
+            <point key="canvasLocation" x="2265" y="72"/>
         </scene>
         <!--Detalhes-->
         <scene sceneID="HM8-zU-3te">
@@ -1120,7 +1115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="z8p-KG-izv">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="z8p-KG-izv">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -1194,9 +1189,6 @@
                                                 <constraint firstItem="n9B-0A-gnu" firstAttribute="width" secondItem="n9B-0A-gnu" secondAttribute="height" multiplier="16:9" id="zsY-cK-MTy"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="DC1-xq-oPP" kind="show" id="KAY-26-FEb"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -1220,7 +1212,7 @@
                     <navigationItem key="navigationItem" title="Busca" id="Fh5-OU-I8q">
                         <barButtonItem key="rightBarButtonItem" title="Filtro" id="mZG-zk-mJr">
                             <connections>
-                                <segue destination="egC-UP-mFo" kind="show" id="Pg7-8a-kPV"/>
+                                <segue destination="HXr-j3-MlX" kind="show" id="gan-51-s3a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1382,7 +1374,7 @@
         <!--Filtro-->
         <scene sceneID="xVG-wC-m5h">
             <objects>
-                <viewController title="Filtro" id="ScG-PC-L2E" sceneMemberID="viewController">
+                <viewController title="Filtro" id="ScG-PC-L2E" customClass="FiltroViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X0h-Ga-VMi"/>
                         <viewControllerLayoutGuide type="bottom" id="4qo-Os-L5X"/>
@@ -1562,6 +1554,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="P0J-FI-HmO"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pf-Kr-v8r" id="FU5-GA-G8U"/>
+                                    <outlet property="delegate" destination="9pf-Kr-v8r" id="xrJ-KN-eT6"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chD-Eg-W9m">
                                 <rect key="frame" x="16" y="244" width="167.5" height="30"/>
@@ -1599,7 +1595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvL-K2-rbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="-1310"/>
+            <point key="canvasLocation" x="3046" y="-619"/>
         </scene>
         <!--Generos-->
         <scene sceneID="Upo-PF-a0D">
@@ -1610,12 +1606,12 @@
                         <viewControllerLayoutGuide type="bottom" id="pAu-7A-rVw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQK-vk-VKQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-80-dAq">
-                                <rect key="frame" x="8" y="8" width="359" height="613"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="8" y="8" width="359" height="316"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdZ-ZJ-9dU">
                                     <size key="itemSize" width="116" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1670,14 +1666,14 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-UU-MT9">
-                                <rect key="frame" x="191" y="629" width="176" height="30"/>
+                                <rect key="frame" x="191" y="332" width="176" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="btnCancel:" destination="RJc-rE-jnD" eventType="touchUpInside" id="fn2-ys-YNM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErY-0P-DPP">
-                                <rect key="frame" x="8" y="629" width="176" height="30"/>
+                                <rect key="frame" x="8" y="332" width="176" height="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
                                     <action selector="btnOK:" destination="RJc-rE-jnD" eventType="touchUpInside" id="etm-mV-rot"/>
@@ -1698,13 +1694,15 @@
                             <constraint firstItem="qTc-80-dAq" firstAttribute="top" secondItem="yQK-vk-VKQ" secondAttribute="top" constant="8" id="sq2-CX-Twg"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="370"/>
                     <connections>
                         <outlet property="collectionView_generos" destination="qTc-80-dAq" id="lwW-YE-NM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013.5999999999999" y="-639.13043478260875"/>
+            <point key="canvasLocation" x="3046" y="-1033"/>
         </scene>
         <!--Filtro-->
         <scene sceneID="gEv-WH-pkd">
@@ -1736,7 +1734,12 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ka-Eg-uVa" userLabel="Genero">
                                                 <rect key="frame" x="76" y="56" width="291" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Selecione"/>
+                                                <connections>
+                                                    <segue destination="RJc-rE-jnD" kind="popoverPresentation" identifier="generosSegue" popoverAnchorView="1ka-Eg-uVa" id="35R-GH-0b7">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-Jn-9L7">
                                                 <rect key="frame" x="8" y="103" width="41" height="21"/>
@@ -1776,18 +1779,20 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMN-r4-SZq" userLabel="HoraMax">
                                                 <rect key="frame" x="225" y="218" width="142" height="30"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Selecionar"/>
                                                 <connections>
-                                                    <segue destination="9pf-Kr-v8r" kind="popoverPresentation" identifier="horaPickerMax" popoverAnchorView="QMN-r4-SZq" id="9Xe-3u-sgu">
+                                                    <segue destination="9pf-Kr-v8r" kind="popoverPresentation" identifier="horaPickerMaxSegue" popoverAnchorView="QMN-r4-SZq" id="RFX-DY-HDx">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-Vt-zYA" userLabel="HoraMin">
                                                 <rect key="frame" x="76" y="218" width="142" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Selecionar"/>
                                                 <connections>
-                                                    <segue destination="9pf-Kr-v8r" kind="presentation" identifier="horaPickerMin" modalPresentationStyle="currentContext" modalTransitionStyle="partialCurl" id="woR-9p-UEd"/>
+                                                    <segue destination="9pf-Kr-v8r" kind="popoverPresentation" identifier="horaPickerMinSegue" popoverAnchorView="aO2-Vt-zYA" id="R8W-3m-oN8">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfz-Il-lpj">
@@ -1908,7 +1913,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OSe-N0-LXN"/>
-        <segue reference="KAY-26-FEb"/>
-        <segue reference="woR-9p-UEd"/>
+        <segue reference="RFX-DY-HDx"/>
     </inferredMetricsTieBreakers>
 </document>

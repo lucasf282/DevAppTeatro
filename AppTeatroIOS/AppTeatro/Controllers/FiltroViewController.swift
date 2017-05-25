@@ -8,11 +8,12 @@
 
 import UIKit
 
-class FiltroViewController: UIViewController, HoraSelectedDelegate {
+class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelectedDelegate{
     
     var horaMin: String?
     var horaMax: String?
-    var isHoraMin = true // variavel para seber quem chamou o picker de hora
+    var isHoraMin = true // variavel para seber qual botão chamou o picker de hora
+    var generosSelecionados: [String]?
     
     @IBOutlet weak var btn_genero: UIButton!
     @IBOutlet weak var TextFild_local: UITextField!
@@ -42,21 +43,36 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate {
             btn_horaMax.setTitle(hora, for: UIControlState.selected)
         }
     }
-
+    
+    func generoSelectedDelegate(generosSelecionados: [String]) {
+        if generosSelecionados.count == 1 {
+            btn_genero.setTitle(generosSelecionados[0], for: UIControlState.normal)
+            btn_genero.setTitle(generosSelecionados[0], for: UIControlState.selected)
+        }else{
+            btn_genero.setTitle("Vários", for: UIControlState.normal)
+            btn_genero.setTitle("Vários", for: UIControlState.selected)
+        }
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "horaPickerMin" {
+        if segue.identifier == "horaPickerMinSegue" {
             let controller = segue.destination as! PickerHoraViewController
             controller.delegate = self
             controller.horaSelecionada = horaMin
             isHoraMin = true
         }
-        if segue.identifier == "horaPickerMax" {
+        if segue.identifier == "horaPickerMaxSegue" {
             let controller = segue.destination as! PickerHoraViewController
             controller.delegate = self
             controller.horaSelecionada = horaMax
             isHoraMin = false
+        }
+        if segue.identifier == "generosSegue" {
+            let controller = segue.destination as! GenerosViewController
+            controller.delegate = self
+            controller.generosSelecionados = generosSelecionados
         }
     }
 

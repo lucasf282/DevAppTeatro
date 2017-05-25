@@ -126,8 +126,8 @@
 				1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */,
 				1F6795971EC26062001FE447 /* LoginViewController.swift */,
 				1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */,
-				1FBE66041ECA0CE200BF87B4 /* GenerosViewController.swift */,
 				1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */,
+				1FBE66041ECA0CE200BF87B4 /* GenerosViewController.swift */,
 				1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */,
 			);
 			name = Controllers;

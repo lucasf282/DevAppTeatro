@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTeatro/Controllers/GenerosViewController.swift"
+            timestampString = "517354276.35171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "btnOK(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppTeatro.GenerosViewController.btnOK (Any) -&gt; ()"
+                  moduleName = "AppTeatro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hc5mac10/Documents/AppTeatroIOS/AppTeatro/Controllers/GenerosViewController.swift"
+                  timestampString = "517354607.161743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppTeatro.GenerosViewController.(btnOK (Any) -&gt; ()).(implicit closure #1)"
+                  moduleName = "AppTeatro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hc5mac10/Documents/AppTeatroIOS/AppTeatro/Controllers/GenerosViewController.swift"
+                  timestampString = "517354607.163893"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
