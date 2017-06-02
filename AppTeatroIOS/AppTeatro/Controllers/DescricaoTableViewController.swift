@@ -10,7 +10,7 @@ import UIKit
 
 class DescricaoTableViewController: UITableViewController {
     
-    var evento : eventoItem?
+    var evento : Evento?
     
     @IBOutlet weak var textView_desc: UITextView!
     @IBOutlet weak var image: UIImageView!
@@ -23,10 +23,10 @@ class DescricaoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        image.image = UIImage(named: (evento?.eventoNome)!)
-        dataHora.text = evento?.eventoDiaeHora
-        local.text = evento?.eventoLocal
-        preco.text = evento?.eventoValor
+        image.image = UIImage(named: evento?.nome ?? "CapaTeste")
+        dataHora.text = evento?.diaHora
+        local.text = evento?.local?.nome
+        preco.text = evento?.valor
         
     }
     

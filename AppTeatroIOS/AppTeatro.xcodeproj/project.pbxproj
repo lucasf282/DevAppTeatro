@@ -28,7 +28,6 @@
 		1FC48EA11EC5333F0028291A /* DetalheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */; };
 		1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
-		3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */; };
 		AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
 		AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */; };
@@ -80,7 +79,6 @@
 		1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheTableViewCell.swift; path = Views/DetalheTableViewCell.swift; sourceTree = "<group>"; };
 		1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesTableViewController.swift; path = Controllers/DetalhesTableViewController.swift; sourceTree = "<group>"; };
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
-		3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PesquisaViewController.swift; path = Controllers/PesquisaViewController.swift; sourceTree = "<group>"; };
 		AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Manager/CoreDataManager.swift; sourceTree = "<group>"; };
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
 		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
-				3BD7ED811EBAA27E007631B5 /* PesquisaViewController.swift */,
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 				1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */,
@@ -131,6 +128,13 @@
 				1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1F7546FD1EE1F08000967C29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		1F7F580E1EBD1D4500644A1F /* Views */ = {
@@ -168,6 +172,7 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
+				1F7546FD1EE1F08000967C29 /* Extensions */,
 				AF3FAA761ECE623F00FD9E2F /* Manager */,
 				AF8A4C491EBE259100F67EF7 /* Library */,
 				1F7F580E1EBD1D4500644A1F /* Views */,
@@ -373,7 +378,6 @@
 				1FBE66051ECA0CE200BF87B4 /* GenerosViewController.swift in Sources */,
 				1F9D55A91ED1048200F085F9 /* FiltroViewController.swift in Sources */,
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
-				3BD7ED821EBAA27E007631B5 /* PesquisaViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				1F6264CD1EB93DC500AB8DED /* EventoTableViewCell.swift in Sources */,
 				AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */,
