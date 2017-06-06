@@ -8,13 +8,15 @@
 
 import UIKit
 
-class EventosTableViewController: UITableViewController {
+class EventosTableViewController: UITableViewController, UISearchBarDelegate {
     
     var evento : eventoItem?
     let detalheEventoSegue = "MostrarDetalheEvento"
     fileprivate var eventoItemArray = [eventoItem]()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,6 +170,18 @@ class EventosTableViewController: UITableViewController {
             // Get the new view controller using segue.destinationViewController.
             // Pass the selected object to the new view controller.
         }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else{
+            eventoItemArray = CoreDataManager.fetchObj()
+            tableView.reloadData()
+            return
+        }
+        
+        eventoItemArray = CoreDataManager.fetchObj(selectedScopeIdx: searchBar.selectedScopeButtonIndex, targetText: searchText)
+        tableView.reloadData()
+        print(searchText)
     }
     
 }
