@@ -30,17 +30,6 @@ class CoreDataManager {
         let container = NSPersistentContainer(name: "AppTeatro")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -65,41 +54,50 @@ class CoreDataManager {
     
     // MARK: - Core Data Search support
     
-    class func fetchObj(entityObject:AnyClass, selectedScopeIdx:Int?=nil,targetText:String?=nil) -> [Evento]{
-        var aray = [Evento]()
+    //    func retrieve<T: NSManagedObject>(entityClass:T.Type, sortBy:String? = nil, isAscending:Bool = true, predicate:NSPredicate? = nil) -> T[] {
+    //        let entityName = NSStringFromClass(entityClass)
+    //        let request    = NSFetchRequest(entityName: entityName)
+    //
+    //        request.returnsObjectsAsFaults = false
+    //        request.predicate = predicate
+    //
+    //        if (sortBy != nil) {
+    //            var sorter = NSSortDescriptor(key:sortBy , ascending:isAscending)
+    //            request.sortDescriptors = [sorter]
+    //        }
+    //
+    //        var error: NSError? = nil
+    //        var fetchedResult = myDataModel.managedObjectContext.executeFetchRequest(request, error: &error)
+    //        if !error {
+    //            println("errore: \(error)")
+    //        }
+    //
+    //        println("retrieved \(fetchedResult.count) elements for \(entityName)")
+    //        return fetchedResult
+    //    }
+    
+    class func fetchObj<T: NSManagedObject>(entityName:T.Type, sortBy:String? = nil, isAscending:Bool = true, predicate:NSPredicate? = nil) -> [T]{
+        var aray = [NSManagedObject]()
         
-        let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest<NSManagedObject>(entityName: String(describing: entityObject))
-        
-        if selectedScopeIdx != nil && targetText != nil{
-            
-            var filterKeyword = "nome"
-            //            switch selectedScopeIdx! {
-            //            case 0:
-            //                filterKeyword = "nome"
-            //            case 1:
-            //                filterKeyword = "lugar"
-            //            default:
-            //                filterKeyword = "nome"
-            //            }
-            
-            let predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
-            //predicate = NSPredicate(format: "by == %@" , "wang")
-            //predicate = NSPredicate(format: "year > %@", "2015")
-            
-            fetchRequest.predicate = predicate
+        let fetchRequest:NSFetchRequest<T> = NSFetchRequest<T>(entityName: String(describing: T.self))
+        fetchRequest.predicate = predicate
+        if (sortBy != nil) {
+            let sorter = NSSortDescriptor(key:sortBy , ascending:isAscending)
+            fetchRequest.sortDescriptors = [sorter]
         }
         
         do {
             let fetchResult = try CoreDataManager.getContext().fetch(fetchRequest)
             
-            aray = fetchResult as! [Evento]
+            aray = fetchResult
             
         }catch {
             print(error.localizedDescription)
         }
         
-        return aray
+        return aray as! [T]
     }
+
     
     ///delete all the data in core data
     class func cleanCoreData() {

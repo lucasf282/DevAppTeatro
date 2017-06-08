@@ -30,10 +30,10 @@ class EventosTableViewController: UITableViewController {
         
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base
-        CoreDataManager.cleanCoreData()
+        //CoreDataManager.cleanCoreData()
         
         // 2. Inserir objetos na base
-        presetCoreData()
+        //presetCoreData()
         
         // 3. Sincronizar objetos da base
         updateData()
@@ -93,7 +93,7 @@ class EventosTableViewController: UITableViewController {
     }
     
     func updateData() {
-        eventoItemArray = CoreDataManager.fetchObj(entityObject: Evento.self)
+        eventoItemArray = CoreDataManager.fetchObj( entityName: Evento.self)
     }
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -131,43 +131,7 @@ class EventosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.evento = eventoItemArray[indexPath.row]
         self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
-    }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
+    }    
     
     // MARK: - Navigation
     
@@ -202,4 +166,22 @@ class EventosTableViewController: UITableViewController {
         }
     }
     
+}
+
+// MARK: - SearchBarDelegate
+extension EventosTableViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else{
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
+            tableView.reloadData()
+            return
+        }
+        
+        let predicate = NSPredicate(format: "nome contains[c] %@", searchText)
+        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, predicate: predicate)
+//        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: predicate)
+        
+        tableView.reloadData()
+        print(searchText)
+    }
 }
