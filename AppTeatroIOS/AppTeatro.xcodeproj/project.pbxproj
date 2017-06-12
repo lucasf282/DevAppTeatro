@@ -33,8 +33,11 @@
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
+		AF9E624A1EEC7AAA00C15D61 /* TeatroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E62491EEC7AAA00C15D61 /* TeatroTableViewCell.swift */; };
+		AF9E624C1EEC7D9B00C15D61 /* TeatrosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E624B1EEC7D9B00C15D61 /* TeatrosTableViewController.swift */; };
 		AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */; };
 		AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA611EBFA699008F0856 /* PageViewController.swift */; };
+		AFC81DF61EEC52A300C2DA69 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC81DF51EEC52A300C2DA69 /* RegisterPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +92,11 @@
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
 		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
 		AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppTeatro-Bridging-Header.h"; path = "Library/AppTeatro-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF9E62491EEC7AAA00C15D61 /* TeatroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeatroTableViewCell.swift; path = Views/TeatroTableViewCell.swift; sourceTree = "<group>"; };
+		AF9E624B1EEC7D9B00C15D61 /* TeatrosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeatrosTableViewController.swift; path = Controllers/TeatrosTableViewController.swift; sourceTree = "<group>"; };
 		AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentPageViewController.swift; path = Controllers/ContentPageViewController.swift; sourceTree = "<group>"; };
 		AFC5EA611EBFA699008F0856 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controllers/PageViewController.swift; sourceTree = "<group>"; };
+		AFC81DF51EEC52A300C2DA69 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterPageViewController.swift; path = Controllers/RegisterPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,8 @@
 				1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */,
 				1FBE66041ECA0CE200BF87B4 /* GenerosViewController.swift */,
 				1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */,
+				AFC81DF51EEC52A300C2DA69 /* RegisterPageViewController.swift */,
+				AF9E624B1EEC7D9B00C15D61 /* TeatrosTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 				1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */,
 				1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */,
 				1FBE66021EC68DAB00BF87B4 /* LocalTableViewCell.swift */,
+				AF9E62491EEC7AAA00C15D61 /* TeatroTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9E624C1EEC7D9B00C15D61 /* TeatrosTableViewController.swift in Sources */,
 				1F6795981EC26062001FE447 /* LoginViewController.swift in Sources */,
 				1F79304A1EEF0F1C008D6D30 /* TeatroTableViewCell.swift in Sources */,
 				1FBE66051ECA0CE200BF87B4 /* GenerosViewController.swift in Sources */,
@@ -391,6 +401,7 @@
 				1F7930451EEF0EC1008D6D30 /* RegisterPageViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
 				AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */,
+				AFC81DF61EEC52A300C2DA69 /* RegisterPageViewController.swift in Sources */,
 				1F9D55CB1ED4D31400F085F9 /* PickerHoraViewController.swift in Sources */,
 				1FA676CC1EA3E3A400150964 /* AppTeatro.xcdatamodeld in Sources */,
 				1FC48EA31EC533F40028291A /* DetalhesTableViewController.swift in Sources */,
