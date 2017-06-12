@@ -54,28 +54,6 @@ class CoreDataManager {
     
     // MARK: - Core Data Search support
     
-    //    func retrieve<T: NSManagedObject>(entityClass:T.Type, sortBy:String? = nil, isAscending:Bool = true, predicate:NSPredicate? = nil) -> T[] {
-    //        let entityName = NSStringFromClass(entityClass)
-    //        let request    = NSFetchRequest(entityName: entityName)
-    //
-    //        request.returnsObjectsAsFaults = false
-    //        request.predicate = predicate
-    //
-    //        if (sortBy != nil) {
-    //            var sorter = NSSortDescriptor(key:sortBy , ascending:isAscending)
-    //            request.sortDescriptors = [sorter]
-    //        }
-    //
-    //        var error: NSError? = nil
-    //        var fetchedResult = myDataModel.managedObjectContext.executeFetchRequest(request, error: &error)
-    //        if !error {
-    //            println("errore: \(error)")
-    //        }
-    //
-    //        println("retrieved \(fetchedResult.count) elements for \(entityName)")
-    //        return fetchedResult
-    //    }
-    
     class func fetchObj<T: NSManagedObject>(entityName:T.Type, sortBy:String? = nil, isAscending:Bool = true, predicate:NSPredicate? = nil) -> [T]{
         var aray = [NSManagedObject]()
         
@@ -102,13 +80,16 @@ class CoreDataManager {
     ///delete all the data in core data
     class func cleanCoreData() {
         
-        let fetchRequest:NSFetchRequest<Evento> = Evento.fetchRequest()
+        let fetchRequestEvento:NSFetchRequest<Evento> = Evento.fetchRequest()
+        let fetchRequestLocal:NSFetchRequest<Local> = Local.fetchRequest()
         
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        let deleteRequestEvento = NSBatchDeleteRequest(fetchRequest: fetchRequestEvento as! NSFetchRequest<NSFetchRequestResult>)
+        let deleteRequestLocal = NSBatchDeleteRequest(fetchRequest: fetchRequestLocal as! NSFetchRequest<NSFetchRequestResult>)
         
         do {
             print("deleting all contents")
-            try CoreDataManager.getContext().execute(deleteRequest)
+            try CoreDataManager.getContext().execute(deleteRequestEvento)
+            try CoreDataManager.getContext().execute(deleteRequestLocal)
         }catch {
             print(error.localizedDescription)
         }

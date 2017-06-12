@@ -195,6 +195,38 @@
                                             <segue destination="Vkl-Q8-QFZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="LvR-MS-hNJ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="4A0-US-D30" userLabel="Teatros">
+                                        <rect key="frame" x="0.0" y="310" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4A0-US-D30" id="H3x-j2-xUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_balance" translatesAutoresizingMaskIntoConstraints="NO" id="K98-SS-gYn">
+                                                    <rect key="frame" x="16" y="16" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="K98-SS-gYn" secondAttribute="height" multiplier="1:1" id="7oF-JS-F5I"/>
+                                                        <constraint firstAttribute="height" constant="32" id="wQ4-u9-IRj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teatros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7h-Nu-oHQ">
+                                                    <rect key="frame" x="60" y="21" width="60.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K98-SS-gYn" firstAttribute="leading" secondItem="H3x-j2-xUQ" secondAttribute="leadingMargin" constant="8" id="Qnh-Ly-IoK"/>
+                                                <constraint firstItem="K98-SS-gYn" firstAttribute="centerY" secondItem="H3x-j2-xUQ" secondAttribute="centerY" id="fRt-6e-A1I"/>
+                                                <constraint firstItem="B7h-Nu-oHQ" firstAttribute="leading" secondItem="K98-SS-gYn" secondAttribute="trailing" constant="12" id="mJM-ee-c0n"/>
+                                                <constraint firstItem="B7h-Nu-oHQ" firstAttribute="centerY" secondItem="H3x-j2-xUQ" secondAttribute="centerY" id="oPr-N0-1p6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="i7s-fI-P3v" kind="show" id="B7a-gU-NHS"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -295,6 +327,9 @@
                                         <state key="normal" title="Entrar">
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="Evx-ha-mfD" eventType="touchUpInside" id="Qdi-OT-0NC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKO-8g-UHr">
                                         <rect key="frame" x="8" y="278" width="160" height="30"/>
@@ -393,11 +428,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenuButton" destination="xKt-cO-W6I" id="jbx-Q7-gmn"/>
+                        <outlet property="userEmailTextField" destination="pqx-3p-MbD" id="SQa-Th-xEQ"/>
+                        <outlet property="userPasswordTextField" destination="XTI-nY-C3l" id="Rsw-Sf-Gw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-XZ-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721.46739130434787" y="813.04347826086962"/>
+            <point key="canvasLocation" x="722" y="1558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TlK-Ke-n2v">
@@ -413,7 +450,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0D-03-eYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="814"/>
+            <point key="canvasLocation" x="-74" y="1559"/>
         </scene>
         <!--Eventos-->
         <scene sceneID="pXz-jO-Xen">
@@ -896,7 +933,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zho-7k-H4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="72"/>
+            <point key="canvasLocation" x="1508" y="814"/>
         </scene>
         <!--Detalhes-->
         <scene sceneID="HM8-zU-3te">
@@ -943,12 +980,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtY-Ie-HYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="814"/>
+            <point key="canvasLocation" x="2265" y="72"/>
         </scene>
         <!--Sigin-->
         <scene sceneID="s6k-nX-2ed">
             <objects>
-                <viewController title="Sigin" id="RQK-6y-euV" sceneMemberID="viewController">
+                <viewController title="Sigin" id="RQK-6y-euV" customClass="RegisterPageViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="An0-Wr-hYg"/>
                         <viewControllerLayoutGuide type="bottom" id="xHE-o3-pdx"/>
@@ -992,6 +1029,9 @@
                                         <state key="normal" title="Criar uma conta">
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="RQK-6y-euV" eventType="touchUpInside" id="5eF-lu-cef"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-Su-aWL">
                                         <rect key="frame" x="8" y="316" width="160" height="30"/>
@@ -1072,10 +1112,15 @@
                             <constraint firstItem="O0n-VP-tL5" firstAttribute="leading" secondItem="Nui-FA-9vh" secondAttribute="leadingMargin" id="qhc-so-KVM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="repeatPasswordTextField" destination="g7F-dY-GHf" id="LEj-jb-Ixe"/>
+                        <outlet property="userEmailTextField" destination="rrt-fS-5bM" id="GXx-LR-eG6"/>
+                        <outlet property="userPasswordTextField" destination="Saz-Eb-5Ms" id="qpT-Bx-4uo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-r5-6dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="814"/>
+            <point key="canvasLocation" x="1508" y="1558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rja-FS-pBO">
@@ -1450,6 +1495,90 @@
             </objects>
             <point key="canvasLocation" x="1508" y="-639"/>
         </scene>
+        <!--Teatros-->
+        <scene sceneID="RYZ-Va-sRM">
+            <objects>
+                <tableViewController title="Teatros" id="y1E-fO-qUB" customClass="TeatrosTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkB-Iw-VXm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TeatroCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeatroCell" rowHeight="210" id="Fvt-GV-eKY" customClass="TeatroTableViewCell" customModule="AppTeatro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="210"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fvt-GV-eKY" id="fEu-Vx-7EY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeatroNacional" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-ku-NcI" userLabel="ImgView_capa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientePreto" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-l5-oyD">
+                                            <rect key="frame" x="0.0" y="109" width="375" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="GLT-Wq-GBv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-FW-ETx">
+                                            <rect key="frame" x="123" y="149" width="129" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1U3-FW-ETx" firstAttribute="centerY" secondItem="LAx-l5-oyD" secondAttribute="centerY" id="1zS-9E-jcV"/>
+                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="leading" secondItem="fEu-Vx-7EY" secondAttribute="leading" id="6j1-oR-0zM"/>
+                                        <constraint firstItem="LAx-l5-oyD" firstAttribute="trailing" secondItem="vhh-ku-NcI" secondAttribute="trailing" id="THo-ap-1Id"/>
+                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="top" secondItem="fEu-Vx-7EY" secondAttribute="top" id="bIW-jQ-gYk"/>
+                                        <constraint firstItem="LAx-l5-oyD" firstAttribute="leading" secondItem="vhh-ku-NcI" secondAttribute="leading" id="fls-R8-cG0"/>
+                                        <constraint firstAttribute="trailing" secondItem="vhh-ku-NcI" secondAttribute="trailing" id="lIT-Gh-MF9"/>
+                                        <constraint firstItem="1U3-FW-ETx" firstAttribute="centerX" secondItem="LAx-l5-oyD" secondAttribute="centerX" id="lp3-yr-qJZ"/>
+                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="width" secondItem="vhh-ku-NcI" secondAttribute="height" multiplier="16:9" id="mtw-bs-iTY"/>
+                                        <constraint firstAttribute="bottom" secondItem="LAx-l5-oyD" secondAttribute="bottom" id="nxV-Py-e1o"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgViewTeatro" destination="vhh-ku-NcI" id="bAo-nA-fcf"/>
+                                    <outlet property="labelTituloTeatro" destination="1U3-FW-ETx" id="QUV-pw-IsL"/>
+                                    <segue destination="sdB-3B-vyg" kind="show" id="jxv-wN-5id"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y1E-fO-qUB" id="enE-VQ-DsA"/>
+                            <outlet property="delegate" destination="y1E-fO-qUB" id="Uxm-ix-943"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Teatros" id="cJL-zB-chd">
+                        <barButtonItem key="leftBarButtonItem" image="SideMenuIcon" id="JAt-e8-IDp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnMenuButton" destination="JAt-e8-IDp" id="K0u-32-RtG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-K3-38N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="814"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BDq-hg-sPm">
+            <objects>
+                <navigationController id="i7s-fI-P3v" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L3c-dh-JBB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y1E-fO-qUB" kind="relationship" relationship="rootViewController" id="bHB-3d-P6e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0TR-pU-zub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="814"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CapaTeste" width="1280" height="720"/>
@@ -1459,6 +1588,7 @@
         <image name="generos_comedia" width="200" height="200"/>
         <image name="generos_suspense" width="200" height="200"/>
         <image name="gradientePreto" width="375" height="112"/>
+        <image name="ic_account_balance" width="24" height="24"/>
         <image name="ic_attach_money" width="24" height="24"/>
         <image name="ic_description" width="24" height="24"/>
         <image name="ic_event" width="24" height="24"/>
@@ -1471,6 +1601,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OSe-N0-LXN"/>
+        <segue reference="jxv-wN-5id"/>
         <segue reference="R8W-3m-oN8"/>
     </inferredMetricsTieBreakers>
 </document>

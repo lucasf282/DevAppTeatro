@@ -30,10 +30,10 @@ class EventosTableViewController: UITableViewController {
         
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base
-        //CoreDataManager.cleanCoreData()
+        CoreDataManager.cleanCoreData()
         
         // 2. Inserir objetos na base
-        //presetCoreData()
+        presetCoreData()
         
         // 3. Sincronizar objetos da base
         updateData()
@@ -93,7 +93,7 @@ class EventosTableViewController: UITableViewController {
     }
     
     func updateData() {
-        eventoItemArray = CoreDataManager.fetchObj( entityName: Evento.self)
+        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
     }
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {
