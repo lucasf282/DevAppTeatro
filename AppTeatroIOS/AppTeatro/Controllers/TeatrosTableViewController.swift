@@ -10,8 +10,8 @@ import UIKit
 
 class TeatrosTableViewController: UITableViewController {
 
-    var evento : eventoItem?
-         fileprivate var eventoItemArray = [eventoItem]()
+    var  local : Local?
+         fileprivate var  localArray = [Local]()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     
@@ -35,20 +35,17 @@ class TeatrosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return eventoItemArray.count
+        print(localArray.count)
+        return  localArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeatroCell", for: indexPath) as! TeatroTableViewCell
         
-        // Configure the cell...
-        //cell.heightAnchor.constraint(equalTo: <#T##NSLayoutDimension#>, multiplier: <#T##CGFloat#>)
+        let localItem =  localArray[indexPath.row]
         
-        let evtItem = eventoItemArray[indexPath.row]
-        
-        cell.imgViewTeatro.image = UIImage(named: evtItem.eventoNome!)
-        cell.labelTituloTeatro.text = evtItem.eventoNome!
+        cell.imgViewTeatro.image = UIImage(named: localItem.nome!)
+        cell.labelTituloTeatro.text = localItem.nome
         
         return cell
     }
@@ -61,7 +58,7 @@ class TeatrosTableViewController: UITableViewController {
 
     
     func updateData() {
-        eventoItemArray = CoreDataManager.fetchObj()
+         localArray = CoreDataManager.fetchObj(entityName: Local.self)
     }
 
 }

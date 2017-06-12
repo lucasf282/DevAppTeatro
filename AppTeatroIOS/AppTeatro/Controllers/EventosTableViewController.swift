@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class EventosTableViewController: UITableViewController, UISearchBarDelegate {
     
-    var evento : eventoItem?
+    var evento : Evento?
     let detalheEventoSegue = "MostrarDetalheEvento"
-    fileprivate var eventoItemArray = [eventoItem]()
+    fileprivate var eventoItemArray = [Evento]()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     
@@ -20,11 +21,6 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         if self.revealViewController() != nil {
             btnMenuButton.target = revealViewController()
@@ -33,12 +29,13 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
+        
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base
-        //CoreDataManager.cleanCoreData()
+        CoreDataManager.cleanCoreData()
         
         // 2. Inserir objetos na base
-        //presetCoreData()
+        presetCoreData()
         
         // 3. Sincronizar objetos da base
         updateData()
@@ -53,16 +50,52 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Table view data source
     
     func presetCoreData() {
+        let eventoClassName: String = String(describing: Evento.self)
+        let localClassName: String = String(describing: Local.self)
         
-        CoreDataManager.storeObj(nome: "Improvaveis", diaHora: "21/02 - 19h", local: "Teatro UNIP", valor: "R$ 30,00", descricao: "A Cia.Barbixas de Humor é formada por...")
+        let evento1: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
+        evento1.nome = "Improvaveis"
+        evento1.diaHora = "21/02 - 19h"
+        evento1.genero = "Comedia"
+        evento1.valor = "R$ 30,00"
+        evento1.descricao = "A Cia.Barbixas de Humor é formada por..."
         
-        CoreDataManager.storeObj(nome: "Melhores do Mundo", diaHora: "10/05 - 20h", local: "Teatro dos Bancários", valor: "R$ 40,00", descricao: "A Cia de comédia Os Melhores do Mundo...")
+        let evento2: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
+        evento2.nome = "Melhores do Mundo"
+        evento2.diaHora = "10/05 - 20h"
+        evento2.genero = "Comedia"
+        evento2.valor = "R$ 40,00"
+        evento2.descricao = "A Cia de comédia Os Melhores do Mundo..."
+
+        let evento3: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
+        evento3.nome = "G7"
+        evento3.diaHora = "06/06 - 18h"
+        evento3.genero = "Comedia"
+        evento3.valor = "R$ 25,00"
+        evento3.descricao = "O G7 há 14 anos faz teatro..."
         
-        CoreDataManager.storeObj(nome: "G7", diaHora: "06/06 - 18h", local: "Teatro Marista", valor: "R$ 25,00", descricao: "O G7 há 14 anos faz teatro...")
+        let local1: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
+        local1.nome = "Teatro UNIP"
+        local1.estado = "DF"
+        local1.cidade = "Santa Maria"
+        local1.endereco = "QR 114 lote 12"
+        local1.coplemento = "area especial"
+        local1.addToListaEvento(evento1)
+        
+        let local2: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
+        local2.nome = "Teatro Marista"
+        local2.estado = "DF"
+        local2.cidade = "Brasília"
+        local2.endereco = "L2 sul QR 616 lote 24"
+        local2.coplemento = "area especial"
+        local2.addToListaEvento(evento2)
+        local2.addToListaEvento(evento3)
+        
+        CoreDataManager.saveContext()
     }
     
     func updateData() {
-        eventoItemArray = CoreDataManager.fetchObj()
+        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
     }
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,15 +112,14 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventoCell", for: indexPath) as! EventoTableViewCell
         
         // Configure the cell...
-        //cell.heightAnchor.constraint(equalTo: <#T##NSLayoutDimension#>, multiplier: <#T##CGFloat#>)
         
         let evtItem = eventoItemArray[indexPath.row]
         
-        cell.ImgView_capa.image = UIImage(named: evtItem.eventoNome!)
-        cell.labelTitulo.text = evtItem.eventoNome!
-        cell.labelDataHora.text = evtItem.eventoDiaeHora!
-        cell.labelLocal.text = evtItem.eventoLocal!
-        cell.labelPreco.text = evtItem.eventoValor!
+        cell.ImgView_capa.image = UIImage(named: evtItem.nome ?? "CapaTeste")
+        cell.labelTitulo.text = evtItem.nome
+        cell.labelDataHora.text = evtItem.diaHora
+        cell.labelLocal.text = evtItem.local?.nome ?? "Local não definido"
+        cell.labelPreco.text = evtItem.valor
         
         return cell
     }
@@ -101,43 +133,7 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.evento = eventoItemArray[indexPath.row]
         self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
-    }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
+    }    
     
     // MARK: - Navigation
     
@@ -184,4 +180,22 @@ class EventosTableViewController: UITableViewController, UISearchBarDelegate {
         print(searchText)
     }
     
+}
+
+// MARK: - SearchBarDelegate
+extension EventosTableViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else{
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
+            tableView.reloadData()
+            return
+        }
+        
+        let predicate = NSPredicate(format: "nome contains[c] %@", searchText)
+        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, predicate: predicate)
+//        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: predicate)
+        
+        tableView.reloadData()
+        print(searchText)
+    }
 }
