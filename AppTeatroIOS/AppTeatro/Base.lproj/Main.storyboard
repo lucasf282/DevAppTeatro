@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
-
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
-
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -227,8 +224,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="i7s-fI-P3v" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3e5-V9-5L8"/>
-
+                                            <segue destination="i7s-fI-P3v" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dce-6s-1l6"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -243,22 +239,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOy-wP-yhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-994" y="814"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fk7-nx-Fx2">
-            <objects>
-                <navigationController id="Kzg-Db-vd0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tti-VT-dCm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="y1E-fO-qUB" kind="relationship" relationship="rootViewController" id="EJa-T0-oEg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iJR-hd-cfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-994" y="1524"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="3rF-Y5-ddN">
@@ -315,7 +295,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Crie um conta"/>
                                 <connections>
-                                    <segue destination="RQK-6y-euV" kind="presentation" id="ltO-KM-DxG"/>
+                                    <segue destination="RQK-6y-euV" kind="show" id="ltO-KM-DxG"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-is-1nd" userLabel="View_login">
@@ -349,7 +329,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="Evx-ha-mfD" eventType="touchUpInside" id="Qdi-OT-0NC"/>
-
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKO-8g-UHr">
@@ -451,7 +430,6 @@
                         <outlet property="btnMenuButton" destination="xKt-cO-W6I" id="jbx-Q7-gmn"/>
                         <outlet property="userEmailTextField" destination="pqx-3p-MbD" id="SQa-Th-xEQ"/>
                         <outlet property="userPasswordTextField" destination="XTI-nY-C3l" id="Rsw-Sf-Gw5"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-XZ-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,7 +554,7 @@
                     <navigationItem key="navigationItem" title="Eventos" id="c8p-5K-Whd">
                         <barButtonItem key="leftBarButtonItem" image="SideMenuIcon" id="kto-IE-0Rw"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="bCF-Ei-vfC">
-                            <rect key="frame" x="68" y="8" width="239" height="29"/>
+                            <rect key="frame" x="68" y="7.5" width="239" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Eventos"/>
@@ -592,7 +570,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenuButton" destination="kto-IE-0Rw" id="pdq-Qz-jZg"/>
-                        <outlet property="searchBar" destination="EYn-2A-eZr" id="BQa-YW-4dp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egf-aI-1RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1043,7 +1020,7 @@
                                         <rect key="frame" x="8" y="240" width="327" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Aa-rP-xrg">
                                         <rect key="frame" x="8" y="278" width="327" height="30"/>
@@ -1054,7 +1031,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerButtonTapped:" destination="RQK-6y-euV" eventType="touchUpInside" id="5eF-lu-cef"/>
-
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-Su-aWL">
@@ -1602,73 +1578,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TR-pU-zub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-74" y="814"/>
-        </scene>
-        <!--Teatros-->
-        <scene sceneID="RYZ-Va-sRM">
-            <objects>
-                <tableViewController title="Teatros" id="y1E-fO-qUB" customClass="TeatrosTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkB-Iw-VXm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TeatroCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeatroCell" rowHeight="210" id="Fvt-GV-eKY" customClass="TeatroTableViewCell" customModule="AppTeatro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="210"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fvt-GV-eKY" id="fEu-Vx-7EY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeatroNacional" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-ku-NcI" userLabel="ImgView_capa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientePreto" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-l5-oyD">
-                                            <rect key="frame" x="0.0" y="109" width="375" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="GLT-Wq-GBv"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-FW-ETx">
-                                            <rect key="frame" x="123" y="149" width="129" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="1U3-FW-ETx" firstAttribute="centerY" secondItem="LAx-l5-oyD" secondAttribute="centerY" id="1zS-9E-jcV"/>
-                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="leading" secondItem="fEu-Vx-7EY" secondAttribute="leading" id="6j1-oR-0zM"/>
-                                        <constraint firstItem="LAx-l5-oyD" firstAttribute="trailing" secondItem="vhh-ku-NcI" secondAttribute="trailing" id="THo-ap-1Id"/>
-                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="top" secondItem="fEu-Vx-7EY" secondAttribute="top" id="bIW-jQ-gYk"/>
-                                        <constraint firstItem="LAx-l5-oyD" firstAttribute="leading" secondItem="vhh-ku-NcI" secondAttribute="leading" id="fls-R8-cG0"/>
-                                        <constraint firstAttribute="trailing" secondItem="vhh-ku-NcI" secondAttribute="trailing" id="lIT-Gh-MF9"/>
-                                        <constraint firstItem="1U3-FW-ETx" firstAttribute="centerX" secondItem="LAx-l5-oyD" secondAttribute="centerX" id="lp3-yr-qJZ"/>
-                                        <constraint firstItem="vhh-ku-NcI" firstAttribute="width" secondItem="vhh-ku-NcI" secondAttribute="height" multiplier="16:9" id="mtw-bs-iTY"/>
-                                        <constraint firstAttribute="bottom" secondItem="LAx-l5-oyD" secondAttribute="bottom" id="nxV-Py-e1o"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imgViewTeatro" destination="vhh-ku-NcI" id="bAo-nA-fcf"/>
-                                    <outlet property="labelTituloTeatro" destination="1U3-FW-ETx" id="QUV-pw-IsL"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="y1E-fO-qUB" id="enE-VQ-DsA"/>
-                            <outlet property="delegate" destination="y1E-fO-qUB" id="Uxm-ix-943"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Teatros" id="cJL-zB-chd">
-                        <barButtonItem key="leftBarButtonItem" image="SideMenuIcon" id="JAt-e8-IDp"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="btnMenuButton" destination="JAt-e8-IDp" id="K0u-32-RtG"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-K3-38N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-74" y="1523"/>
         </scene>
     </scenes>
     <resources>
