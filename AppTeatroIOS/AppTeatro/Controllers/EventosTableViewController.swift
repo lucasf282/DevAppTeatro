@@ -33,7 +33,7 @@ class EventosTableViewController: UITableViewController {
         CoreDataManager.cleanCoreData()
         
         // 2. Inserir objetos na base
-        presetCoreData()
+        CoreDataManager.presetCoreData()
         
         // 3. Sincronizar objetos da base
         updateData()
@@ -46,51 +46,6 @@ class EventosTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    func presetCoreData() {
-        let eventoClassName: String = String(describing: Evento.self)
-        let localClassName: String = String(describing: Local.self)
-        
-        let evento1: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
-        evento1.nome = "Improvaveis"
-        evento1.diaHora = "21/02 - 19h"
-        evento1.genero = "Comedia"
-        evento1.valor = "R$ 30,00"
-        evento1.descricao = "A Cia.Barbixas de Humor é formada por..."
-        
-        let evento2: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
-        evento2.nome = "Melhores do Mundo"
-        evento2.diaHora = "10/05 - 20h"
-        evento2.genero = "Comedia"
-        evento2.valor = "R$ 40,00"
-        evento2.descricao = "A Cia de comédia Os Melhores do Mundo..."
-
-        let evento3: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
-        evento3.nome = "G7"
-        evento3.diaHora = "06/06 - 18h"
-        evento3.genero = "Comedia"
-        evento3.valor = "R$ 25,00"
-        evento3.descricao = "O G7 há 14 anos faz teatro..."
-        
-        let local1: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
-        local1.nome = "Teatro UNIP"
-        local1.estado = "DF"
-        local1.cidade = "Santa Maria"
-        local1.endereco = "QR 114 lote 12"
-        local1.coplemento = "area especial"
-        local1.addToListaEvento(evento1)
-        
-        let local2: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
-        local2.nome = "Teatro Marista"
-        local2.estado = "DF"
-        local2.cidade = "Brasília"
-        local2.endereco = "L2 sul QR 616 lote 24"
-        local2.coplemento = "area especial"
-        local2.addToListaEvento(evento2)
-        local2.addToListaEvento(evento3)
-        
-        CoreDataManager.saveContext()
-    }
     
     func updateData() {
         eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)

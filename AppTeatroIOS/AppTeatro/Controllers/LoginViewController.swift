@@ -37,6 +37,33 @@ class LoginViewController: UIViewController {
         let userEmail = userEmailTextField.text
         let userPassword = userPasswordTextField.text
         
+        
+        let predicate = NSPredicate(format: "email = %@", userEmail ?? "")
+        let usuario = CoreDataManager.fetchObj(entityName: Usuario.self, predicate: predicate).first
+        
+        if(usuario?.email == userEmail && usuario?.senha == userPassword){
+                // Login is sucessfull
+            UserDefaults.standard.set(usuario?.email, forKey: "userEmail")
+            UserDefaults.standard.set(usuario?.senha, forKey: "userPassword")
+            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
+            
+        }else{
+            // Display alert message with confirmation
+            let myAlert = UIAlertController(title: "Alert", message: "Email ou senha errado", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default){
+                action in
+                self.dismiss(animated: true, completion: nil)
+            }
+            myAlert.addAction(okAction)
+            self.present(myAlert, animated: true, completion:nil)
+        }
+        
+        /*
+        let userEmail = userEmailTextField.text
+        let userPassword = userPasswordTextField.text
+        
         let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         
         let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword")
@@ -45,11 +72,11 @@ class LoginViewController: UIViewController {
             if(userPasswordStored == userPassword){
                 // Login is sucessfull
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-                 UserDefaults.standard.synchronize()
+                UserDefaults.standard.synchronize()
                 self.dismiss(animated: true, completion: nil)
             }
         }
-        
+        */
     }
 
     /*

@@ -122,13 +122,13 @@
 		1F6264C91EB93B5A00AB8DED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F7930431EEF0EC1008D6D30 /* RegisterPageViewController.swift */,
 				1F7930441EEF0EC1008D6D30 /* TeatrosTableViewController.swift */,
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 				1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */,
 				1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */,
+				1F7930431EEF0EC1008D6D30 /* RegisterPageViewController.swift */,
 				1F6795971EC26062001FE447 /* LoginViewController.swift */,
 				1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */,
 				1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */,
