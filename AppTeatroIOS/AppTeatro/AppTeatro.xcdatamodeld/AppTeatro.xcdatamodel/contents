@@ -28,10 +28,11 @@
     </entity>
     <entity name="Local" representedClassName="Local" syncable="YES" codeGenerationType="class">
         <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="coplemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endereco" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="listaEvento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evento" inverseName="local" inverseEntity="Evento" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
@@ -42,7 +43,7 @@
         <element name="Agenda" positionX="376" positionY="-3249" width="128" height="103"/>
         <element name="Evento" positionX="547" positionY="-3249" width="128" height="223"/>
         <element name="Ingresso" positionX="378" positionY="-3096" width="128" height="103"/>
-        <element name="Local" positionX="738" positionY="-3249" width="128" height="133"/>
+        <element name="Local" positionX="738" positionY="-3249" width="128" height="150"/>
         <element name="Usuario" positionX="736" positionY="-3042" width="128" height="73"/>
     </elements>
 </model>

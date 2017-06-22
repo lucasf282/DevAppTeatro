@@ -44,7 +44,6 @@ class LoginViewController: UIViewController {
         if(usuario?.email == userEmail && usuario?.senha == userPassword){
                 // Login is sucessfull
             UserDefaults.standard.set(usuario?.email, forKey: "userEmail")
-            UserDefaults.standard.set(usuario?.senha, forKey: "userPassword")
             UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
             UserDefaults.standard.synchronize()
             

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterPageViewController: UIViewController {
 
+    let usuarioClassName = String(describing: Usuario.self)
     
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
@@ -50,9 +52,14 @@ class RegisterPageViewController: UIViewController {
         }
         
         // Store data
+        let usuario = NSEntityDescription.insertNewObject(forEntityName: usuarioClassName, into: CoreDataManager.getContext()) as! Usuario
+        usuario.email = userEmail
+        usuario.senha = userPassword
+        CoreDataManager.saveContext()
+        
         UserDefaults.standard.set(userEmail, forKey: "userEmail")
-        UserDefaults.standard.set(userPassword, forKey: "userPassword")
         UserDefaults.standard.synchronize()
+        
         
         // Display alert message with confirmation
         let myAlert = UIAlertController(title: "Alert", message: "Sua conta foi criada com sucesso", preferredStyle: UIAlertControllerStyle.alert)

@@ -9,16 +9,21 @@
 import UIKit
 
 class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let conteudo = [["Nome:", "Teatro Nacional"],
-                    ["Endereço:", "apenas endereço de teste."],
-                    ["Complemento:", "não sei o que por aqui"],
-                    ["Cidade/Estado:", "Brasília - DF"],
-                    ["Telefone:", "(61) 00000-0000"]]
+    
+    var local : Local?
+    var conteudo : [[String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if let teatro = local {
+            conteudo = [
+                ["Nome:", teatro.nome ?? "nome"],
+                ["Endereço:", teatro.endereco ?? "endereço"],
+                ["Complemento:", teatro.complemento ?? "complemento"],
+                ["Cidade/Estado:", "\(teatro.cidade ?? "cidade") / \(teatro.estado ?? "estado")"],
+                ["Telefone:", teatro.telefone ?? "telefone"]
+            ]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,20 +43,10 @@ class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocalCell", for: indexPath) as! LocalTableViewCell
         
-        cell.UILabel_titulo.text = conteudo[indexPath.row][0]
-        cell.UILabel_valor.text = conteudo[indexPath.row][1]
-        
+        if let info = conteudo {
+            cell.UILabel_titulo.text = info[indexPath.row][0]
+            cell.UILabel_valor.text = info[indexPath.row][1]
+        }
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

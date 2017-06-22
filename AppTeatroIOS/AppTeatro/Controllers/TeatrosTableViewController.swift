@@ -11,7 +11,8 @@ import UIKit
 class TeatrosTableViewController: UITableViewController {
 
     var  local : Local?
-         fileprivate var  localArray = [Local]()
+    let localSegue = "teatrosToLocalSegue"
+    fileprivate var  localArray = [Local]()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     
@@ -53,12 +54,35 @@ class TeatrosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let largura = tableView.frame.size.width
         return largura/16*9
-        
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        local = localArray[indexPath.row]
+    }
     
     func updateData() {
          localArray = CoreDataManager.fetchObj(entityName: Local.self)
+    }
+    
+    // MARK: - Navigation
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        switch identifier {
+        case localSegue:
+            return self.local != nil
+        default:
+            return true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier{
+            switch identifier {
+            case localSegue:
+                (segue.destination as! LocalViewController).local = self.local
+            default:
+                break;
+            }
+        }
     }
 
 }

@@ -83,7 +83,8 @@ class CoreDataManager {
         local1.estado = "DF"
         local1.cidade = "Santa Maria"
         local1.endereco = "QR 114 lote 12"
-        local1.coplemento = "area especial"
+        local1.complemento = "area especial"
+        local1.telefone = "(61) 00000 0000"
         local1.addToListaEvento(evento1)
         
         let local2: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
@@ -91,7 +92,8 @@ class CoreDataManager {
         local2.estado = "DF"
         local2.cidade = "Brasília"
         local2.endereco = "L2 sul QR 616 lote 24"
-        local2.coplemento = "area especial"
+        local2.complemento = "area especial"
+        local2.telefone = "(61) 00000 0000"
         local2.addToListaEvento(evento2)
         local2.addToListaEvento(evento3)
         
@@ -145,5 +147,4 @@ class CoreDataManager {
             print(error.localizedDescription)
         }
     }
-    
 }

@@ -12,10 +12,28 @@ import CoreData
 class EventosTableViewController: UITableViewController {
     
     var evento : Evento?
+    
     let detalheEventoSegue = "MostrarDetalheEvento"
     fileprivate var eventoItemArray = [Evento]()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
+    @IBOutlet var eventosTable: UITableView!
+    @IBAction func favoritar(_ sender: Any) {
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        if isUserLoggedIn {
+            
+        }else{
+            // Display alert message with confirmation
+            let myAlert = UIAlertController(title: "Alert", message: "Você precisa estar conectado a uma conta", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default){
+                action in
+                self.dismiss(animated: true, completion: nil)
+            }
+            myAlert.addAction(okAction)
+            self.present(myAlert, animated: true, completion:nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +105,25 @@ class EventosTableViewController: UITableViewController {
         self.evento = eventoItemArray[indexPath.row]
         self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
     }    
+    // MARK: - Segments
+    
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBAction func IndexChenged(_ sender: Any) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: nil)
+            eventosTable.reloadData()
+        case 1:
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: false, predicate: nil)
+            eventosTable.reloadData()
+        case 2:
+            let predicate = NSPredicate(format: "nome contains[c] %@", "impro")
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: predicate)
+            eventosTable.reloadData()
+        default:
+            break
+        }
+    }
     
     // MARK: - Navigation
     
