@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -81,7 +81,6 @@
         <!--Sibar-->
         <scene sceneID="zix-6n-uPA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uOy-wP-yhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Sibar" id="sv6-dy-g86" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1DF-3h-iC6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -95,7 +94,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sK7-1C-3RY" id="K77-pp-s8f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-Jm-dxe" userLabel="TopoMenu">
@@ -136,7 +135,7 @@
                                         <rect key="frame" x="0.0" y="182" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U2L-7P-ULT" id="SGC-wc-TAB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventosIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-28-JFx">
@@ -168,7 +167,7 @@
                                         <rect key="frame" x="0.0" y="246" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bZb-rK-RlB" id="YWv-hg-UMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-jI-6aI">
@@ -200,7 +199,7 @@
                                         <rect key="frame" x="0.0" y="310" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4A0-US-D30" id="H3x-j2-xUQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_balance" translatesAutoresizingMaskIntoConstraints="NO" id="K98-SS-gYn">
@@ -237,6 +236,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOy-wP-yhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-994" y="814"/>
         </scene>
@@ -281,7 +281,6 @@
         <!--Login-->
         <scene sceneID="8Jv-NN-qMd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-XZ-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login" id="Evx-ha-mfD" customClass="LoginViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mrr-Mf-Oi1"/>
@@ -433,6 +432,7 @@
                         <outlet property="userPasswordTextField" destination="XTI-nY-C3l" id="Rsw-Sf-Gw5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-XZ-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="722" y="1558"/>
         </scene>
@@ -455,7 +455,6 @@
         <!--Eventos-->
         <scene sceneID="pXz-jO-Xen">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Egf-aI-1RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Eventos" id="PT0-xe-vM7" customClass="EventosTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="h8P-wj-ppU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -474,11 +473,11 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kkv-CH-gpR" id="zqi-m4-APe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapaTeste" translatesAutoresizingMaskIntoConstraints="NO" id="On3-4s-Ggz" userLabel="ImgView_capa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientePreto" translatesAutoresizingMaskIntoConstraints="NO" id="F3c-sv-qxi">
@@ -508,6 +507,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-RO-ozL">
                                             <rect key="frame" x="335" y="16" width="24" height="24"/>
                                             <state key="normal" image="ic_favorite_border"/>
+                                            <state key="selected" image="ic_favorite"/>
                                             <connections>
                                                 <action selector="favoritar:" destination="PT0-xe-vM7" eventType="touchUpInside" id="Mqp-aU-h0n"/>
                                             </connections>
@@ -581,13 +581,13 @@
                         <outlet property="segment" destination="bCF-Ei-vfC" id="Gfu-4Q-rgm"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egf-aI-1RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="722.39999999999998" y="73.313343328335833"/>
         </scene>
         <!--Descricao-->
         <scene sceneID="UCx-rP-0KR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iod-U2-UuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Descricao" id="DC1-xq-oPP" customClass="DescricaoTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="213" sectionHeaderHeight="28" sectionFooterHeight="28" id="nh4-zu-9QC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -600,20 +600,23 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJT-07-RWg" id="byR-T6-OfJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="212.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapaTeste" translatesAutoresizingMaskIntoConstraints="NO" id="IIR-Et-F1Z" userLabel="ImgView_capa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="IIR-Et-F1Z" secondAttribute="height" multiplier="16:9" id="i0z-m9-6LQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxq-T9-RLN" userLabel="FavoriteButton">
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxq-T9-RLN" userLabel="FavoriteButton">
                                                     <rect key="frame" x="343" y="8" width="24" height="24"/>
-                                                    <state key="normal" image="ic_favorite"/>
+                                                    <state key="normal" image="ic_favorite_border"/>
                                                     <state key="selected" image="ic_favorite"/>
+                                                    <connections>
+                                                        <action selector="Favoritar:" destination="DC1-xq-oPP" eventType="touchUpInside" id="0fB-eR-bKQ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -629,7 +632,7 @@
                                         <rect key="frame" x="0.0" y="241" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Voi-ba-ajV" id="5oo-NE-PUF">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_event" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-DK-Ein" userLabel="ImgView_icon">
@@ -666,7 +669,7 @@
                                         <rect key="frame" x="0.0" y="305" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqN-WO-g02" id="7cr-xg-pKX">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-Kj-nDc" userLabel="ImgView_icon">
@@ -706,7 +709,7 @@
                                         <rect key="frame" x="0.0" y="369" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pq-8N-WiM" id="FKQ-Bg-gbR">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attach_money" translatesAutoresizingMaskIntoConstraints="NO" id="ptG-ls-DLd" userLabel="ImgView_icon">
@@ -743,7 +746,7 @@
                                         <rect key="frame" x="0.0" y="433" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PvE-xB-vfU" id="Fj4-br-D6Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_description" translatesAutoresizingMaskIntoConstraints="NO" id="uim-rz-APV" userLabel="ImgView_icon">
@@ -794,6 +797,7 @@
                         <barButtonItem key="rightBarButtonItem" image="ic_share" id="DLG-lu-geX"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="btn_favorito" destination="sxq-T9-RLN" id="cCW-Bo-rK0"/>
                         <outlet property="dataHora" destination="2YR-SP-PUD" id="Znu-uj-sVQ"/>
                         <outlet property="image" destination="IIR-Et-F1Z" id="0GL-mu-l3E"/>
                         <outlet property="local" destination="FlZ-eJ-mAc" id="b63-eg-Uqf"/>
@@ -801,13 +805,13 @@
                         <outlet property="textView_desc" destination="RWZ-6S-tsY" id="53w-SJ-d3R"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iod-U2-UuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="71.514242878560722"/>
         </scene>
         <!--Local-->
         <scene sceneID="mPk-AA-E4m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zho-7k-H4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Local" id="sdB-3B-vyg" customClass="LocalViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6CM-cY-xym"/>
@@ -837,7 +841,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BHT-n3-qDz" id="bsN-uO-8sH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po0-aJ-jfK">
@@ -847,7 +851,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Teatro Nacional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-fu-yc8">
-                                                            <rect key="frame" x="69" y="11" width="248.5" height="21"/>
+                                                            <rect key="frame" x="69" y="11" width="290" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -940,13 +944,13 @@
                         </variation>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zho-7k-H4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="814"/>
         </scene>
         <!--Detalhes-->
         <scene sceneID="HM8-zU-3te">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtY-Ie-HYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Detalhes" id="lZM-u1-4dY" customClass="DetalhesTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iJE-dk-al3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -957,7 +961,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oH1-tI-Qr8" id="QVo-d9-sDy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bYo-hE-N4a">
@@ -987,13 +991,13 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtY-Ie-HYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2265" y="72"/>
         </scene>
         <!--Sigin-->
         <scene sceneID="s6k-nX-2ed">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-r5-6dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Sigin" id="RQK-6y-euV" customClass="RegisterPageViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="An0-Wr-hYg"/>
@@ -1029,7 +1033,7 @@
                                         <rect key="frame" x="8" y="240" width="327" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Aa-rP-xrg">
                                         <rect key="frame" x="8" y="278" width="327" height="30"/>
@@ -1127,6 +1131,7 @@
                         <outlet property="userPasswordTextField" destination="Saz-Eb-5Ms" id="qpT-Bx-4uo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-r5-6dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="1558"/>
         </scene>
@@ -1151,7 +1156,6 @@
         <!--HoraPicker-->
         <scene sceneID="qHf-tw-RsC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SvL-K2-rbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="HoraPicker" id="9pf-Kr-v8r" customClass="PickerHoraViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cdh-Qt-aBZ"/>
@@ -1205,13 +1209,13 @@
                         <outlet property="pickerView_hora" destination="Hgu-rE-mZU" id="FZz-aP-Uzc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvL-K2-rbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2265" y="-462"/>
         </scene>
         <!--Generos-->
         <scene sceneID="Upo-PF-a0D">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Generos" id="RJc-rE-jnD" customClass="GenerosViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMi-rC-bsb"/>
@@ -1312,13 +1316,13 @@
                         <outlet property="collectionView_generos" destination="qTc-80-dAq" id="lwW-YE-NM3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2265" y="-1223"/>
         </scene>
         <!--Filtro-->
         <scene sceneID="gEv-WH-pkd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fw7-di-VBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Filtro" id="HXr-j3-MlX" customClass="FiltroViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="229-JS-yUW"/>
@@ -1500,13 +1504,13 @@
                         <outlet property="btn_horaMin" destination="aO2-Vt-zYA" id="09e-h6-PCX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fw7-di-VBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="-639"/>
         </scene>
         <!--Teatros-->
         <scene sceneID="RYZ-Va-sRM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-K3-38N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Teatros" id="y1E-fO-qUB" customClass="TeatrosTableViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkB-Iw-VXm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1517,11 +1521,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fvt-GV-eKY" id="fEu-Vx-7EY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeatroNacional" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-ku-NcI" userLabel="ImgView_capa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientePreto" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-l5-oyD">
@@ -1568,6 +1572,7 @@
                         <outlet property="btnMenuButton" destination="JAt-e8-IDp" id="K0u-32-RtG"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-K3-38N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="722" y="814"/>
         </scene>

@@ -19,6 +19,11 @@ class DescricaoTableViewController: UITableViewController {
     @IBOutlet weak var local: UILabel!
     @IBOutlet weak var preco: UILabel!
     
+    @IBOutlet weak var btn_favorito: UIButton!
+    @IBAction func Favoritar(_ sender: UIButton) {
+        btn_favorito.isSelected = !btn_favorito.isSelected
+    }
+    
     let textExemplo = "Lorem ipsum dolor sit er elit lamet, consectetaur kj fasds; Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore fjasdlkj fasdsdsfa."
     
     override func viewDidLoad() {
