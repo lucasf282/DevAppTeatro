@@ -632,7 +632,7 @@
                                         <rect key="frame" x="0.0" y="241" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Voi-ba-ajV" id="5oo-NE-PUF">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_event" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-DK-Ein" userLabel="ImgView_icon">
@@ -669,7 +669,7 @@
                                         <rect key="frame" x="0.0" y="305" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqN-WO-g02" id="7cr-xg-pKX">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-Kj-nDc" userLabel="ImgView_icon">
@@ -709,7 +709,7 @@
                                         <rect key="frame" x="0.0" y="369" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pq-8N-WiM" id="FKQ-Bg-gbR">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attach_money" translatesAutoresizingMaskIntoConstraints="NO" id="ptG-ls-DLd" userLabel="ImgView_icon">
@@ -746,7 +746,7 @@
                                         <rect key="frame" x="0.0" y="433" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PvE-xB-vfU" id="Fj4-br-D6Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_description" translatesAutoresizingMaskIntoConstraints="NO" id="uim-rz-APV" userLabel="ImgView_icon">
@@ -1156,7 +1156,7 @@
         <!--HoraPicker-->
         <scene sceneID="qHf-tw-RsC">
             <objects>
-                <viewController title="HoraPicker" id="9pf-Kr-v8r" customClass="PickerHoraViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HoraPicker" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="9pf-Kr-v8r" customClass="PickerHoraViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cdh-Qt-aBZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Q1D-yM-t8s"/>
@@ -1165,43 +1165,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-rE-mZU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPq-62-r5d" userLabel="popUpView" customClass="DesignableView" customModule="AppTeatro" customModuleProvider="target">
+                                <rect key="frame" x="8" y="2" width="359" height="270"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-rE-mZU">
+                                        <rect key="frame" x="20" y="8" width="319" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="216" id="P0J-FI-HmO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9pf-Kr-v8r" id="FU5-GA-G8U"/>
+                                            <outlet property="delegate" destination="9pf-Kr-v8r" id="xrJ-KN-eT6"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chD-Eg-W9m">
+                                        <rect key="frame" x="16" y="232" width="159.5" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelar:" destination="9pf-Kr-v8r" eventType="touchUpInside" id="Tir-Ch-Zye"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn9-T4-ffL">
+                                        <rect key="frame" x="183.5" y="232" width="159.5" height="30"/>
+                                        <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="selecionar:" destination="9pf-Kr-v8r" eventType="touchUpInside" id="Nkj-ON-G7h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="P0J-FI-HmO"/>
+                                    <constraint firstItem="chD-Eg-W9m" firstAttribute="top" secondItem="Hgu-rE-mZU" secondAttribute="bottom" constant="8" id="K4M-cR-htZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="chD-Eg-W9m" secondAttribute="bottom" constant="8" id="KGZ-Aw-jHf"/>
+                                    <constraint firstItem="Hgu-rE-mZU" firstAttribute="leading" secondItem="aPq-62-r5d" secondAttribute="leading" constant="20" id="L94-P8-gl0"/>
+                                    <constraint firstItem="Qn9-T4-ffL" firstAttribute="width" secondItem="chD-Eg-W9m" secondAttribute="width" id="PbO-4h-Z4s"/>
+                                    <constraint firstItem="chD-Eg-W9m" firstAttribute="leading" secondItem="aPq-62-r5d" secondAttribute="leadingMargin" constant="8" id="T4L-za-bhf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hgu-rE-mZU" secondAttribute="trailing" constant="20" id="V3M-g4-JCQ"/>
+                                    <constraint firstItem="chD-Eg-W9m" firstAttribute="width" secondItem="aPq-62-r5d" secondAttribute="width" multiplier="0.5" constant="-20" id="X4O-ke-yYR"/>
+                                    <constraint firstAttribute="width" constant="360" id="XvK-ot-IyH"/>
+                                    <constraint firstItem="Qn9-T4-ffL" firstAttribute="centerY" secondItem="chD-Eg-W9m" secondAttribute="centerY" id="ejo-XR-q3m"/>
+                                    <constraint firstItem="Qn9-T4-ffL" firstAttribute="trailing" secondItem="aPq-62-r5d" secondAttribute="trailingMargin" constant="-8" id="rGH-aV-WdG"/>
+                                    <constraint firstItem="Hgu-rE-mZU" firstAttribute="top" secondItem="aPq-62-r5d" secondAttribute="top" constant="8" id="se2-w9-38m"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="9pf-Kr-v8r" id="FU5-GA-G8U"/>
-                                    <outlet property="delegate" destination="9pf-Kr-v8r" id="xrJ-KN-eT6"/>
-                                </connections>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chD-Eg-W9m">
-                                <rect key="frame" x="16" y="244" width="167.5" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelar:" destination="9pf-Kr-v8r" eventType="touchUpInside" id="Tir-Ch-Zye"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn9-T4-ffL">
-                                <rect key="frame" x="191.5" y="244" width="167.5" height="30"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <action selector="selecionar:" destination="9pf-Kr-v8r" eventType="touchUpInside" id="Nkj-ON-G7h"/>
-                                </connections>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XvK-ot-IyH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XvK-ot-IyH"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Hgu-rE-mZU" secondAttribute="trailing" id="4SS-4h-KJl"/>
-                            <constraint firstItem="Qn9-T4-ffL" firstAttribute="width" secondItem="chD-Eg-W9m" secondAttribute="width" id="8TU-cq-huB"/>
-                            <constraint firstItem="chD-Eg-W9m" firstAttribute="leading" secondItem="mSd-vy-0WV" secondAttribute="leadingMargin" id="8V1-Wn-1T5"/>
-                            <constraint firstItem="chD-Eg-W9m" firstAttribute="top" secondItem="Hgu-rE-mZU" secondAttribute="bottom" constant="8" id="8mE-Hp-ORd"/>
-                            <constraint firstItem="Hgu-rE-mZU" firstAttribute="top" secondItem="Cdh-Qt-aBZ" secondAttribute="bottom" id="Iiv-LW-kXr"/>
-                            <constraint firstItem="Hgu-rE-mZU" firstAttribute="leading" secondItem="mSd-vy-0WV" secondAttribute="leading" id="Kfe-ua-bcJ"/>
-                            <constraint firstItem="Qn9-T4-ffL" firstAttribute="centerY" secondItem="chD-Eg-W9m" secondAttribute="centerY" id="PgX-tw-Wrb"/>
-                            <constraint firstItem="chD-Eg-W9m" firstAttribute="width" secondItem="mSd-vy-0WV" secondAttribute="width" multiplier="0.5" constant="-20" id="c3r-yN-BSL"/>
-                            <constraint firstItem="Qn9-T4-ffL" firstAttribute="trailing" secondItem="mSd-vy-0WV" secondAttribute="trailingMargin" id="rsg-o4-Vfc"/>
+                            <constraint firstItem="aPq-62-r5d" firstAttribute="width" secondItem="mSd-vy-0WV" secondAttribute="width" constant="-16" id="FlL-cW-xIt"/>
+                            <constraint firstItem="aPq-62-r5d" firstAttribute="centerX" secondItem="mSd-vy-0WV" secondAttribute="centerX" id="SNe-sR-PIZ"/>
+                            <constraint firstItem="aPq-62-r5d" firstAttribute="centerY" secondItem="mSd-vy-0WV" secondAttribute="centerY" id="nqE-A6-doa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FlL-cW-xIt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="FlL-cW-xIt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="274"/>
@@ -1211,12 +1249,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvL-K2-rbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="-462"/>
+            <point key="canvasLocation" x="2297" y="-462"/>
         </scene>
         <!--Generos-->
         <scene sceneID="Upo-PF-a0D">
             <objects>
-                <viewController title="Generos" id="RJc-rE-jnD" customClass="GenerosViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Generos" modalPresentationStyle="overCurrentContext" id="RJc-rE-jnD" customClass="GenerosViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMi-rC-bsb"/>
                         <viewControllerLayoutGuide type="bottom" id="pAu-7A-rVw"/>
@@ -1318,7 +1356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sw-43-Nvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="-1223"/>
+            <point key="canvasLocation" x="2297" y="-1172"/>
         </scene>
         <!--Filtro-->
         <scene sceneID="gEv-WH-pkd">
@@ -1352,9 +1390,7 @@
                                                 <rect key="frame" x="76" y="56" width="291" height="30"/>
                                                 <state key="normal" title="Selecione"/>
                                                 <connections>
-                                                    <segue destination="RJc-rE-jnD" kind="popoverPresentation" identifier="generosSegue" popoverAnchorView="1ka-Eg-uVa" id="35R-GH-0b7">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
+                                                    <segue destination="RJc-rE-jnD" kind="presentation" identifier="generosSegue" id="35R-GH-0b7"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-Jn-9L7">
@@ -1385,6 +1421,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ce-0w-44X" userLabel="Data">
                                                 <rect key="frame" x="76" y="176" width="291" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="h1N-nh-Y8Z" kind="presentation" identifier="dataPickerSegue" id="nU4-YW-Upg"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-kR-C7a">
                                                 <rect key="frame" x="8" y="223" width="57" height="21"/>
@@ -1397,18 +1436,14 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 <state key="normal" title="Selecionar"/>
                                                 <connections>
-                                                    <segue destination="9pf-Kr-v8r" kind="popoverPresentation" identifier="horaPickerMaxSegue" popoverAnchorView="QMN-r4-SZq" id="RFX-DY-HDx">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
+                                                    <segue destination="9pf-Kr-v8r" kind="presentation" identifier="horaPickerMaxSegue" id="RFX-DY-HDx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-Vt-zYA" userLabel="HoraMin">
                                                 <rect key="frame" x="76" y="218" width="142" height="30"/>
                                                 <state key="normal" title="Selecionar"/>
                                                 <connections>
-                                                    <segue destination="9pf-Kr-v8r" kind="popoverPresentation" identifier="horaPickerMinSegue" popoverAnchorView="aO2-Vt-zYA" id="R8W-3m-oN8">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
+                                                    <segue destination="9pf-Kr-v8r" kind="presentation" identifier="horaPickerMinSegue" id="R8W-3m-oN8"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfz-Il-lpj">
@@ -1499,6 +1534,7 @@
                     <connections>
                         <outlet property="SegmentedControl_local" destination="O9s-mL-PcH" id="s1W-hG-QiB"/>
                         <outlet property="TextFild_local" destination="npC-Qt-bXp" id="t4F-Bm-vRG"/>
+                        <outlet property="btn_data" destination="2ce-0w-44X" id="2Av-F4-ylL"/>
                         <outlet property="btn_genero" destination="1ka-Eg-uVa" id="dkh-sT-6HQ"/>
                         <outlet property="btn_horaMax" destination="QMN-r4-SZq" id="QBd-Oc-Xmf"/>
                         <outlet property="btn_horaMin" destination="aO2-Vt-zYA" id="09e-h6-PCX"/>
@@ -1592,6 +1628,100 @@
             </objects>
             <point key="canvasLocation" x="-74" y="814"/>
         </scene>
+        <!--DataPicker-->
+        <scene sceneID="U1T-Eo-2mr">
+            <objects>
+                <viewController title="DataPicker" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="h1N-nh-Y8Z" customClass="PickerDataViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yDE-KS-R1J"/>
+                        <viewControllerLayoutGuide type="bottom" id="1M6-K5-Hme"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6N-Ra-xgV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KO8-oY-Hch" userLabel="popUpView" customClass="DesignableView" customModule="AppTeatro" customModuleProvider="target">
+                                <rect key="frame" x="8" y="2" width="359" height="270"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-bp-RWu">
+                                        <rect key="frame" x="20" y="8" width="319" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="524006611.63790101">
+                                            <!--2017-08-09 21:23:31 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJr-Hn-g6J">
+                                        <rect key="frame" x="16" y="232" width="159.5" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelar:" destination="h1N-nh-Y8Z" eventType="touchUpInside" id="2bJ-9i-vRN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKp-tm-nPI">
+                                        <rect key="frame" x="183.5" y="232" width="159.5" height="30"/>
+                                        <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="selecionar:" destination="h1N-nh-Y8Z" eventType="touchUpInside" id="rhN-bt-ff4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TLd-bp-RWu" secondAttribute="trailing" constant="20" id="1MG-Wb-Fir"/>
+                                    <constraint firstItem="TLd-bp-RWu" firstAttribute="leading" secondItem="KO8-oY-Hch" secondAttribute="leading" constant="20" id="34S-H7-cSR"/>
+                                    <constraint firstAttribute="bottom" secondItem="rJr-Hn-g6J" secondAttribute="bottom" constant="8" id="3Pq-ux-A41"/>
+                                    <constraint firstItem="rJr-Hn-g6J" firstAttribute="top" secondItem="TLd-bp-RWu" secondAttribute="bottom" constant="8" id="6xa-AQ-bAJ"/>
+                                    <constraint firstItem="TLd-bp-RWu" firstAttribute="top" secondItem="KO8-oY-Hch" secondAttribute="top" constant="8" id="9gs-fR-5SG"/>
+                                    <constraint firstItem="rJr-Hn-g6J" firstAttribute="width" secondItem="KO8-oY-Hch" secondAttribute="width" multiplier="0.5" constant="-20" id="BTo-7E-jmv"/>
+                                    <constraint firstItem="DKp-tm-nPI" firstAttribute="width" secondItem="rJr-Hn-g6J" secondAttribute="width" id="Ehl-4X-E9K"/>
+                                    <constraint firstItem="rJr-Hn-g6J" firstAttribute="leading" secondItem="KO8-oY-Hch" secondAttribute="leadingMargin" constant="8" id="JBz-Be-s60"/>
+                                    <constraint firstItem="DKp-tm-nPI" firstAttribute="centerY" secondItem="rJr-Hn-g6J" secondAttribute="centerY" id="Jrj-Xe-qir"/>
+                                    <constraint firstItem="DKp-tm-nPI" firstAttribute="trailing" secondItem="KO8-oY-Hch" secondAttribute="trailingMargin" constant="-8" id="bQb-fR-G0Z"/>
+                                    <constraint firstAttribute="width" constant="360" id="huX-af-n6m"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="huX-af-n6m"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="huX-af-n6m"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KO8-oY-Hch" firstAttribute="centerY" secondItem="t6N-Ra-xgV" secondAttribute="centerY" id="H7L-Mw-iwO"/>
+                            <constraint firstItem="KO8-oY-Hch" firstAttribute="width" secondItem="t6N-Ra-xgV" secondAttribute="width" constant="-16" id="cjY-2G-JsG"/>
+                            <constraint firstItem="KO8-oY-Hch" firstAttribute="centerX" secondItem="t6N-Ra-xgV" secondAttribute="centerX" id="ugo-aD-aNt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cjY-2G-JsG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="cjY-2G-JsG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="274"/>
+                    <connections>
+                        <outlet property="dataPicker" destination="TLd-bp-RWu" id="9AZ-rC-ebl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEd-33-L2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="-816"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CapaTeste" width="1280" height="720"/>
@@ -1614,7 +1744,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OSe-N0-LXN"/>
-        <segue reference="sbB-JT-y1o"/>
-        <segue reference="RFX-DY-HDx"/>
+        <segue reference="jxv-wN-5id"/>
+        <segue reference="R8W-3m-oN8"/>
     </inferredMetricsTieBreakers>
 </document>

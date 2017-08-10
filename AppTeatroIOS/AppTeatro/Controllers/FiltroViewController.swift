@@ -8,18 +8,20 @@
 
 import UIKit
 
-class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelectedDelegate{
+class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelectedDelegate, DataSelectedDelegate{
     
     var horaMin: String?
     var horaMax: String?
     var isHoraMin = true // variavel para seber qual botão chamou o picker de hora
     var generosSelecionados: [String]?
+    var dataSelecionada: String?
     
     @IBOutlet weak var btn_genero: UIButton!
     @IBOutlet weak var TextFild_local: UITextField!
     @IBOutlet weak var SegmentedControl_local: UISegmentedControl!
     @IBOutlet weak var btn_horaMin: UIButton!
     @IBOutlet weak var btn_horaMax: UIButton!
+    @IBOutlet weak var btn_data: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,7 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
     }
     
     func generoSelectedDelegate(generosSelecionados: [String]) {
+        self.generosSelecionados = generosSelecionados
         if generosSelecionados.count == 1 {
             btn_genero.setTitle(generosSelecionados[0], for: UIControlState.normal)
             btn_genero.setTitle(generosSelecionados[0], for: UIControlState.selected)
@@ -52,6 +55,12 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
             btn_genero.setTitle("Vários", for: UIControlState.normal)
             btn_genero.setTitle("Vários", for: UIControlState.selected)
         }
+    }
+    
+    func dataSelectedDelegate(data: String) {
+        dataSelecionada = data
+        btn_data.setTitle(dataSelecionada, for: UIControlState.normal)
+        btn_data.setTitle(dataSelecionada, for: UIControlState.selected)
     }
     
     // MARK: - Navigation
@@ -73,6 +82,11 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
             let controller = segue.destination as! GenerosViewController
             controller.delegate = self
             controller.generosSelecionados = generosSelecionados
+        }
+        if segue.identifier == "dataPickerSegue" {
+            let controller = segue.destination as! PickerDataViewController
+            controller.delegate = self
+            controller.dataSelecionada = dataSelecionada
         }
     }
 
