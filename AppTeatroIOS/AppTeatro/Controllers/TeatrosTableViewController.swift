@@ -58,10 +58,11 @@ class TeatrosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         local = localArray[indexPath.row]
+        self.performSegue(withIdentifier: localSegue, sender: nil)
     }
     
     func updateData() {
-         localArray = CoreDataManager.fetchObj(entityName: Local.self)
+        localArray = CoreDataManager.fetchObj(entityName: Local.self)
     }
     
     // MARK: - Navigation
@@ -79,6 +80,7 @@ class TeatrosTableViewController: UITableViewController {
             switch identifier {
             case localSegue:
                 (segue.destination as! LocalViewController).local = self.local
+                self.local = nil
             default:
                 break;
             }

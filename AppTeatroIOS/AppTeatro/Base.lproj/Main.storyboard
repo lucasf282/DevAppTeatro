@@ -632,7 +632,7 @@
                                         <rect key="frame" x="0.0" y="241" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Voi-ba-ajV" id="5oo-NE-PUF">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_event" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-DK-Ein" userLabel="ImgView_icon">
@@ -669,7 +669,7 @@
                                         <rect key="frame" x="0.0" y="305" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqN-WO-g02" id="7cr-xg-pKX">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-Kj-nDc" userLabel="ImgView_icon">
@@ -709,7 +709,7 @@
                                         <rect key="frame" x="0.0" y="369" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pq-8N-WiM" id="FKQ-Bg-gbR">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attach_money" translatesAutoresizingMaskIntoConstraints="NO" id="ptG-ls-DLd" userLabel="ImgView_icon">
@@ -746,7 +746,7 @@
                                         <rect key="frame" x="0.0" y="433" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PvE-xB-vfU" id="Fj4-br-D6Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_description" translatesAutoresizingMaskIntoConstraints="NO" id="uim-rz-APV" userLabel="ImgView_icon">
@@ -898,8 +898,11 @@
                                     <constraint firstAttribute="bottom" secondItem="TiO-vM-kMS" secondAttribute="bottom" id="yog-RF-4St"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-Jl-K1e">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-Jl-K1e">
                                 <rect key="frame" x="0.0" y="495" width="375" height="172"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sdB-3B-vyg" id="EZj-Ev-Rt4"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -943,6 +946,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="W9z-Jl-K1e" id="hfX-N6-bF9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zho-7k-H4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

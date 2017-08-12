@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12115" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Agenda" representedClassName="Agenda" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="hora" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -31,6 +31,8 @@
         <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endereco" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="listaEvento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evento" inverseName="local" inverseEntity="Evento" syncable="YES"/>
@@ -43,7 +45,7 @@
         <element name="Agenda" positionX="376" positionY="-3249" width="128" height="103"/>
         <element name="Evento" positionX="547" positionY="-3249" width="128" height="223"/>
         <element name="Ingresso" positionX="378" positionY="-3096" width="128" height="103"/>
-        <element name="Local" positionX="738" positionY="-3249" width="128" height="150"/>
+        <element name="Local" positionX="738" positionY="-3249" width="128" height="178"/>
         <element name="Usuario" positionX="736" positionY="-3042" width="128" height="73"/>
     </elements>
 </model>

@@ -13,6 +13,7 @@
 		1F7930461EEF0EC1008D6D30 /* TeatrosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7930441EEF0EC1008D6D30 /* TeatrosTableViewController.swift */; };
 		1F7930491EEF0F1C008D6D30 /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7930471EEF0F1C008D6D30 /* EventoTableViewCell.swift */; };
 		1F79304A1EEF0F1C008D6D30 /* TeatroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7930481EEF0F1C008D6D30 /* TeatroTableViewCell.swift */; };
+		1F81882A1F3E651D00974D03 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8188291F3E651D00974D03 /* ExtensionString.swift */; };
 		1F9D55A91ED1048200F085F9 /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */; };
 		1F9D55CB1ED4D31400F085F9 /* PickerHoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */; };
 		1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA676C31EA3E3A300150964 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		1F7930441EEF0EC1008D6D30 /* TeatrosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeatrosTableViewController.swift; path = Controllers/TeatrosTableViewController.swift; sourceTree = "<group>"; };
 		1F7930471EEF0F1C008D6D30 /* EventoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventoTableViewCell.swift; path = Views/EventoTableViewCell.swift; sourceTree = "<group>"; };
 		1F7930481EEF0F1C008D6D30 /* TeatroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeatroTableViewCell.swift; path = Views/TeatroTableViewCell.swift; sourceTree = "<group>"; };
+		1F8188291F3E651D00974D03 /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionString.swift; path = Extensions/ExtensionString.swift; sourceTree = "<group>"; };
 		1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiltroViewController.swift; path = Controllers/FiltroViewController.swift; sourceTree = "<group>"; };
 		1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerHoraViewController.swift; path = Controllers/PickerHoraViewController.swift; sourceTree = "<group>"; };
 		1FA676C01EA3E3A100150964 /* AppTeatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTeatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +128,6 @@
 		1F6264C91EB93B5A00AB8DED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F7930441EEF0EC1008D6D30 /* TeatrosTableViewController.swift */,
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
@@ -134,6 +135,7 @@
 				1FC48EA21EC533F40028291A /* DetalhesTableViewController.swift */,
 				1F7930431EEF0EC1008D6D30 /* RegisterPageViewController.swift */,
 				1F6795971EC26062001FE447 /* LoginViewController.swift */,
+				1F7930441EEF0EC1008D6D30 /* TeatrosTableViewController.swift */,
 				1FBE66001EC6880B00BF87B4 /* LocalViewController.swift */,
 				1F9D55A81ED1048200F085F9 /* FiltroViewController.swift */,
 				1FBE66041ECA0CE200BF87B4 /* GenerosViewController.swift */,
@@ -146,6 +148,7 @@
 		1F7546FD1EE1F08000967C29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1F8188291F3E651D00974D03 /* ExtensionString.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */,
 				1FC413E51EC384F200732ECB /* GeneroCollectionViewCell.swift in Sources */,
 				3BD5C68A1F3BAABF003401C1 /* DesignableView.swift in Sources */,
+				1F81882A1F3E651D00974D03 /* ExtensionString.swift in Sources */,
 				1F7930461EEF0EC1008D6D30 /* TeatrosTableViewController.swift in Sources */,
 				3B2D5A961F3BB71C00A68272 /* PickerDataViewController.swift in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,

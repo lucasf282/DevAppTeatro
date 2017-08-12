@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
-class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate{
     
     var local : Local?
     var conteudo : [[String]]?
     
+    @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let point = MKPointAnnotation();
         if let teatro = local {
             conteudo = [
                 ["Nome:", teatro.nome ?? "nome"],
@@ -22,8 +25,21 @@ class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 ["Complemento:", teatro.complemento ?? "complemento"],
                 ["Cidade/Estado:", "\(teatro.cidade ?? "cidade") / \(teatro.estado ?? "estado")"],
                 ["Telefone:", teatro.telefone ?? "telefone"]
+                
             ]
+            
+            if (teatro.latitude != nil && teatro.longitude != nil) {
+                point.coordinate = CLLocationCoordinate2DMake(Double(teatro.latitude!)!, Double(teatro.longitude!)!)//-15.8373354, -47.9160457)
+                point.title = teatro.nome ?? "nome"
+                
+                mapView.addAnnotation(point)
+                mapView.camera.altitude = pow(2, 11)
+                mapView.showAnnotations([point], animated: false)
+            }
+            
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

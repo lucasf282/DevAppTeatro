@@ -94,6 +94,8 @@ class CoreDataManager {
         local2.endereco = "L2 sul QR 616 lote 24"
         local2.complemento = "area especial"
         local2.telefone = "(61) 00000 0000"
+        local2.latitude = "-15.8373354"
+        local2.longitude = "-47.9160457"
         local2.addToListaEvento(evento2)
         local2.addToListaEvento(evento3)
         
