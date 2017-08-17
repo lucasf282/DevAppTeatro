@@ -442,6 +442,10 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     // not supported
 }
 
+- (void)pauseInteractiveTransition
+{
+    // not supported
+}
 
 - (void)completeTransition:(BOOL)didComplete
 {
@@ -760,14 +764,14 @@ const int FrontViewPositionNone = 0xff;
     _userInteractionStore = _contentView.userInteractionEnabled;
 }
 
-
+/*
 - (NSUInteger)supportedInterfaceOrientations
 {
     // we could have simply not implemented this, but we choose to call super to make explicit that we
     // want the default behavior.
     return [super supportedInterfaceOrientations];
 }
-
+*/
 
 #pragma mark - Public methods and property accessors
 
