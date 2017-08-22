@@ -31,7 +31,6 @@ class LocalViewController: UIViewController{
             self.marcarPonto(teatro: teatro)
         }
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,28 +80,69 @@ extension LocalViewController: MKMapViewDelegate{
             mapView.showAnnotations([point], animated: false)
         }
     }
+    func showRoute(sourceCoordinate: CLLocationCoordinate2D, destinationCoordinate: CLLocationCoordinate2D){
+        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinate, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil)
+        
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceMapItem
+        directionRequest.destination = destinationMapItem
+        directionRequest.transportType = .automobile
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate{[unowned self] response, error in
+            guard let unwrappedResponse = response else {return}
+                
+            for route in unwrappedResponse.routes {
+                self.mapView.add(route.polyline)
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+            
+        }
+        
+    }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        polylineRenderer.strokeColor = UIColor.blue
+        polylineRenderer.fillColor = UIColor.red
+        polylineRenderer.lineWidth = 2
+        return polylineRenderer
+    }
 }
 
 //MARK: CLLocationManagerDelegate
 extension LocalViewController: CLLocationManagerDelegate{
     // trocar esse método por um botão para criar rota.
-    //testar mostrar posição do usuário
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.authorizedWhenInUse{
             mapView.showsUserLocation = true
             
-            if let coordinate = locationManager.location?.coordinate{
-                let point = MKPointAnnotation();
-                point.coordinate = coordinate //-15.8348257,-47.9137472)iesb
-                point.title = "usuário"
+            if let sourceCoordinate = manager.location?.coordinate{
+                //let point = MKPointAnnotation();
+                //point.coordinate = coordinate //-15.8348257,-47.9137472)iesb
+                //point.title = "usuário"
                 //mapView.addAnnotation(point)
-                mapView.camera.altitude = pow(2, 11)
                 //mapView.showAnnotations([point], animated: false)
-                mapView.setCenter(coordinate, animated: true)
+                //mapView.camera.altitude = pow(2, 11)
+                //mapView.setCenter(sourceCoordinate, animated: true)
+                
+                if let theater = local {
+                    if (theater.latitude != nil && theater.longitude != nil) {
+                        let destinationCordinate = CLLocationCoordinate2DMake(Double(theater.latitude!)!, Double(theater.longitude!)!)
+                        showRoute(sourceCoordinate: sourceCoordinate, destinationCoordinate: destinationCordinate)
+                    }
+                }
+                
             } else{
                 locationManager.startUpdatingLocation()
             }
-        } else {
+            
+        }
+        if status == CLAuthorizationStatus.notDetermined {
+            locationManager.requestWhenInUseAuthorization()
         }
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
