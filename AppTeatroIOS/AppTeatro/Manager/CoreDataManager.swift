@@ -57,6 +57,57 @@ class CoreDataManager {
         let localClassName: String = String(describing: Local.self)
         let usuarioClassName: String = String(describing: Usuario.self)
         
+        // TO-DO Refatorar
+        let url = URL(string: "https://teatro-api.herokuapp.com/eventos")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil{
+                print ("ERROR");
+            }
+            else{
+                
+                if let content = data{
+                    do {
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        
+                        var eventos: [Evento] = []
+                        
+                        for json in myJson as! [[String:Any]]{
+                            let evento1: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
+                            evento1.nome = json["nome"] as? String
+                            evento1.diaHora = "21/02 - 19h"
+                            evento1.genero = "Comedia"
+                            evento1.valor = "R$ 30,00"
+                            evento1.descricao = json["descricao"] as? String
+                            
+                            if let rates = json["local"] as? NSDictionary{
+                                print(rates)
+                                
+                                let local1: Local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: CoreDataManager.getContext()) as! Local
+                                local1.nome = rates["nome"] as? String
+                                local1.estado = rates["estado"] as? String
+                                local1.cidade = rates["cidade"] as? String
+                                local1.endereco = rates["endereco"] as? String
+                                local1.complemento = rates["complemento"] as? String
+                                local1.telefone = rates["telefone"] as? String
+                                local1.latitude = "-15.8175238"
+                                local1.longitude = "-47.9223492"
+                                evento1.local = local1
+                            }
+                            
+                            eventos.append(evento1)
+                            
+                        }
+                        
+                    }
+                    catch{
+                        
+                    }
+                }
+            }
+        }
+        task.resume()
+        // TO-DO Refatorar
+        
         let evento1: Evento = NSEntityDescription.insertNewObject(forEntityName: eventoClassName, into: CoreDataManager.getContext()) as! Evento
         evento1.nome = "Improvaveis"
         evento1.diaHora = "21/02 - 19h"
@@ -130,7 +181,7 @@ class CoreDataManager {
         
         return aray as! [T]
     }
-
+    
     
     ///delete all the data in core data
     class func cleanCoreData() {
