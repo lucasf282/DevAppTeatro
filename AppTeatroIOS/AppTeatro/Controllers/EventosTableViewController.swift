@@ -45,15 +45,7 @@ class EventosTableViewController: UITableViewController {
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
-        
-        //Inicialização do Core Data
-        // 1. Deletar todos os objetos da base
-        CoreDataManager.cleanCoreData()
-        
-        // 2. Inserir objetos na base
-        CoreDataManager.presetCoreData()
-        
-        // 3. Sincronizar objetos da base
+        // Sincronizar objetos da base
         updateData()
         
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jt3-Gd-xoJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -373,7 +373,6 @@
                                     <constraint firstItem="p1B-qt-NvJ" firstAttribute="width" secondItem="qKO-8g-UHr" secondAttribute="width" id="mT1-Xm-AIy"/>
                                     <constraint firstItem="p1B-qt-NvJ" firstAttribute="centerY" secondItem="qKO-8g-UHr" secondAttribute="centerY" id="pmo-66-gk1"/>
                                     <constraint firstAttribute="trailing" secondItem="p1B-qt-NvJ" secondAttribute="trailing" constant="8" id="sCn-lm-SWl"/>
-                                    <constraint firstItem="p1B-qt-NvJ" firstAttribute="leading" secondItem="qKO-8g-UHr" secondAttribute="trailing" constant="8" id="smp-GZ-H3Y"/>
                                     <constraint firstAttribute="bottom" secondItem="vDN-be-iLS" secondAttribute="bottom" constant="8" id="so4-sD-b6c"/>
                                     <constraint firstItem="pqx-3p-MbD" firstAttribute="top" secondItem="ZXG-is-1nd" secondAttribute="top" constant="8" id="vY3-w9-cNO"/>
                                 </constraints>
@@ -384,7 +383,6 @@
                                     <mask key="constraints">
                                         <exclude reference="1aN-12-iX4"/>
                                         <exclude reference="vY3-w9-cNO"/>
-                                        <exclude reference="smp-GZ-H3Y"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">

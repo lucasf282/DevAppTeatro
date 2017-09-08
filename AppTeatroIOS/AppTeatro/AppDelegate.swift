@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
         let defaults = UserDefaults.standard
         let skipTutorialPages = defaults.bool(forKey: "skipTutorialPages")
         
@@ -35,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIPageControl.appearance().currentPageIndicatorTintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         }
         
+        //Inicialização do Core Data
+        // 1. Deletar todos os objetos da base
+        CoreDataManager.cleanCoreData()
+        
+        // 2. Inserir objetos na base
+        CoreDataManager.presetCoreData()
         return true
     }
 
