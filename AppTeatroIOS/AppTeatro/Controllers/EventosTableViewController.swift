@@ -12,6 +12,7 @@ import CoreData
 class EventosTableViewController: UITableViewController {
     
     var evento : Evento?
+    var filtro : NSPredicate? = nil
     
     let detalheEventoSegue = "MostrarDetalheEvento"
     fileprivate var eventoItemArray = [Evento]()
@@ -38,11 +39,14 @@ class EventosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.revealViewController() != nil {
+        if(filtro == nil){
+            if self.revealViewController() != nil {
             btnMenuButton.target = revealViewController()
             btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
         }
         
         // Sincronizar objetos da base
@@ -58,7 +62,11 @@ class EventosTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     func updateData() {
+        if(filtro != nil){
+            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, predicate: filtro)
+        } else{
         eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
+        }
     }
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {

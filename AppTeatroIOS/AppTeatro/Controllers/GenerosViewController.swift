@@ -17,7 +17,7 @@ class GenerosViewController: UIViewController , UICollectionViewDelegate, UIColl
     var delegate : GeneroSelectedDelegate?
     var generosSelecionados:[String]?
     
-    let generos = [["generos_comedia", "comédia"], ["generos_drama", "drama"], ["generos_suspense", "suspense"], ["generos_outro1", "outro1"], ["generos_outro2", "outro2"], ["generos_outro3", "outro3"], ["generos_outro4", "outro4"]]
+    let generos = [["generos_comedia", "STANDUP"], ["generos_drama", "MONOLOGO"], ["generos_suspense", "suspense"], ["generos_outro1", "outro1"], ["generos_outro2", "outro2"], ["generos_outro3", "outro3"], ["generos_outro4", "outro4"]]
     
     
     @IBOutlet weak var collectionView_generos: UICollectionView!

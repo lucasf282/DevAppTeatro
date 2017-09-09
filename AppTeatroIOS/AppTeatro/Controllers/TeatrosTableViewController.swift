@@ -45,7 +45,8 @@ class TeatrosTableViewController: UITableViewController {
         
         let localItem =  localArray[indexPath.row]
         
-        cell.imgViewTeatro.image = UIImage(named: localItem.nome!)
+        let id = localItem.id as NSNumber
+        cell.imgViewTeatro.image = UIImage(named: "local"+id.stringValue)
         cell.labelTituloTeatro.text = localItem.nome
         
         return cell

@@ -60,7 +60,8 @@ class CoreDataManager {
         usuario.email = "exemplo@email.com"
         usuario.senha = "123"
 
-        RestToCoreData().presetCoreData()
+        RestToCoreData().presetCoreDataEventos()
+        RestToCoreData().presetCoreDataLocais()
         
         // TO-DO Refatorar
         //        let url = URL(string: "https://teatro-api.herokuapp.com/eventos")

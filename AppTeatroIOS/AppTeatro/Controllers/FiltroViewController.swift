@@ -12,8 +12,8 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
     
     var horaMin: String?
     var horaMax: String?
-    var isHoraMin = true // variavel para seber qual botão chamou o picker de hora
-    var generosSelecionados: [String]?
+    var isHoraMin = true // variavel para saber qual botão chamou o picker de hora
+    var generosSelecionados: [String] = []
     var dataSelecionada: String?
     
     @IBOutlet weak var btn_genero: UIButton!
@@ -25,10 +25,10 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -88,6 +88,16 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
             controller.delegate = self
             controller.dataSelecionada = dataSelecionada
         }
+        if segue.identifier == "filtroEvento"{
+            // TO-DO Colocar o restante dos filtros
+            let predicateGenero = NSPredicate(format: "genero IN %@", generosSelecionados)
+            let predicateNome = NSPredicate(format: "nome == %@", TextFild_local.text!)
+            
+            let preicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNome, predicateGenero])
+            
+            (segue.destination as! EventosTableViewController).filtro = preicateCompound
+        }
+        
     }
-
+    
 }

@@ -17,6 +17,7 @@ class LocalViewController: UIViewController{
     var locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var imagemLocal: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class LocalViewController: UIViewController{
                 ["Cidade/Estado:", "\(teatro.cidade ?? "cidade") / \(teatro.estado ?? "estado")"],
                 ["Telefone:", teatro.telefone ?? "telefone"]]
             
+            let id = teatro.id as NSNumber
+            imagemLocal.image = UIImage(named: "local"+id.stringValue)
             self.marcarPonto(teatro: teatro)
         }
         locationManager.delegate = self
