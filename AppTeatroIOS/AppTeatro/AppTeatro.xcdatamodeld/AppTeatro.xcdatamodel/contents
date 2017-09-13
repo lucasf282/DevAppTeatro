@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12115" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Agenda" representedClassName="Agenda" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dataHora" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,7 +26,7 @@
     <entity name="Ingresso" representedClassName="Ingresso" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="preco" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="preco" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="quantidade" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="agenda" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Agenda" inverseName="listaIngresso" inverseEntity="Agenda" syncable="YES"/>
     </entity>
@@ -49,7 +49,7 @@
     <elements>
         <element name="Agenda" positionX="376" positionY="-3249" width="128" height="133"/>
         <element name="Evento" positionX="547" positionY="-3249" width="128" height="238"/>
-        <element name="Ingresso" positionX="378" positionY="-3096" width="128" height="118"/>
+        <element name="Ingresso" positionX="378" positionY="-3096" width="128" height="120"/>
         <element name="Local" positionX="738" positionY="-3249" width="128" height="193"/>
         <element name="Usuario" positionX="736" positionY="-3042" width="128" height="73"/>
     </elements>

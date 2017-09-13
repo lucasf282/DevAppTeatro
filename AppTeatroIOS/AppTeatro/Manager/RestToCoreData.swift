@@ -50,7 +50,18 @@ class RestToCoreData{
         let context = CoreDataManager.getContext()
         
         if let ingresso = NSEntityDescription.insertNewObject(forEntityName: ingressoClassName, into: context) as? Ingresso {
-            ingresso.setValuesForKeys(dictionary)
+            if let id = dictionary["id"] as? Int64{
+                ingresso.id = id
+            }
+            if let quant = dictionary["quantidade"] as? Int16{
+                ingresso.quantidade = quant
+            }
+            ingresso.nome = dictionary["nome"] as? String
+            
+            if let preco = (dictionary["preco"] as? String){
+                ingresso.preco = Double(preco.replacingOccurrences(of: "R$", with: "").replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            }
+            
             return ingresso
         }
         return nil
@@ -63,12 +74,27 @@ class RestToCoreData{
             if let id = dictionary["id"] as? Int64{
                 agenda.id = id
             }
-            //let data = dictionary["data"] as? String
-            let hora = dictionary["hora"] as? String
-            agenda.dataHora = hora
-            let ingressos = dictionary["listaIngresso"] as? NSArray
+            if let data = dictionary["data"] as? NSArray{
+                if let dia = data[2] as? Int{
+                    if let mes = data[1] as? Int{
+                        if let ano = data[0] as? Int{
+                            agenda.dataHora = "\(dia)/\(mes)/\(ano)"
+                        }
+                    }
+                }
+                
+                if let hora = dictionary["horario"] as? String{
+                    agenda.dataHora = agenda.dataHora ?? "" + " - " + hora
+                }
+            }
             
-            //agenda.listaIngresso?.adding(createIngressoEntityFrom(dictionary: ingressos["0"]))
+            if let ingressos = dictionary["listaIngresso"] as? NSMutableArray{
+                if let ingressoDictionary =  ingressos[0] as? [String: AnyObject]{
+                    if let ingresso = self.createIngressoEntityFrom(dictionary: ingressoDictionary) as? Ingresso{
+                        agenda.addToListaIngresso(ingresso)
+                    }
+                }
+            }
             return agenda
         }
         return nil
@@ -82,10 +108,14 @@ class RestToCoreData{
                 evento.id = id
             }
             evento.nome = dictionary["nome"] as? String
-            let agendas = dictionary["listaAgenda"] as? NSDictionary
-            print("conteudo lista agenda")
-            print(agendas)
-            //evento.listaAgenda?.adding(self.createAgendaEntityFrom(dictionary: agendas["0"]))
+            if let agendas = dictionary["listaAgenda"] as? NSMutableArray{
+                if let agendaDictionary =  agendas[0] as? [String: AnyObject]{
+                    if let agenda = self.createAgendaEntityFrom(dictionary: agendaDictionary) as? Agenda{
+                        evento.addToListaAgenda(agenda)
+                        evento.diaHora = agenda.dataHora
+                    }
+                }
+            }
             evento.genero = dictionary["genero"] as? String
             evento.valor = "R$ 30,00"
             evento.descricao = dictionary["descricao"] as? String
@@ -97,7 +127,7 @@ class RestToCoreData{
                 }
                 evento.local = local
             }*/
-            
+            print(evento)
             return evento
         }
         return nil

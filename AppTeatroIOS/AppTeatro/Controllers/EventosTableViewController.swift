@@ -88,9 +88,18 @@ class EventosTableViewController: UITableViewController {
         
         cell.ImgView_capa.image = UIImage(named: evtItem.nome ?? "CapaTeste")
         cell.labelTitulo.text = evtItem.nome
-        cell.labelDataHora.text = evtItem.diaHora
+        if let agenda = evtItem.listaAgenda?.allObjects.first as? Agenda {
+            cell.labelDataHora.text = agenda.dataHora
+            if let ingresso = agenda.listaIngresso?.allObjects.first as? Ingresso {
+                cell.labelPreco.text = "R$" + String(describing: ingresso.preco)
+            }else{
+                cell.labelPreco.text = evtItem.valor
+            }
+        }else{
+            cell.labelDataHora.text = evtItem.diaHora
+            cell.labelPreco.text = evtItem.valor
+        }
         cell.labelLocal.text = evtItem.local?.nome ?? "Local não definido"
-        cell.labelPreco.text = evtItem.valor
         
         return cell
     }
