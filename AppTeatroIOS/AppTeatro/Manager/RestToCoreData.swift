@@ -119,14 +119,10 @@ class RestToCoreData{
             evento.genero = dictionary["genero"] as? String
             evento.valor = "R$ 30,00"
             evento.descricao = dictionary["descricao"] as? String
+            if let localDictionary = dictionary["local"] as? [String: AnyObject]{
+                evento.local = self.createLocalEntityFrom(dictionary: localDictionary) as? Local
+            }
             
-            /* TO-DO
-            if let local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: context) as? Local {
-                if let localDictionary = dictionary["local"] as? [String: AnyObject]{
-                    local.setValuesForKeys(localDictionary)
-                }
-                evento.local = local
-            }*/
             print(evento)
             return evento
         }
@@ -136,20 +132,24 @@ class RestToCoreData{
     private func createLocalEntityFrom(dictionary: [String: AnyObject]) -> NSManagedObject? {
         let context = CoreDataManager.getContext()
         
-        if let local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: context) as? Local {
-            if let id = dictionary["id"] as? Int64{
-                local.id = id
-            }
-            local.nome = dictionary["nome"] as? String
-            local.endereco = dictionary["endereco"] as? String
-            local.complemento = dictionary["complemento"] as? String
-            local.cidade = dictionary["cidade"] as? String
-            local.estado = dictionary["estado"] as? String
-            local.telefone = dictionary["telefone"] as? String
-            local.latitude = dictionary["latitude"] as? String
-            local.longitude = dictionary["longitude"] as? String
-            
+        if let local = CoreDataManager.fetchObjById(entityName: Local.self, id: dictionary["id"] as? Int64) {
             return local
+        }else {
+            if let local = NSEntityDescription.insertNewObject(forEntityName: localClassName, into: context) as? Local {
+                if let id = dictionary["id"] as? Int64{
+                    local.id = id
+                }
+                local.nome = dictionary["nome"] as? String
+                local.endereco = dictionary["endereco"] as? String
+                local.complemento = dictionary["complemento"] as? String
+                local.cidade = dictionary["cidade"] as? String
+                local.estado = dictionary["estado"] as? String
+                local.telefone = dictionary["telefone"] as? String
+                local.latitude = dictionary["latitude"] as? String
+                local.longitude = dictionary["longitude"] as? String
+                
+                return local
+            }
         }
         return nil
     }

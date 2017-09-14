@@ -41,12 +41,12 @@ class EventosTableViewController: UITableViewController {
         
         if(filtro == nil){
             if self.revealViewController() != nil {
-            btnMenuButton.target = revealViewController()
-            btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
+                btnMenuButton.target = revealViewController()
+                btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+                self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+                
+                self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+            }
         }
         
         // Sincronizar objetos da base
@@ -68,11 +68,6 @@ class EventosTableViewController: UITableViewController {
         eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
         }
     }
-    
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 1
-    //    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

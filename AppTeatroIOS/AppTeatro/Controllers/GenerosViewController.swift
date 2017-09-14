@@ -12,7 +12,7 @@ import UIKit
     func generoSelectedDelegate(generosSelecionados: [String])
 }
 
-class GenerosViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
+class GenerosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     var delegate : GeneroSelectedDelegate?
     var generosSelecionados:[String]?
