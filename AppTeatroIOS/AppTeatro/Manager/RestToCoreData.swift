@@ -119,6 +119,12 @@ class RestToCoreData{
             evento.genero = dictionary["genero"] as? String
             evento.valor = "R$ 30,00"
             evento.descricao = dictionary["descricao"] as? String
+            
+            let url = dictionary["imagem"] as? String
+            let urlImage = URL(string: url!)
+            let data = try? Data(contentsOf: urlImage!)
+            evento.foto = data as NSData?
+            
             if let localDictionary = dictionary["local"] as? [String: AnyObject]{
                 evento.local = self.createLocalEntityFrom(dictionary: localDictionary) as? Local
             }

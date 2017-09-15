@@ -93,9 +93,9 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
             let predicateGenero = NSPredicate(format: "genero IN %@", generosSelecionados)
             let predicateNome = NSPredicate(format: "nome == %@", TextFild_local.text!)
             
-            let preicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNome, predicateGenero])
+            let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNome, predicateGenero])
             
-            (segue.destination as! EventosTableViewController).filtro = preicateCompound
+            (segue.destination as! EventosTableViewController).filtro = predicateCompound
         }
         
     }

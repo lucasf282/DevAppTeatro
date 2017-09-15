@@ -68,7 +68,13 @@ class EventosTableViewController: UITableViewController{
     
     func performFetch() {
         do {
-            try fetchedhResultController.performFetch()
+            if(filtro != nil){
+                fetchedhResultController.fetchRequest.predicate = filtro
+                try fetchedhResultController.performFetch()
+                //tableView.reloadData()
+            } else{
+                try fetchedhResultController.performFetch()
+            }
         } catch {
             print(error)
         }
@@ -86,7 +92,7 @@ class EventosTableViewController: UITableViewController{
         
         let evtItem = fetchedhResultController.object(at: indexPath)
         
-        cell.ImgView_capa.image = UIImage(named: evtItem.nome ?? "CapaTeste")
+        cell.ImgView_capa.image = UIImage(data: evtItem.foto! as Data)
         cell.labelTitulo.text = evtItem.nome
         if let agenda = evtItem.listaAgenda?.allObjects.first as? Agenda {
             cell.labelDataHora.text = agenda.dataHora

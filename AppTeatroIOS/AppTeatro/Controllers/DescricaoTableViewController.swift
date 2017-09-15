@@ -29,7 +29,7 @@ class DescricaoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        image.image = UIImage(named: evento?.nome ?? "CapaTeste")
+        image.image = UIImage(data: evento?.foto as! Data)
         dataHora.text = evento?.diaHora
         local.text = evento?.local?.nome
         preco.text = evento?.valor
