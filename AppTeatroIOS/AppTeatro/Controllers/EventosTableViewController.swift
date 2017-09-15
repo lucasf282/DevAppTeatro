@@ -9,13 +9,23 @@
 import UIKit
 import CoreData
 
-class EventosTableViewController: UITableViewController {
+class EventosTableViewController: UITableViewController{
     
     var evento : Evento?
     var filtro : NSPredicate? = nil
     
     let detalheEventoSegue = "MostrarDetalheEvento"
-    fileprivate var eventoItemArray = [Evento]()
+    
+    lazy var fetchedhResultController: NSFetchedResultsController<Evento> = {
+        let fetchRequest = NSFetchRequest<Evento>(entityName: String(describing: Evento.self))
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        
+        let context = CoreDataManager.getContext()
+        
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = self
+        return frc
+    }()
     
     @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     @IBOutlet var eventosTable: UITableView!
@@ -24,7 +34,6 @@ class EventosTableViewController: UITableViewController {
         if isUserLoggedIn {
             
         }else{
-            // Display alert message with confirmation
             let myAlert = UIAlertController(title: "Alert", message: "Você precisa estar conectado a uma conta", preferredStyle: UIAlertControllerStyle.alert)
             
             let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default){
@@ -49,9 +58,7 @@ class EventosTableViewController: UITableViewController {
             }
         }
         
-        // Sincronizar objetos da base
-        updateData()
-        
+        self.performFetch()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,27 +66,25 @@ class EventosTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
-    
-    func updateData() {
-        if(filtro != nil){
-            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, predicate: filtro)
-        } else{
-        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
+    func performFetch() {
+        do {
+            try fetchedhResultController.performFetch()
+        } catch {
+            print(error)
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return eventoItemArray.count
+        if let count = fetchedhResultController.sections?[section].numberOfObjects{
+            return count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventoCell", for: indexPath) as! EventoTableViewCell
         
-        // Configure the cell...
-        
-        let evtItem = eventoItemArray[indexPath.row]
+        let evtItem = fetchedhResultController.object(at: indexPath)
         
         cell.ImgView_capa.image = UIImage(named: evtItem.nome ?? "CapaTeste")
         cell.labelTitulo.text = evtItem.nome
@@ -106,24 +111,30 @@ class EventosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.evento = eventoItemArray[indexPath.row]
+        self.evento = fetchedhResultController.object(at: indexPath)
         self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
-    }    
+    }
+    
     // MARK: - Segments
     
     @IBOutlet weak var segment: UISegmentedControl!
     @IBAction func IndexChenged(_ sender: Any) {
         switch segment.selectedSegmentIndex {
         case 0:
-            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: nil)
-            eventosTable.reloadData()
+            fetchedhResultController.fetchRequest.predicate = nil
+            fetchedhResultController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "nome", ascending: true)]
+            performFetch()
+            tableView.reloadData()
         case 1:
-            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: false, predicate: nil)
-            eventosTable.reloadData()
+            fetchedhResultController.fetchRequest.predicate = nil
+            fetchedhResultController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "nome", ascending: false)]
+            performFetch()
+            tableView.reloadData()
         case 2:
-            let predicate = NSPredicate(format: "nome contains[c] %@", "impro")
-            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: predicate)
-            eventosTable.reloadData()
+            let predicate = NSPredicate(format: "nome contains[c] %@", "cl")
+            fetchedhResultController.fetchRequest.predicate = predicate
+            performFetch()
+            tableView.reloadData()
         default:
             break
         }
@@ -143,7 +154,6 @@ class EventosTableViewController: UITableViewController {
         
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let identifier = segue.identifier{
@@ -156,28 +166,43 @@ class EventosTableViewController: UITableViewController {
                 break;
                 
             }
-            
-            // Get the new view controller using segue.destinationViewController.
-            // Pass the selected object to the new view controller.
         }
     }
-    
 }
 
 // MARK: - SearchBarDelegate
 extension EventosTableViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else{
-            eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self)
+            fetchedhResultController.fetchRequest.predicate = nil
+            fetchedhResultController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+            performFetch()
             tableView.reloadData()
             return
         }
         
         let predicate = NSPredicate(format: "nome contains[c] %@", searchText)
-        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, predicate: predicate)
-//        eventoItemArray = CoreDataManager.fetchObj(entityName: Evento.self, sortBy: "nome", isAscending: true, predicate: predicate)
-        
+        fetchedhResultController.fetchRequest.predicate = predicate
+        fetchedhResultController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "nome", ascending: true)]
+        performFetch()
         tableView.reloadData()
         print(searchText)
     }
+}
+
+// MARK: - NSFetchedResultsControllerDelegate
+extension EventosTableViewController: NSFetchedResultsControllerDelegate{
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if type == .insert{
+            if let index = newIndexPath {
+                //eventosTable.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
+            }
+        }
+        
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        eventosTable.reloadData()
+    }
+    
 }
