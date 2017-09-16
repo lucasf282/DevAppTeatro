@@ -10,11 +10,11 @@ import UIKit
 
 class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelectedDelegate, DataSelectedDelegate{
     
-    var horaMin: String?
-    var horaMax: String?
+    var horaMin: String? = ""
+    var horaMax: String? = ""
     var isHoraMin = true // variavel para saber qual botão chamou o picker de hora
     var generosSelecionados: [String] = []
-    var dataSelecionada: String?
+    var dataSelecionada: String? = ""
     
     @IBOutlet weak var btn_genero: UIButton!
     @IBOutlet weak var TextFild_local: UITextField!
@@ -94,8 +94,10 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
             let predicateGenero = NSPredicate(format: "genero IN %@", generosSelecionados)
             let predicateNomeEvento = NSPredicate(format: "nome contains[c] %@", textField_evento.text!)
             let predicateNomeLocal = NSPredicate(format: "local.nome contains[c] %@", TextFild_local.text!)
+            let predicateHora = NSPredicate(format: "(ANY listaAgenda.hora >= %@) AND (ANY listaAgenda.hora <= %@)", horaMin!, horaMax!)
+             let predicateData = NSPredicate(format: "ANY listaAgenda.dataHora == %@", dataSelecionada!)
             
-            let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNomeEvento, predicateNomeLocal, predicateGenero])
+            let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNomeEvento, predicateNomeLocal, predicateGenero, predicateHora, predicateData])
             
             (segue.destination as! EventosTableViewController).filtro = predicateCompound
         }

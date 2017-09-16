@@ -96,6 +96,7 @@ class EventosTableViewController: UITableViewController{
         cell.labelTitulo.text = evtItem.nome
         if let agenda = evtItem.listaAgenda?.allObjects.first as? Agenda {
             cell.labelDataHora.text = agenda.dataHora
+            cell.labelHora.text = agenda.hora
             if let ingresso = agenda.listaIngresso?.allObjects.first as? Ingresso {
                 cell.labelPreco.text = "R$" + String(describing: ingresso.preco)
             }else{
@@ -200,7 +201,7 @@ extension EventosTableViewController : UISearchBarDelegate{
 extension EventosTableViewController: NSFetchedResultsControllerDelegate{
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         if type == .insert{
-            if let index = newIndexPath {
+            if newIndexPath != nil {
                 //eventosTable.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
             }
         }

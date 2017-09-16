@@ -83,10 +83,11 @@ class RestToCoreData{
                     }
                 }
                 
-                if let hora = dictionary["horario"] as? String{
-                    agenda.dataHora = agenda.dataHora ?? "" + " - " + hora
-                }
+//               if let hora = dictionary["horario"] as? String{
+//                    agenda.dataHora = agenda.dataHora ?? "" + " - " + hora
+//                }
             }
+            agenda.hora = dictionary["horario"] as? String
             
             if let ingressos = dictionary["listaIngresso"] as? NSMutableArray{
                 if let ingressoDictionary =  ingressos[0] as? [String: AnyObject]{

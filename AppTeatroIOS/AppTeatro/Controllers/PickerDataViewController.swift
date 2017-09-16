@@ -18,9 +18,9 @@ class PickerDataViewController: UIViewController{
     var dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "d/M/yyyy"
         
-        if dataSelecionada != nil {
+        if !(dataSelecionada?.isEmpty)! {
             dataPicker.date = dateFormatter.date(from: dataSelecionada!)!
         }
     }

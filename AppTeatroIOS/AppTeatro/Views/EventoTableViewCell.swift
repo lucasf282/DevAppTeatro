@@ -16,6 +16,7 @@ class EventoTableViewCell: UITableViewCell {
     @IBOutlet weak var labelLocal: UILabel!
     @IBOutlet weak var Btn_favorito: UIButton!
     @IBOutlet weak var ImgView_capa: UIImageView!
+    @IBOutlet weak var labelHora: UILabel!
     
     
     override func awakeFromNib() {
