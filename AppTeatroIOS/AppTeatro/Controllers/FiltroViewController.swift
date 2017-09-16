@@ -18,6 +18,7 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
     
     @IBOutlet weak var btn_genero: UIButton!
     @IBOutlet weak var TextFild_local: UITextField!
+    @IBOutlet weak var textField_evento: UITextField!
     @IBOutlet weak var SegmentedControl_local: UISegmentedControl!
     @IBOutlet weak var btn_horaMin: UIButton!
     @IBOutlet weak var btn_horaMax: UIButton!
@@ -91,9 +92,10 @@ class FiltroViewController: UIViewController, HoraSelectedDelegate, GeneroSelect
         if segue.identifier == "filtroEvento"{
             // TO-DO Colocar o restante dos filtros
             let predicateGenero = NSPredicate(format: "genero IN %@", generosSelecionados)
-            let predicateNome = NSPredicate(format: "nome == %@", TextFild_local.text!)
+            let predicateNomeEvento = NSPredicate(format: "nome contains[c] %@", textField_evento.text!)
+            let predicateNomeLocal = NSPredicate(format: "local.nome contains[c] %@", TextFild_local.text!)
             
-            let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNome, predicateGenero])
+            let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [predicateNomeEvento, predicateNomeLocal, predicateGenero])
             
             (segue.destination as! EventosTableViewController).filtro = predicateCompound
         }
