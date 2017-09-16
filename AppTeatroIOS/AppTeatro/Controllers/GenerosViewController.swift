@@ -17,7 +17,7 @@ class GenerosViewController: UIViewController, UICollectionViewDelegate, UIColle
     var delegate : GeneroSelectedDelegate?
     var generosSelecionados:[String]?
     
-    let generos = [["generos_comedia", "STANDUP"], ["generos_drama", "MONOLOGO"], ["generos_suspense", "suspense"], ["generos_outro1", "outro1"], ["generos_outro2", "outro2"], ["generos_outro3", "outro3"], ["generos_outro4", "outro4"]]
+    let generos = [["gen__standup", "STANDUP"], ["gen__monologo", "MONOLOGO"], ["gen__musical", "MUSICAL"], ["gen__drama", "DRAMA"], ["gen__show", "SHOW"]]
     
     
     @IBOutlet weak var collectionView_generos: UICollectionView!
@@ -49,6 +49,16 @@ class GenerosViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneroCell", for: indexPath) as! GeneroCollectionViewCell
         cell.btn_genero.setImage(UIImage(named: generos[indexPath.row][0]), for: UIControlState.normal)
+        cell.btn_genero.setImage(UIImage(named: (generos[indexPath.row][0])+"_selected"), for: UIControlState.selected)
+        if let generos_selected = generosSelecionados {
+            for genero_selected in generos_selected {
+                if generos[indexPath.row].contains(genero_selected){
+                    cell.btn_genero.isSelected = true
+                    cell.btnIsSelected = true
+                }
+                
+            }
+        }
         //cell.btn_genero.value(forKey: generos[indexPath.row][1])
         cell.label_genero.text = generos[indexPath.row][1]
         return cell
