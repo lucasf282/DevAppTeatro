@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let nextView: SWRevealViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+            let nextView: UITabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             
             window?.rootViewController = nextView
             

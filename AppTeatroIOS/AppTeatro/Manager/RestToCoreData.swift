@@ -124,7 +124,7 @@ class RestToCoreData{
             let url = dictionary["imagem"] as? String
             let urlImage = URL(string: url!)
             let data = try? Data(contentsOf: urlImage!)
-            evento.foto = data as NSData?
+            evento.foto = data as Data?
             
             if let localDictionary = dictionary["local"] as? [String: AnyObject]{
                 evento.local = self.createLocalEntityFrom(dictionary: localDictionary) as? Local
