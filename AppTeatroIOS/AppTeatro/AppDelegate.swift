@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,8 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIPageControl.appearance().pageIndicatorTintColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.5)
             UIPageControl.appearance().currentPageIndicatorTintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         }
-        
-        FirebaseApp.configure()
         
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base

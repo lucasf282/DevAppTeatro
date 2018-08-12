@@ -37,11 +37,6 @@
 		3B7F06BD1F60CDFB00D65E0C /* RestToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F06BC1F60CDFB00D65E0C /* RestToCoreData.swift */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD5C68A1F3BAABF003401C1 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5C6891F3BAABF003401C1 /* DesignableView.swift */; };
-		62566C692117A770003FF8AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62566C682117A770003FF8AA /* GoogleService-Info.plist */; };
-		625C76722103B68F003F8F55 /* MeuPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */; };
-		8751624B200E7068A7C5AD50 /* Pods_AppTeatroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */; };
-		8D931EB50D33FCDE3CE20BE9 /* Pods_AppTeatroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD317D41C6F73F321E4A767 /* Pods_AppTeatroUITests.framework */; };
-		AD2E9A27636151B23069EA0F /* Pods_AppTeatro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8FFCE8B7053E93A04BBA15 /* Pods_AppTeatro.framework */; };
 		AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */; };
 		AF8A4C681EBE2F2700F67EF7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */; };
 		AFC5EA601EBFA689008F0856 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */; };
@@ -66,7 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1267E58E23E310FAC56545E2 /* Pods-AppTeatro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatro.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro.release.xcconfig"; sourceTree = "<group>"; };
 		1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescricaoTableViewController.swift; path = Controllers/DescricaoTableViewController.swift; sourceTree = "<group>"; };
 		1F6795971EC26062001FE447 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		1F7930431EEF0EC1008D6D30 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterPageViewController.swift; path = Controllers/RegisterPageViewController.swift; sourceTree = "<group>"; };
@@ -103,22 +97,12 @@
 		3B7F06BC1F60CDFB00D65E0C /* RestToCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestToCoreData.swift; path = Manager/RestToCoreData.swift; sourceTree = "<group>"; };
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		3BD5C6891F3BAABF003401C1 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Designables/DesignableView.swift; sourceTree = "<group>"; };
-		55BEFD040ACF627015DD88CC /* Pods-AppTeatroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatroUITests/Pods-AppTeatroUITests.release.xcconfig"; sourceTree = "<group>"; };
-		62566C682117A770003FF8AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeuPerfilViewController.swift; path = Controllers/MeuPerfilViewController.swift; sourceTree = "<group>"; };
-		643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro.debug.xcconfig"; sourceTree = "<group>"; };
-		6C8FFCE8B7053E93A04BBA15 /* Pods_AppTeatro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTeatro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94CF9053806357F6B5386EAD /* Pods-AppTeatroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatroTests/Pods-AppTeatroTests.debug.xcconfig"; sourceTree = "<group>"; };
-		99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTeatroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A88B392FE29D54870B932576 /* Pods-AppTeatroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatroTests/Pods-AppTeatroTests.release.xcconfig"; sourceTree = "<group>"; };
-		ABFC291CC743DF903F8EE170 /* Pods-AppTeatroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatroUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatroUITests/Pods-AppTeatroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3FAA771ECE627B00FD9E2F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Manager/CoreDataManager.swift; sourceTree = "<group>"; };
 		AF8A4C661EBE2F2700F67EF7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Library/SWRevealViewController.h; sourceTree = "<group>"; };
 		AF8A4C671EBE2F2700F67EF7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Library/SWRevealViewController.m; sourceTree = "<group>"; };
 		AF8A4C691EBE2F4300F67EF7 /* AppTeatro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppTeatro-Bridging-Header.h"; path = "Library/AppTeatro-Bridging-Header.h"; sourceTree = "<group>"; };
 		AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentPageViewController.swift; path = Controllers/ContentPageViewController.swift; sourceTree = "<group>"; };
 		AFC5EA611EBFA699008F0856 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controllers/PageViewController.swift; sourceTree = "<group>"; };
-		EFD317D41C6F73F321E4A767 /* Pods_AppTeatroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTeatroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA676F61EA3E41C00150964 /* MapKit.framework in Frameworks */,
-				AD2E9A27636151B23069EA0F /* Pods_AppTeatro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8751624B200E7068A7C5AD50 /* Pods_AppTeatroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D931EB50D33FCDE3CE20BE9 /* Pods_AppTeatroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +147,6 @@
 				1FBE66041ECA0CE200BF87B4 /* GenerosViewController.swift */,
 				1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */,
 				3B2D5A951F3BB71C00A68272 /* PickerDataViewController.swift */,
-				625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,7 +180,6 @@
 				1FA676E51EA3E3AB00150964 /* AppTeatroUITests */,
 				1FA676C11EA3E3A100150964 /* Products */,
 				1FA676F41EA3E41C00150964 /* Frameworks */,
-				56553891CA36E97C1DF3D8FD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,7 +196,6 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
-				62566C682117A770003FF8AA /* GoogleService-Info.plist */,
 				3BD5C6881F3BAA4F003401C1 /* Designables */,
 				1F7546FD1EE1F08000967C29 /* Extensions */,
 				AF3FAA761ECE623F00FD9E2F /* Manager */,
@@ -258,9 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				1FA676F51EA3E41C00150964 /* MapKit.framework */,
-				6C8FFCE8B7053E93A04BBA15 /* Pods_AppTeatro.framework */,
-				99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */,
-				EFD317D41C6F73F321E4A767 /* Pods_AppTeatroUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,19 +246,6 @@
 				3BD5C6891F3BAABF003401C1 /* DesignableView.swift */,
 			);
 			name = Designables;
-			sourceTree = "<group>";
-		};
-		56553891CA36E97C1DF3D8FD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */,
-				1267E58E23E310FAC56545E2 /* Pods-AppTeatro.release.xcconfig */,
-				94CF9053806357F6B5386EAD /* Pods-AppTeatroTests.debug.xcconfig */,
-				A88B392FE29D54870B932576 /* Pods-AppTeatroTests.release.xcconfig */,
-				ABFC291CC743DF903F8EE170 /* Pods-AppTeatroUITests.debug.xcconfig */,
-				55BEFD040ACF627015DD88CC /* Pods-AppTeatroUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		AF3FAA761ECE623F00FD9E2F /* Manager */ = {
@@ -312,11 +274,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA676EB1EA3E3AC00150964 /* Build configuration list for PBXNativeTarget "AppTeatro" */;
 			buildPhases = (
-				0E7BB4B255378D5BE097F1E6 /* [CP] Check Pods Manifest.lock */,
 				1FA676BC1EA3E3A100150964 /* Sources */,
 				1FA676BD1EA3E3A100150964 /* Frameworks */,
 				1FA676BE1EA3E3A100150964 /* Resources */,
-				F8C1347D67BCADEB218AE9E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,7 +291,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA676EE1EA3E3AC00150964 /* Build configuration list for PBXNativeTarget "AppTeatroTests" */;
 			buildPhases = (
-				7433372FC1B432AC2F1F4F00 /* [CP] Check Pods Manifest.lock */,
 				1FA676D31EA3E3AA00150964 /* Sources */,
 				1FA676D41EA3E3AA00150964 /* Frameworks */,
 				1FA676D51EA3E3AA00150964 /* Resources */,
@@ -350,7 +309,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA676F11EA3E3AC00150964 /* Build configuration list for PBXNativeTarget "AppTeatroUITests" */;
 			buildPhases = (
-				B78378B6CCCAEB7894C406F8 /* [CP] Check Pods Manifest.lock */,
 				1FA676DE1EA3E3AB00150964 /* Sources */,
 				1FA676DF1EA3E3AB00150964 /* Frameworks */,
 				1FA676E01EA3E3AB00150964 /* Resources */,
@@ -372,7 +330,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = MyMac;
 				TargetAttributes = {
 					1FA676BF1EA3E3A100150964 = {
@@ -425,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA676D11EA3E3A400150964 /* LaunchScreen.storyboard in Resources */,
-				62566C692117A770003FF8AA /* GoogleService-Info.plist in Resources */,
 				1FA676CE1EA3E3A400150964 /* Assets.xcassets in Resources */,
 				1FA676C91EA3E3A300150964 /* Main.storyboard in Resources */,
 			);
@@ -447,83 +404,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0E7BB4B255378D5BE097F1E6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppTeatro-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7433372FC1B432AC2F1F4F00 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppTeatroTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B78378B6CCCAEB7894C406F8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppTeatroUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8C1347D67BCADEB218AE9E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1FA676BC1EA3E3A100150964 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -531,7 +411,6 @@
 			files = (
 				1F6795981EC26062001FE447 /* LoginViewController.swift in Sources */,
 				1F79304A1EEF0F1C008D6D30 /* TeatroTableViewCell.swift in Sources */,
-				625C76722103B68F003F8F55 /* MeuPerfilViewController.swift in Sources */,
 				1FBE66051ECA0CE200BF87B4 /* GenerosViewController.swift in Sources */,
 				1F9D55A91ED1048200F085F9 /* FiltroViewController.swift in Sources */,
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
@@ -626,7 +505,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -634,7 +512,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -685,7 +562,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -693,7 +569,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -725,11 +600,9 @@
 		};
 		1FA676EC1EA3E3AC00150964 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppTeatro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,11 +617,9 @@
 		};
 		1FA676ED1EA3E3AC00150964 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1267E58E23E310FAC56545E2 /* Pods-AppTeatro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppTeatro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -762,7 +633,6 @@
 		};
 		1FA676EF1EA3E3AC00150964 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94CF9053806357F6B5386EAD /* Pods-AppTeatroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -782,7 +652,6 @@
 		};
 		1FA676F01EA3E3AC00150964 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A88B392FE29D54870B932576 /* Pods-AppTeatroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -801,7 +670,6 @@
 		};
 		1FA676F21EA3E3AC00150964 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABFC291CC743DF903F8EE170 /* Pods-AppTeatroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -820,7 +688,6 @@
 		};
 		1FA676F31EA3E3AC00150964 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55BEFD040ACF627015DD88CC /* Pods-AppTeatroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
