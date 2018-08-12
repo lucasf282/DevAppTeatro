@@ -50,3 +50,17 @@ AppTeatroIOS/AppTeatro.xcodeproj/project.xcworkspace/xcuserdata/lucasfarias.xcus
 AppTeatroIOS/AppTeatro.xcodeproj/xcuserdata/lucasfarias.xcuserdatad/xcschemes/xcschememanagement.plist
 AppTeatroIOS/AppTeatro/Breakpoints_v2.xcbkptlist
 AppTeatroIOS/AppTeatro/UserInterfaceState.xcuserstate
+
+# Created by https://www.gitignore.io/api/cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+
+
+# End of https://www.gitignore.io/api/cocoapods
+
