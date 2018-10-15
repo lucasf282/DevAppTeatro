@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import CoreData
+import Firebase
+import FirebaseAuth
 
 class RegisterPageViewController: UIViewController {
 
@@ -38,30 +39,33 @@ class RegisterPageViewController: UIViewController {
             
             // Display alert message
             displayMyAlertMessage(userMessage: "Todos os campos devem sem preenchidos")
-            
             return;
         }
         
         // Chech if password match
         if(userPassword != userRepeatPassword){
-            
             // Display alert message
             displayMyAlertMessage(userMessage: "A senhas não correspondem")
-            
             return;
         }
         
-        // Store data
-        let usuario = NSEntityDescription.insertNewObject(forEntityName: usuarioClassName, into: CoreDataManager.getContext()) as! Usuario
-        usuario.email = userEmail
-        usuario.senha = userPassword
-        CoreDataManager.saveContext()
+        // Try to create a account
+        Auth.auth().createUser(withEmail: userEmail ?? "", password: userPassword ?? ""){(user, error) in
+            if user != nil{
+                UserDefaults.standard.set(user, forKey: "user")
+                UserDefaults.standard.synchronize()
+                print("user has signed up!")
+                // Display alert message with confirmation
+                self.signupSucessAlert()
+            }
+            if error != nil {
+                print("error on signinup")
+            }
+        }
         
-        UserDefaults.standard.set(userEmail, forKey: "userEmail")
-        UserDefaults.standard.synchronize()
-        
-        
-        // Display alert message with confirmation
+    }
+    
+    func signupSucessAlert(){
         let myAlert = UIAlertController(title: "Alert", message: "Sua conta foi criada com sucesso", preferredStyle: UIAlertControllerStyle.alert)
         
         let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default){
@@ -71,7 +75,6 @@ class RegisterPageViewController: UIViewController {
         
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion:nil)
-        
     }
     
     func displayMyAlertMessage(userMessage:String){

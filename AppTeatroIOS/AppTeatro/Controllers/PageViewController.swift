@@ -120,11 +120,12 @@ class PageViewController: UIViewController , UIPageViewControllerDataSource {
         defaults.synchronize()
         
         
-        let nextView: SWRevealViewController = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+        let nextView: UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         
         appdelegate.window!.rootViewController = nextView
+        appdelegate.window?.makeKeyAndVisible()
 
     }
     

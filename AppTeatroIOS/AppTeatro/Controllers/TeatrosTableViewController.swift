@@ -14,17 +14,8 @@ class TeatrosTableViewController: UITableViewController {
     let localSegue = "teatrosToLocalSegue"
     fileprivate var  localArray = [Local]()
     
-    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if self.revealViewController() != nil {
-            btnMenuButton.target = revealViewController()
-            btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        }
         
         // 3. Sincronizar objetos da base
         updateData()

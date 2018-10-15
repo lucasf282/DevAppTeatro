@@ -21,20 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let defaults = UserDefaults.standard
         let skipTutorialPages = defaults.bool(forKey: "skipTutorialPages")
-        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var nextView: UIViewController
         if skipTutorialPages
         {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let nextView: UITabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-            
-            window?.rootViewController = nextView
-            
+            nextView = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         } else {
-            UIPageControl.appearance().pageIndicatorTintColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.5)
-            UIPageControl.appearance().currentPageIndicatorTintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            nextView = mainStoryboard.instantiateViewController(withIdentifier: "OnBoard") as! OnboardingPager
         }
-        
+        window?.rootViewController = nextView
+        window?.makeKeyAndVisible()
         FirebaseApp.configure()
         
         //Inicialização do Core Data
