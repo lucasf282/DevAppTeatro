@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class MeuPerfilViewController: UIViewController {
+class MeuPerfilViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let buttonLogOut = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: Selector("logout"))
+        self.navigationItem.rightBarButtonItem  = buttonLogOut
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +24,15 @@ class MeuPerfilViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func logout(){
+        do {
+            try Auth.auth().signOut()
+            self.navigationController?.viewControllers.remove(at: self.navigationController!.viewControllers.count-1)
+            show(storyboard!.instantiateViewController(withIdentifier: "RegisterPageViewController"), sender: nil)
+        } catch {
+            print(error)
+        }
+    }
 
     /*
     // MARK: - Navigation

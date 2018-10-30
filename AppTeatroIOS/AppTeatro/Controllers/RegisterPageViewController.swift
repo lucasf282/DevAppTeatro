@@ -54,12 +54,10 @@ class RegisterPageViewController: UIViewController {
             if user != nil{
                 UserDefaults.standard.set(user, forKey: "user")
                 UserDefaults.standard.synchronize()
-                print("user has signed up!")
-                // Display alert message with confirmation
                 self.signupSucessAlert()
             }
             if error != nil {
-                print("error on signinup")
+                self.displayMyAlertMessage(userMessage: error.debugDescription)
             }
         }
         

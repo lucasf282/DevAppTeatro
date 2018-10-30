@@ -17,7 +17,6 @@ extension UIImageView {
         }
         if let url = URL(string: URLString) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                //print("RESPONSE FROM API: \(response)")
                 if error != nil {
                     print("ERROR LOADING IMAGES FROM URL: \(error!)")
                     DispatchQueue.main.async {

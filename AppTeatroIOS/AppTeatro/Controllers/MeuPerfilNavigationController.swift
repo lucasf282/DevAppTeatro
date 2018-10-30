@@ -14,17 +14,10 @@ class MeuPerfilNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var controllersStack = viewControllers
-        controllersStack.remove(at: controllersStack.count-1)
-        let loginViewController = storyboard!.instantiateViewController(withIdentifier: "RegisterPageViewController")
-        let meuPerfilViewController = storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController")
-        setViewControllers(controllersStack, animated: true)
         if Auth.auth().currentUser?.uid != nil {
-            show(meuPerfilViewController, sender: nil)
-        }else{
-            show(loginViewController, sender: nil)
+            viewControllers.remove(at: viewControllers.count-1)
+            show(storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController"), sender: nil)
         }
-        // Do any additional setup after loading the view.
     }
     
 

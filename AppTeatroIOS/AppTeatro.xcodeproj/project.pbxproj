@@ -43,6 +43,8 @@
 		629097E22159D1AD006F18E4 /* OnBoard02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */; };
 		629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */; };
 		629097E62159D1E0006F18E4 /* OnBoard03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */; };
+		62B6B2A521863CB7006D1FED /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6B2A421863CB7006D1FED /* Structs.swift */; };
+		62B6B2A721869C05006D1FED /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6B2A621869C05006D1FED /* EventsTableViewController.swift */; };
 		62BBCAD0216ECB6E00B2F037 /* MeuPerfilNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */; };
 		62CC6D0221615D9B008AE3D2 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */; };
 		8751624B200E7068A7C5AD50 /* Pods_AppTeatroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */; };
@@ -116,6 +118,8 @@
 		629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard02ViewController.swift; path = Controllers/OnBoard02ViewController.swift; sourceTree = "<group>"; };
 		629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard01ViewController.swift; path = Controllers/OnBoard01ViewController.swift; sourceTree = "<group>"; };
 		629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard03ViewController.swift; path = Controllers/OnBoard03ViewController.swift; sourceTree = "<group>"; };
+		62B6B2A421863CB7006D1FED /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Structs.swift; path = Structs/Structs.swift; sourceTree = "<group>"; };
+		62B6B2A621869C05006D1FED /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsTableViewController.swift; path = Controllers/EventsTableViewController.swift; sourceTree = "<group>"; };
 		62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeuPerfilNavigationController.swift; path = Controllers/MeuPerfilNavigationController.swift; sourceTree = "<group>"; };
 		62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPager.swift; path = Controllers/OnboardingPager.swift; sourceTree = "<group>"; };
 		643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			children = (
 				629097E02159D16E006F18E4 /* OnBoard */,
 				3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */,
+				62B6B2A621869C05006D1FED /* EventsTableViewController.swift */,
 				AFC5EA5F1EBFA689008F0856 /* ContentPageViewController.swift */,
 				AFC5EA611EBFA699008F0856 /* PageViewController.swift */,
 				1F6795951EC0E61C001FE447 /* DescricaoTableViewController.swift */,
@@ -232,6 +237,7 @@
 		1FA676C21EA3E3A100150964 /* AppTeatro */ = {
 			isa = PBXGroup;
 			children = (
+				62B6B2A121863C22006D1FED /* Structs */,
 				3BD5C6881F3BAA4F003401C1 /* Designables */,
 				1F7546FD1EE1F08000967C29 /* Extensions */,
 				AF3FAA761ECE623F00FD9E2F /* Manager */,
@@ -310,6 +316,14 @@
 				62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */,
 			);
 			name = OnBoard;
+			sourceTree = "<group>";
+		};
+		62B6B2A121863C22006D1FED /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				62B6B2A421863CB7006D1FED /* Structs.swift */,
+			);
+			name = Structs;
 			sourceTree = "<group>";
 		};
 		AF3FAA761ECE623F00FD9E2F /* Manager */ = {
@@ -557,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B6B2A521863CB7006D1FED /* Structs.swift in Sources */,
 				1F6795981EC26062001FE447 /* LoginViewController.swift in Sources */,
 				1F79304A1EEF0F1C008D6D30 /* TeatroTableViewCell.swift in Sources */,
 				625C76722103B68F003F8F55 /* MeuPerfilViewController.swift in Sources */,
@@ -565,6 +580,7 @@
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
 				1F7930451EEF0EC1008D6D30 /* RegisterPageViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
+				62B6B2A721869C05006D1FED /* EventsTableViewController.swift in Sources */,
 				62BBCAD0216ECB6E00B2F037 /* MeuPerfilNavigationController.swift in Sources */,
 				62CC6D0221615D9B008AE3D2 /* OnboardingPager.swift in Sources */,
 				AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */,

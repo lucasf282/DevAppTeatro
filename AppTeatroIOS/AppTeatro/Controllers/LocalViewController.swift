@@ -12,7 +12,7 @@ import CoreLocation
 
 class LocalViewController: UIViewController{
     
-    var local : Local?
+    var local : Theater?
     var conteudo : [[String]]?
     var locationManager = CLLocationManager()
     
@@ -29,8 +29,8 @@ class LocalViewController: UIViewController{
                 ["Cidade/Estado:", "\(teatro.cidade ?? "cidade") / \(teatro.estado ?? "estado")"],
                 ["Telefone:", teatro.telefone ?? "telefone"]]
             
-            let id = teatro.id as NSNumber
-            imagemLocal.image = UIImage(named: "local"+id.stringValue)
+            
+            imagemLocal.loadImageUsingCacheWithURLString(teatro.imagem ?? "",placeHolder: nil)
             self.marcarPonto(teatro: teatro)
         }
         locationManager.delegate = self
@@ -70,7 +70,7 @@ extension LocalViewController: UITableViewDataSource{
 
 //MARK: MKMapViewDelegate
 extension LocalViewController: MKMapViewDelegate{
-    func marcarPonto(teatro: Local){
+    func marcarPonto(teatro: Theater){
         let point = MKPointAnnotation();
         if (teatro.latitude != nil && teatro.longitude != nil) {
             point.coordinate = CLLocationCoordinate2DMake(Double(teatro.latitude!)!, Double(teatro.longitude!)!)

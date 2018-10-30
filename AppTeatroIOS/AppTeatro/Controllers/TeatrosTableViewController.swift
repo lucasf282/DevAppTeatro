@@ -10,34 +10,55 @@ import UIKit
 
 class TeatrosTableViewController: UITableViewController {
 
-    var  local : Local?
+    var local : Theater?
+    var theaters : [Theater]?
     let localSegue = "teatrosToLocalSegue"
     fileprivate var  localArray = [Local]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 3. Sincronizar objetos da base
-        updateData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func loadJsonWith(size:Int, page:Int){
+        let jsonUrlString = "https://teatro-api.herokuapp.com/locais?peagle&size=\(size)&page=\(page)"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url){ (data, response, err) in
+            if err != nil {
+                print("error on runTask:", err!)
+                return
+            }
+            guard let data = data else { return }
+            
+            do{
+                let decoder = JSONDecoder()
+                self.theaters = try decoder.decode([Theater].self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } catch let jsonErr {
+                print("error on json:", jsonErr)
+            }
+        }.resume()
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(localArray.count)
-        return  localArray.count
+        if let count = theaters?.count{
+            return count
+        }
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeatroCell", for: indexPath) as! TeatroTableViewCell
         
-        let localItem =  localArray[indexPath.row]
+        guard let localItem = theaters?[indexPath.row] else { return cell}
         
-        let id = localItem.id as NSNumber
-        cell.imgViewTeatro.image = UIImage(named: "local"+id.stringValue)
+        cell.imgViewTeatro.loadImageUsingCacheWithURLString(localItem.imagem ?? "",placeHolder: nil)
         cell.labelTituloTeatro.text = localItem.nome
         
         return cell
@@ -49,7 +70,7 @@ class TeatrosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        local = localArray[indexPath.row]
+        self.local = theaters?[indexPath.row]
         self.performSegue(withIdentifier: localSegue, sender: nil)
     }
     

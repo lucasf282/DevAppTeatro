@@ -8,10 +8,13 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseAuth
 
 class EventosTableViewController: UITableViewController{
     
-    var evento : Evento?
+    var evento : Event?
+    var events : [Event]?
     var filtro : NSPredicate? = nil
     
     let detalheEventoSegue = "MostrarDetalheEvento"
@@ -27,40 +30,56 @@ class EventosTableViewController: UITableViewController{
         return frc
     }()
     
-    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
     @IBOutlet var eventosTable: UITableView!
     @IBAction func favoritar(_ sender: Any) {
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
-        if isUserLoggedIn {
-            
+        if Auth.auth().currentUser?.uid != nil {
+            //TODO: metodo de favoritar
         }else{
             let myAlert = UIAlertController(title: "Alert", message: "Você precisa estar conectado a uma conta", preferredStyle: UIAlertControllerStyle.alert)
             
             let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default){
                 action in
+                self.tabBarController?.selectedIndex = 2;
+                self.dismiss(animated: true, completion: nil)
+            }
+            let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.default){
+                action in
                 self.dismiss(animated: true, completion: nil)
             }
             myAlert.addAction(okAction)
+            myAlert.addAction(cancelAction)
             self.present(myAlert, animated: true, completion:nil)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(filtro == nil){
-            if self.revealViewController() != nil {
-                btnMenuButton.target = revealViewController()
-                btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-                self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-                
-                self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            }
-        }
-        
-        self.performFetch()
+        //self.performFetch()
+        self.loadJsonWith(size: 12, page: 0)
     }
-    
+    func loadJsonWith(size:Int, page:Int){
+        let jsonUrlString = "https://teatro-api.herokuapp.com/eventos?peagle&size=\(size)&page=\(page)"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url){ (data, response, err) in
+            if err != nil {
+                print("error on runTask:", err!)
+                return
+            }
+            guard let data = data else { return }
+            
+            do{
+                let decoder = JSONDecoder()
+                let content = try decoder.decode(Content.self, from: data)
+                self.events = content.content
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } catch let jsonErr {
+                print("error on json:", jsonErr)
+            }
+        }.resume()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -81,7 +100,7 @@ class EventosTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = fetchedhResultController.sections?[section].numberOfObjects{
+        if let count = events?.count{
             return count
         }
         return 0
@@ -90,21 +109,16 @@ class EventosTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventoCell", for: indexPath) as! EventoTableViewCell
         
-        let evtItem = fetchedhResultController.object(at: indexPath)
+        guard let evtItem = events?[indexPath.row] else { return cell}
         
-        cell.ImgView_capa.image = UIImage(data: evtItem.foto! as Data)
+        cell.ImgView_capa.loadImageUsingCacheWithURLString(evtItem.imagem ?? "",placeHolder: nil)
         cell.labelTitulo.text = evtItem.nome
-        if let agenda = evtItem.listaAgenda?.allObjects.first as? Agenda {
-            cell.labelDataHora.text = agenda.dataHora
-            cell.labelHora.text = agenda.hora
-            if let ingresso = agenda.listaIngresso?.allObjects.first as? Ingresso {
-                cell.labelPreco.text = "R$" + String(describing: ingresso.preco)
-            }else{
-                cell.labelPreco.text = evtItem.valor
+        if let agenda = evtItem.listaAgenda?.first {
+            cell.labelDataHora.text = agenda.data
+            cell.labelHora.text = agenda.horario
+            if let ingresso = agenda.listaIngresso?.first {
+                cell.labelPreco.text = "R$" + (ingresso.preco ?? "--,--")
             }
-        }else{
-            cell.labelDataHora.text = evtItem.diaHora
-            cell.labelPreco.text = evtItem.valor
         }
         cell.labelLocal.text = evtItem.local?.nome ?? "Local não definido"
         
@@ -118,7 +132,7 @@ class EventosTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.evento = fetchedhResultController.object(at: indexPath)
+        self.evento = events?[indexPath.row]
         self.performSegue(withIdentifier: detalheEventoSegue, sender: nil)
     }
     
@@ -193,7 +207,6 @@ extension EventosTableViewController : UISearchBarDelegate{
         fetchedhResultController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "nome", ascending: true)]
         performFetch()
         tableView.reloadData()
-        print(searchText)
     }
 }
 

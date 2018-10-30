@@ -10,7 +10,7 @@ import UIKit
 
 class DescricaoTableViewController: UITableViewController {
     
-    var evento : Evento?
+    var evento : Event?
     let localSegue = "descricaoToLocalSegue"
     
     @IBOutlet weak var textView_desc: UITextView!
@@ -29,10 +29,10 @@ class DescricaoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        image.image = UIImage(data: evento?.foto as! Data)
-        dataHora.text = evento?.diaHora
+        image.loadImageUsingCacheWithURLString(evento?.imagem ?? "",placeHolder: nil)
+        dataHora.text = evento?.listaAgenda?.first?.data
         local.text = evento?.local?.nome
-        preco.text = evento?.valor
+        preco.text = evento?.listaAgenda?.first?.listaIngresso?.first?.preco
         
     }
     

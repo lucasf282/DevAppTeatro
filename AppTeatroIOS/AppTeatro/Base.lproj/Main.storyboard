@@ -173,7 +173,7 @@
         <!--Meu perfil-->
         <scene sceneID="40s-Xt-PVI">
             <objects>
-                <tableViewController storyboardIdentifier="MeuPerfilViewController" title="Meu perfil" id="bdc-He-dyM" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MeuPerfilViewController" title="Meu perfil" id="bdc-He-dyM" customClass="MeuPerfilViewController" customModule="AppTeatro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lTd-5H-JMS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1811,6 +1811,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RFX-DY-HDx"/>
-        <segue reference="jxv-wN-5id"/>
+        <segue reference="sbB-JT-y1o"/>
     </inferredMetricsTieBreakers>
 </document>

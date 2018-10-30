@@ -35,10 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base
-        CoreDataManager.cleanCoreData()
+        //CoreDataManager.cleanCoreData()
         
         // 2. Inserir objetos na base
-        CoreDataManager.presetCoreData()
+        //CoreDataManager.presetCoreData()
         return true
     }
 
