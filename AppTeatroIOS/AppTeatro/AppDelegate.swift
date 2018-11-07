@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        FirebaseApp.configure()
         let defaults = UserDefaults.standard
         let skipTutorialPages = defaults.bool(forKey: "skipTutorialPages")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -31,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.rootViewController = nextView
         window?.makeKeyAndVisible()
-        FirebaseApp.configure()
         
         //Inicialização do Core Data
         // 1. Deletar todos os objetos da base

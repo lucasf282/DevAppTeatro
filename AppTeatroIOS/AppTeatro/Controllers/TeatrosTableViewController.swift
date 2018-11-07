@@ -17,7 +17,7 @@ class TeatrosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadJsonWith(size: 6, page: 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -40,6 +40,7 @@
 		62057ECC216AF03800101271 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62057ECB216AF03800101271 /* TabBarViewController.swift */; };
 		62566C692117A770003FF8AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62566C682117A770003FF8AA /* GoogleService-Info.plist */; };
 		625C76722103B68F003F8F55 /* MeuPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */; };
+		628592F8218E62C500B73332 /* EditarPerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */; };
 		629097E22159D1AD006F18E4 /* OnBoard02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */; };
 		629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */; };
 		629097E62159D1E0006F18E4 /* OnBoard03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */; };
@@ -114,6 +115,7 @@
 		62057ECB216AF03800101271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Controllers/TabBarViewController.swift; sourceTree = "<group>"; };
 		62566C682117A770003FF8AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeuPerfilViewController.swift; path = Controllers/MeuPerfilViewController.swift; sourceTree = "<group>"; };
+		628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditarPerfilTableViewController.swift; path = Controllers/EditarPerfilTableViewController.swift; sourceTree = "<group>"; };
 		629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard02ViewController.swift; path = Controllers/OnBoard02ViewController.swift; sourceTree = "<group>"; };
 		629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard01ViewController.swift; path = Controllers/OnBoard01ViewController.swift; sourceTree = "<group>"; };
 		629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard03ViewController.swift; path = Controllers/OnBoard03ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */,
 				62057ECB216AF03800101271 /* TabBarViewController.swift */,
 				62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */,
+				628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */,
 				629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */,
 				1FBE66031EC68DAB00BF87B4 /* LocalTableViewCell.swift in Sources */,
+				628592F8218E62C500B73332 /* EditarPerfilTableViewController.swift in Sources */,
 				1F7930491EEF0F1C008D6D30 /* EventoTableViewCell.swift in Sources */,
 				62057ECC216AF03800101271 /* TabBarViewController.swift in Sources */,
 				3B7F06BD1F60CDFB00D65E0C /* RestToCoreData.swift in Sources */,

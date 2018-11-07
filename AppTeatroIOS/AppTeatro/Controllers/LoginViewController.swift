@@ -10,14 +10,23 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /*
+        userEmailTextField.delegate = self
+        userPasswordTextField.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)*/
+    }
+    
+    @objc func dismissKeyboard(){
+        //textField.resignFirstResponder()
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +45,21 @@ class LoginViewController: UIViewController {
                 print("user has signed up!")
             }
             if error != nil {
-                print("error on signinup")
-                self.signinErrorMessage()
+                if error != nil {
+                    self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+                }
             }
         }
     }
     
+    @IBAction func recuperarSenha() {
+        Auth.auth().sendPasswordReset(withEmail: userEmailTextField.text ?? "") { (error) in
+            self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+        }
+    }
+    @IBAction func cancelar(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     func signinErrorMessage(){
         let myAlert = UIAlertController(title: "Alert", message: "Email ou senha errado", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -52,14 +70,15 @@ class LoginViewController: UIViewController {
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion:nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func displayMyAlertMessage(userMessage:String){
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion:nil)
     }
-    */
 
 }

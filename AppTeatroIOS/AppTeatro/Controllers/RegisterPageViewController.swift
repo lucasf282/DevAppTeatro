@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class RegisterPageViewController: UIViewController {
+class RegisterPageViewController: UIViewController, UITextFieldDelegate {
 
     let usuarioClassName = String(describing: Usuario.self)
     
@@ -21,7 +21,16 @@ class RegisterPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userEmailTextField.delegate = self
+        userPasswordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        //textField.resignFirstResponder()
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,12 +61,10 @@ class RegisterPageViewController: UIViewController {
         // Try to create a account
         Auth.auth().createUser(withEmail: userEmail ?? "", password: userPassword ?? ""){(user, error) in
             if user != nil{
-                UserDefaults.standard.set(user, forKey: "user")
-                UserDefaults.standard.synchronize()
                 self.signupSucessAlert()
             }
             if error != nil {
-                self.displayMyAlertMessage(userMessage: error.debugDescription)
+                self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
             }
         }
         
