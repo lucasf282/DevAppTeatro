@@ -33,6 +33,8 @@ extension UIImageView {
                     }
                 }
             }).resume()
+        }else{
+            self.image = placeHolder
         }
     }
 }

@@ -288,7 +288,7 @@
                                     <action selector="logout:" destination="bdc-He-dyM" id="0vm-iq-vBh"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Edit" id="zQO-gj-qtI">
+                            <barButtonItem title="Editar" id="zQO-gj-qtI">
                                 <connections>
                                     <segue destination="77R-2E-0kT" kind="show" id="luY-Jp-FpK"/>
                                 </connections>
@@ -1877,17 +1877,26 @@
                                                         <constraint firstAttribute="height" constant="160" id="VTD-wu-CeH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Meu Nome" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQ7-L8-skB">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Meu Nome" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQ7-L8-skB">
                                                     <rect key="frame" x="40" y="176" width="295" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-Fg-nL7">
+                                                    <rect key="frame" x="275.5" y="73" width="31" height="30"/>
+                                                    <state key="normal" title="Foto"/>
+                                                    <connections>
+                                                        <action selector="Capturarfoto:" destination="77R-2E-0kT" eventType="touchUpInside" id="IpL-w7-OaK"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="DQ7-L8-skB" firstAttribute="top" secondItem="TCe-2A-F3J" secondAttribute="bottom" constant="8" id="4rV-bB-fYS"/>
+                                                <constraint firstItem="wn7-Fg-nL7" firstAttribute="centerY" secondItem="TCe-2A-F3J" secondAttribute="centerY" id="Esy-rH-ewN"/>
                                                 <constraint firstAttribute="trailing" secondItem="DQ7-L8-skB" secondAttribute="trailing" constant="40" id="MTt-FJ-vv2"/>
                                                 <constraint firstItem="TCe-2A-F3J" firstAttribute="centerX" secondItem="sBS-zq-5Cp" secondAttribute="centerX" id="SeZ-oO-aib"/>
+                                                <constraint firstItem="wn7-Fg-nL7" firstAttribute="leading" secondItem="TCe-2A-F3J" secondAttribute="trailing" constant="8" id="Sp4-4U-jEf"/>
                                                 <constraint firstItem="DQ7-L8-skB" firstAttribute="centerX" secondItem="sBS-zq-5Cp" secondAttribute="centerX" id="UKB-m6-fAu"/>
                                                 <constraint firstAttribute="bottom" secondItem="DQ7-L8-skB" secondAttribute="bottom" constant="7.5" id="XOJ-Ku-J6d"/>
                                                 <constraint firstItem="DQ7-L8-skB" firstAttribute="leading" secondItem="sBS-zq-5Cp" secondAttribute="leading" constant="40" id="jTz-Nr-00d"/>
@@ -1939,11 +1948,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-GB-TLM">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-GB-TLM">
                                                     <rect key="frame" x="80" y="8" width="287" height="29.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="new-password"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1965,7 +1974,13 @@
                             <outlet property="delegate" destination="77R-2E-0kT" id="kYj-XC-zlu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hR0-Ex-xEg"/>
+                    <navigationItem key="navigationItem" id="hR0-Ex-xEg">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="4Gy-jL-fsp">
+                            <connections>
+                                <action selector="atualizarPerfil:" destination="77R-2E-0kT" id="lMj-Ce-1Y8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgPerfil" destination="TCe-2A-F3J" id="GIX-Fr-m9J"/>
                         <outlet property="txtf_email" destination="o5b-y1-fWr" id="9XL-Wg-hx6"/>

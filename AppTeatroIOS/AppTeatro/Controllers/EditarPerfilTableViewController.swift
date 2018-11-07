@@ -27,7 +27,6 @@ class EditarPerfilTableViewController: UITableViewController {
         }
     }
 
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -36,7 +35,7 @@ class EditarPerfilTableViewController: UITableViewController {
         return 3
     }
     
-    func atualizarPerfil() {
+    @IBAction func atualizarPerfil(_ sender: Any) {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = txtf_nome.text
         changeRequest?.commitChanges { (error) in
@@ -45,9 +44,14 @@ class EditarPerfilTableViewController: UITableViewController {
         Auth.auth().currentUser?.updateEmail(to: txtf_email.text ?? "") { (error) in
             self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
         }
-        Auth.auth().currentUser?.updatePassword(to: txtf_senha.text ?? "") { (error) in
-            self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+        if !txtf_senha.isEqual("123456789"){
+            Auth.auth().currentUser?.updatePassword(to: txtf_senha.text ?? "") { (error) in
+                self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+            }
         }
+    }
+    
+    @IBAction func Capturarfoto(_ sender: Any) {
     }
     
     func displayMyAlertMessage(userMessage:String){

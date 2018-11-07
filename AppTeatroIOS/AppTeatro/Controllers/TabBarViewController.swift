@@ -15,19 +15,19 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let eventosViewController = storyboard!.instantiateViewController(withIdentifier: "EventosNavVC")
-        eventosViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
         let teatrosViewController = storyboard!.instantiateViewController(withIdentifier: "TeatrosTableVC")
-        teatrosViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        teatrosViewController.tabBarItem = UITabBarItem(title: "Teatros", image: UIImage(named: "ic_account_balance"), tag: 0)
+        
+        let eventosViewController = storyboard!.instantiateViewController(withIdentifier: "EventosNavVC")
+        eventosViewController.tabBarItem = UITabBarItem(title: "Eventos", image: UIImage(named: "FavoriteFilledIcon"), tag: 1)
         
         let meuPerfilViewController = storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController")
-        meuPerfilViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
-    
-        let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-        loginViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+        meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_account_circle"), tag: 2)
         
-        var tabBarList:[UIViewController] = [eventosViewController, teatrosViewController]
+        let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
+        loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_account_circle"), tag: 2)
+        
+        var tabBarList:[UIViewController] = [teatrosViewController, eventosViewController]
         
         if Auth.auth().currentUser?.uid != nil {
             tabBarList.append(meuPerfilViewController)
@@ -36,6 +36,7 @@ class TabBarViewController: UITabBarController {
         }
         
         viewControllers = tabBarList
+        selectedIndex = 1
         // Do any additional setup after loading the view.
     }
     

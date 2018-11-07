@@ -42,7 +42,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Try to create a account
         Auth.auth().signIn(withEmail: userEmail ?? "", password: userPassword ?? ""){(user, error) in
             if user != nil{
-                print("user has signed up!")
+                let meuPerfilViewController = self.storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController")
+                meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_account_circle"), tag: 2)
+                self.navigationController?.tabBarController?.viewControllers?[2] = meuPerfilViewController
             }
             if error != nil {
                 if error != nil {

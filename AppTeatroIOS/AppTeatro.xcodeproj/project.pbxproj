@@ -45,7 +45,6 @@
 		629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */; };
 		629097E62159D1E0006F18E4 /* OnBoard03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */; };
 		62B6B2A521863CB7006D1FED /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6B2A421863CB7006D1FED /* Structs.swift */; };
-		62BBCAD0216ECB6E00B2F037 /* MeuPerfilNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */; };
 		62CC6D0221615D9B008AE3D2 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */; };
 		8751624B200E7068A7C5AD50 /* Pods_AppTeatroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */; };
 		8D931EB50D33FCDE3CE20BE9 /* Pods_AppTeatroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD317D41C6F73F321E4A767 /* Pods_AppTeatroUITests.framework */; };
@@ -120,7 +119,6 @@
 		629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard01ViewController.swift; path = Controllers/OnBoard01ViewController.swift; sourceTree = "<group>"; };
 		629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard03ViewController.swift; path = Controllers/OnBoard03ViewController.swift; sourceTree = "<group>"; };
 		62B6B2A421863CB7006D1FED /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Structs.swift; path = Structs/Structs.swift; sourceTree = "<group>"; };
-		62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeuPerfilNavigationController.swift; path = Controllers/MeuPerfilNavigationController.swift; sourceTree = "<group>"; };
 		62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPager.swift; path = Controllers/OnboardingPager.swift; sourceTree = "<group>"; };
 		643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro.debug.xcconfig"; sourceTree = "<group>"; };
 		6C8FFCE8B7053E93A04BBA15 /* Pods_AppTeatro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTeatro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,9 +182,8 @@
 				1F9D55CA1ED4D31400F085F9 /* PickerHoraViewController.swift */,
 				3B2D5A951F3BB71C00A68272 /* PickerDataViewController.swift */,
 				625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */,
-				62057ECB216AF03800101271 /* TabBarViewController.swift */,
-				62BBCACF216ECB6E00B2F037 /* MeuPerfilNavigationController.swift */,
 				628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */,
+				62057ECB216AF03800101271 /* TabBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -580,7 +577,6 @@
 				1FA676C61EA3E3A300150964 /* ViewController.swift in Sources */,
 				1F7930451EEF0EC1008D6D30 /* RegisterPageViewController.swift in Sources */,
 				AFC5EA621EBFA699008F0856 /* PageViewController.swift in Sources */,
-				62BBCAD0216ECB6E00B2F037 /* MeuPerfilNavigationController.swift in Sources */,
 				62CC6D0221615D9B008AE3D2 /* OnboardingPager.swift in Sources */,
 				AF3FAA781ECE627B00FD9E2F /* CoreDataManager.swift in Sources */,
 				1F9D55CB1ED4D31400F085F9 /* PickerHoraViewController.swift in Sources */,
