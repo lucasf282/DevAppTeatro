@@ -37,6 +37,7 @@
 		3B7F06BD1F60CDFB00D65E0C /* RestToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F06BC1F60CDFB00D65E0C /* RestToCoreData.swift */; };
 		3BC3D1E41EBA70DB0004E48A /* EventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */; };
 		3BD5C68A1F3BAABF003401C1 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5C6891F3BAABF003401C1 /* DesignableView.swift */; };
+		62029E3921951061007479DA /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62029E3821951061007479DA /* ChatsTableViewController.swift */; };
 		62057ECC216AF03800101271 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62057ECB216AF03800101271 /* TabBarViewController.swift */; };
 		62566C692117A770003FF8AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62566C682117A770003FF8AA /* GoogleService-Info.plist */; };
 		625C76722103B68F003F8F55 /* MeuPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */; };
@@ -111,6 +112,7 @@
 		3BC3D1E31EBA70DB0004E48A /* EventosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventosTableViewController.swift; path = Controllers/EventosTableViewController.swift; sourceTree = "<group>"; };
 		3BD5C6891F3BAABF003401C1 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Designables/DesignableView.swift; sourceTree = "<group>"; };
 		55BEFD040ACF627015DD88CC /* Pods-AppTeatroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatroUITests/Pods-AppTeatroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62029E3821951061007479DA /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatsTableViewController.swift; path = Controllers/ChatsTableViewController.swift; sourceTree = "<group>"; };
 		62057ECB216AF03800101271 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Controllers/TabBarViewController.swift; sourceTree = "<group>"; };
 		62566C682117A770003FF8AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeuPerfilViewController.swift; path = Controllers/MeuPerfilViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				625C76712103B68F003F8F55 /* MeuPerfilViewController.swift */,
 				628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */,
 				62057ECB216AF03800101271 /* TabBarViewController.swift */,
+				62029E3821951061007479DA /* ChatsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -548,12 +551,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +593,7 @@
 				3BD5C68A1F3BAABF003401C1 /* DesignableView.swift in Sources */,
 				1F8F7FFF1F603BE900F55DB5 /* RestApiService.swift in Sources */,
 				1F81882A1F3E651D00974D03 /* ExtensionString.swift in Sources */,
+				62029E3921951061007479DA /* ChatsTableViewController.swift in Sources */,
 				1F7930461EEF0EC1008D6D30 /* TeatrosTableViewController.swift in Sources */,
 				3B2D5A961F3BB71C00A68272 /* PickerDataViewController.swift in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,

@@ -64,13 +64,13 @@
                                             <constraint firstAttribute="height" constant="120" id="qRG-r4-ZHw"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pqx-3p-MbD">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="aba@a.com" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pqx-3p-MbD">
                                         <rect key="frame" x="8" y="164" width="327" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardType="emailAddress" returnKeyType="go"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a123456" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTI-nY-C3l">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTI-nY-C3l">
                                         <rect key="frame" x="8" y="202" width="327" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -907,7 +907,7 @@
                                             <constraint firstAttribute="width" secondItem="8rD-KP-C3z" secondAttribute="height" multiplier="1:1" id="kz6-50-1A7"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrt-fS-5bM">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="aba@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrt-fS-5bM">
                                         <rect key="frame" x="8" y="164" width="327" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1948,11 +1948,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-GB-TLM">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="deixe vazio caso não queira altera-la" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-GB-TLM">
                                                     <rect key="frame" x="80" y="8" width="287" height="29.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1986,7 +1986,6 @@
                         <outlet property="txtf_email" destination="o5b-y1-fWr" id="9XL-Wg-hx6"/>
                         <outlet property="txtf_nome" destination="DQ7-L8-skB" id="j1z-3P-QvA"/>
                         <outlet property="txtf_senha" destination="gPc-GB-TLM" id="hEL-Rh-EzK"/>
-                        <outlet property="txtf_telefone" destination="gPc-GB-TLM" id="kr7-xk-mrq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXG-ly-CN1" userLabel="First Responder" sceneMemberID="firstResponder"/>

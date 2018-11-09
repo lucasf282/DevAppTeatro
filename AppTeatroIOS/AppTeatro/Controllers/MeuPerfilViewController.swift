@@ -34,6 +34,7 @@ class MeuPerfilViewController: UITableViewController {
         imagemPerfil.loadImageUsingCacheWithURLString(user.photoURL?.absoluteString ?? "", placeHolder: UIImage(named: "login_icon"))
         txt_nome.text = user.displayName ?? user.email
         txt_email.text = user.email
+        
     }
 
     override func didReceiveMemoryWarning() {

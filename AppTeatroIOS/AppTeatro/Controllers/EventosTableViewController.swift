@@ -182,7 +182,6 @@ class EventosTableViewController: UITableViewController{
             case detalheEventoSegue:
                 (segue.destination as! DescricaoTableViewController).evento = self.evento!
                 self.evento = nil
-                
             default:
                 break;
                 

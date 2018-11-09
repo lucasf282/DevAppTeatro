@@ -59,3 +59,9 @@ struct Ticket: Decodable{
     let preco:String?
     let quantidade:Int?
 }
+
+struct ChatMessage: Decodable{
+    let messageText:String?
+    let messageTime:CLong?
+    let messageUser:String?
+}
