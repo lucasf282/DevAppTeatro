@@ -45,6 +45,8 @@
 		629097E22159D1AD006F18E4 /* OnBoard02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */; };
 		629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */; };
 		629097E62159D1E0006F18E4 /* OnBoard03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */; };
+		62A023C9219A660600D00F4B /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A023C8219A660600D00F4B /* MessagesTableViewController.swift */; };
+		62A023CB219A748400D00F4B /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A023CA219A748400D00F4B /* MessageTableViewCell.swift */; };
 		62B6B2A521863CB7006D1FED /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6B2A421863CB7006D1FED /* Structs.swift */; };
 		62CC6D0221615D9B008AE3D2 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */; };
 		8751624B200E7068A7C5AD50 /* Pods_AppTeatroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AAE942057D0D406E7361E7 /* Pods_AppTeatroTests.framework */; };
@@ -120,6 +122,8 @@
 		629097E12159D1AD006F18E4 /* OnBoard02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard02ViewController.swift; path = Controllers/OnBoard02ViewController.swift; sourceTree = "<group>"; };
 		629097E32159D1CC006F18E4 /* OnBoard01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard01ViewController.swift; path = Controllers/OnBoard01ViewController.swift; sourceTree = "<group>"; };
 		629097E52159D1E0006F18E4 /* OnBoard03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoard03ViewController.swift; path = Controllers/OnBoard03ViewController.swift; sourceTree = "<group>"; };
+		62A023C8219A660600D00F4B /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessagesTableViewController.swift; path = Controllers/MessagesTableViewController.swift; sourceTree = "<group>"; };
+		62A023CA219A748400D00F4B /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = Views/MessageTableViewCell.swift; sourceTree = "<group>"; };
 		62B6B2A421863CB7006D1FED /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Structs.swift; path = Structs/Structs.swift; sourceTree = "<group>"; };
 		62CC6D0121615D9B008AE3D2 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPager.swift; path = Controllers/OnboardingPager.swift; sourceTree = "<group>"; };
 		643DF6D85E48CC79E3D2E249 /* Pods-AppTeatro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTeatro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTeatro/Pods-AppTeatro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				628592F7218E62C500B73332 /* EditarPerfilTableViewController.swift */,
 				62057ECB216AF03800101271 /* TabBarViewController.swift */,
 				62029E3821951061007479DA /* ChatsTableViewController.swift */,
+				62A023C8219A660600D00F4B /* MessagesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				1FC413E41EC384F200732ECB /* GeneroCollectionViewCell.swift */,
 				1FC48EA01EC5333F0028291A /* DetalheTableViewCell.swift */,
 				1FBE66021EC68DAB00BF87B4 /* LocalTableViewCell.swift */,
+				62A023CA219A748400D00F4B /* MessageTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -593,9 +599,11 @@
 				3BD5C68A1F3BAABF003401C1 /* DesignableView.swift in Sources */,
 				1F8F7FFF1F603BE900F55DB5 /* RestApiService.swift in Sources */,
 				1F81882A1F3E651D00974D03 /* ExtensionString.swift in Sources */,
+				62A023CB219A748400D00F4B /* MessageTableViewCell.swift in Sources */,
 				62029E3921951061007479DA /* ChatsTableViewController.swift in Sources */,
 				1F7930461EEF0EC1008D6D30 /* TeatrosTableViewController.swift in Sources */,
 				3B2D5A961F3BB71C00A68272 /* PickerDataViewController.swift in Sources */,
+				62A023C9219A660600D00F4B /* MessagesTableViewController.swift in Sources */,
 				1FA676C41EA3E3A300150964 /* AppDelegate.swift in Sources */,
 				1F6795961EC0E61C001FE447 /* DescricaoTableViewController.swift in Sources */,
 				629097E42159D1CC006F18E4 /* OnBoard01ViewController.swift in Sources */,

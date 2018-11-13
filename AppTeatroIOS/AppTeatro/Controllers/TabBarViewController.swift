@@ -27,6 +27,9 @@ class TabBarViewController: UITabBarController {
         let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
         loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_account_circle"), tag: 2)
         
+        let ChatViewController = storyboard!.instantiateViewController(withIdentifier: "ChatNavVC")
+        ChatViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "FavoriteFilledIcon"), tag: 3)
+        
         var tabBarList:[UIViewController] = [teatrosViewController, eventosViewController]
         
         if Auth.auth().currentUser?.uid != nil {
@@ -34,6 +37,7 @@ class TabBarViewController: UITabBarController {
         }else{
             tabBarList.append(loginViewController)
         }
+        tabBarList.append(ChatViewController)
         
         viewControllers = tabBarList
         selectedIndex = 1

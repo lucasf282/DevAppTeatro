@@ -60,8 +60,33 @@ struct Ticket: Decodable{
     let quantidade:Int?
 }
 
+struct Chat {
+    let nome: String?
+    var messages:[ChatMessage] = [ChatMessage]()
+
+    init(nome: String, messages: [String: Any]?) {
+        self.nome = nome
+        guard let messages = messages else { return }
+        
+        for message in messages {
+            self.messages.append(ChatMessage(dict: message.value as! [String: Any])!)
+        }
+    }
+}
+
 struct ChatMessage: Decodable{
     let messageText:String?
-    let messageTime:CLong?
+    let messageTime:Int?
     let messageUser:String?
+    
+    init?(dict: [String: Any]) {
+        guard let messageText = dict["messageText"] as? String,
+         let messageTime = dict["messageTime"] as? Int,
+         let messageUser = dict["messageUser"] as? String
+            else { return nil }
+        
+        self.messageText = messageText
+        self.messageTime = messageTime
+        self.messageUser = messageUser
+    }
 }
