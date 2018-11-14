@@ -20,7 +20,7 @@ class MeuPerfilViewController: UITableViewController {
         do {
             try Auth.auth().signOut()
             let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-            loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_account_circle"), tag: 2)
+            loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_person_black_24pt"), tag: 2)
             self.navigationController?.tabBarController?.viewControllers?[2] = loginViewController
         } catch {
             print(error)

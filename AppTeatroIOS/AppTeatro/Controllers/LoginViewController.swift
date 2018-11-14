@@ -43,20 +43,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: userEmail ?? "", password: userPassword ?? ""){(user, error) in
             if user != nil{
                 let meuPerfilViewController = self.storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController")
-                meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_account_circle"), tag: 2)
+                meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_person_black_24pt"), tag: 2)
                 self.navigationController?.tabBarController?.viewControllers?[2] = meuPerfilViewController
             }
             if error != nil {
-                if error != nil {
-                    self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
-                }
+                self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
             }
         }
     }
     
     @IBAction func recuperarSenha() {
         Auth.auth().sendPasswordReset(withEmail: userEmailTextField.text ?? "") { (error) in
-            self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+            if error != nil {
+                self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
+            }else{
+                self.displayMyAlertMessage(userMessage: "Você receberá um email com instruções de recuperação da sua senha!")
+            }
         }
     }
     @IBAction func cancelar(_ sender: Any) {

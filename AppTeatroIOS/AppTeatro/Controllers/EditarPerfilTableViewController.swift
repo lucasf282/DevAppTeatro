@@ -55,7 +55,7 @@ class EditarPerfilTableViewController: UITableViewController, UIImagePickerContr
                 self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)
             }
         }
-        if !txtf_senha.isEqual("") && txtf_senha.text != nil{
+        if (!txtf_senha.isEqual("")) && txtf_senha.text != nil{
             Auth.auth().currentUser?.updatePassword(to: txtf_senha.text ?? "") { (error) in
                 if(error != nil){
                 self.displayMyAlertMessage(userMessage: error?.localizedDescription ?? error.debugDescription)

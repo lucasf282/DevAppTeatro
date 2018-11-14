@@ -19,16 +19,16 @@ class TabBarViewController: UITabBarController {
         teatrosViewController.tabBarItem = UITabBarItem(title: "Teatros", image: UIImage(named: "ic_account_balance"), tag: 0)
         
         let eventosViewController = storyboard!.instantiateViewController(withIdentifier: "EventosNavVC")
-        eventosViewController.tabBarItem = UITabBarItem(title: "Eventos", image: UIImage(named: "FavoriteFilledIcon"), tag: 1)
+        eventosViewController.tabBarItem = UITabBarItem(title: "Eventos", image: UIImage(named: "ic_event_black_24pt"), tag: 1)
         
         let meuPerfilViewController = storyboard!.instantiateViewController(withIdentifier: "MeuPerfilViewController")
-        meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_account_circle"), tag: 2)
+        meuPerfilViewController.tabBarItem = UITabBarItem(title: "Meu Perfil", image: UIImage(named: "ic_person_black_24pt"), tag: 2)
         
         let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-        loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_account_circle"), tag: 2)
+        loginViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "ic_person_black_24pt"), tag: 2)
         
         let ChatViewController = storyboard!.instantiateViewController(withIdentifier: "ChatNavVC")
-        ChatViewController.tabBarItem = UITabBarItem(title: "Login", image: UIImage(named: "FavoriteFilledIcon"), tag: 3)
+        ChatViewController.tabBarItem = UITabBarItem(title: "Chat", image: UIImage(named: "ic_message_black_24pt"), tag: 3)
         
         var tabBarList:[UIViewController] = [teatrosViewController, eventosViewController]
         

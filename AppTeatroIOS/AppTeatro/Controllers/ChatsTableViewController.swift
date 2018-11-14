@@ -20,7 +20,7 @@ class ChatsTableViewController: UITableViewController{
         self.tableView.tableFooterView = UIView() //evita aparecer o separador em linhas vazias
         databaseRoot = Database.database().reference().root
         databaseRoot?.observe(.value, with: { (snapshot) -> Void in
-            
+            self.chatArray.removeAll()
             for chat in snapshot.children.allObjects as! [DataSnapshot]{
                 let chatName = chat.key
                 let messages = chat.value as? [String: Any]

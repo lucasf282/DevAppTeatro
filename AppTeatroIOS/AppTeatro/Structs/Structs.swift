@@ -89,4 +89,10 @@ struct ChatMessage: Decodable{
         self.messageTime = messageTime
         self.messageUser = messageUser
     }
+    
+    init(messageText: String, messageTime: Int, messageUser: String) {
+        self.messageText = messageText
+        self.messageTime = messageTime
+        self.messageUser = messageUser
+    }
 }
